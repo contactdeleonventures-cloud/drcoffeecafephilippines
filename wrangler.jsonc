@@ -1,0 +1,6 @@
+// Lets Cloudflare Workers serve this folder as a static site (Pages doesn't need it).
+{
+  "name": "drcoffeecafe",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./", "not_found_handling": "single-page-application" }
+}
