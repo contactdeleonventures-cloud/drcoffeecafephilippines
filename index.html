@@ -1,0 +1,1887 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Coffee | Your Daily Dose of Remedy</title>
+<meta name="description" content="Dr. Coffee is a Philippine-rooted café with a playful clinic theme. Choose your dose at Cebu Main, Casa Mira and JamesTown.">
+<meta name="theme-color" content="#F4F4F1">
+<link rel="canonical" href="https://drcoffee-cebu.pages.dev/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dr. Coffee">
+<meta property="og:title" content="Dr. Coffee | Your Daily Dose of Remedy">
+<meta property="og:description" content="Dr. Coffee is a Philippine-rooted café with a playful clinic theme. Choose your dose at Cebu Main, Casa Mira and JamesTown.">
+<meta property="og:url" content="https://drcoffee-cebu.pages.dev/">
+<meta property="og:image" content="https://drcoffee-cebu.pages.dev/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@600;700&display=swap">
+<style>
+/* Dr. Coffee, matte white edition. Brand Book DC-BB-001 Rev 08: Georgia for display, Helvetica for labels,
+   the black logo on light grounds, red kept for the Transfusion label's cross.
+   Layout: CEREAL's centred masthead and hairline-divided bands frame the page; Sweater Weather's matte-black
+   blocks hold the products; soft neumorphic surfaces mark the things you can press. One light look, by request. */
+:root{
+  color-scheme: light;
+  --paper:#F4F4F1;
+  --paper-2:#EAE9E4;
+  --paper-glass:rgba(244,244,241,.88);
+  --white:#FCFCFA;
+  --ink:#1A1A1A;
+  --black:#141312;
+  --black-hi:#262420;
+  --muted:#6B6A65;
+  --hair:#D6D4CC;
+  --taupe:#857163;
+  --taupe-lt:#C4B2A2;
+  --cream:#F2EFE8;
+  --cream-2:#A9A59D;
+  --line-dark:rgba(242,239,232,.18);
+  --red:#C8202A;
+  --ok:#136B4E;
+  --ok-lt:#86CBA9;
+  --ask:#7A5300;
+  --hl:rgba(255,255,255,.95);
+  --sh:rgba(64,58,48,.15);
+  --neu:-10px -10px 22px var(--hl), 12px 14px 28px var(--sh);
+  --neu-sm:-5px -5px 12px var(--hl), 6px 7px 14px var(--sh);
+  --neu-in:inset 5px 5px 11px var(--sh), inset -5px -5px 11px var(--hl);
+  --display: Georgia, Gelasio, "Times New Roman", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --label: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --wrap: 1240px;
+  --gut: clamp(16px, 4vw, 56px);
+  --side-l: max(var(--gut), env(safe-area-inset-left, 0px));
+  --side-r: max(var(--gut), env(safe-area-inset-right, 0px));
+  --mast-top: 74px;
+  --mast-nav: 46px;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --ease-io: cubic-bezier(.77,0,.18,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--mast-nav) + 28px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--display);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::after{content:"";position:fixed;inset:0;z-index:85;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+[hidden]{display:none!important}
+img{display:block;max-width:100%;height:auto}
+table{color:inherit;font:inherit;border-collapse:collapse}
+a{color:inherit}
+button,select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--cream)}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--side-l);padding-right:var(--side-r)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--paper);padding:10px 14px;font-family:var(--sans);font-size:13px;z-index:130}
+.skip:focus{left:12px;top:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- type ---------- */
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.015em}
+h1{font-size:clamp(42px,6vw,88px);line-height:1.02}
+h2{font-size:clamp(34px,4.3vw,58px);line-height:1.06}
+h3{font-size:clamp(22px,2vw,28px);line-height:1.2}
+p{margin:0}
+.label{font-family:var(--display);font-size:12px;letter-spacing:.34em;text-transform:uppercase;margin:0}
+.label.rule::after{content:"";display:block;width:34px;height:1px;background:currentColor;opacity:.35;margin-top:16px}
+.center .label.rule::after{margin-inline:auto}
+.over{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:0}
+.lead{font-size:clamp(17px,1.35vw,19px);line-height:1.7;color:var(--muted);max-width:34em}
+.small{font-size:14px;line-height:1.6;color:var(--muted)}
+
+/* ---------- buttons & links ---------- */
+.btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:16px 26px;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;transition:color .45s var(--ease)}
+.btn::before{content:"";position:absolute;inset:-1px;z-index:-1;background:var(--ink);transform:scaleY(0);transform-origin:50% 100%;transition:transform .55s var(--ease)}
+.btn:hover{color:var(--paper)}
+.btn:hover::before{transform:scaleY(1)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid::before{background:var(--paper)}
+.btn.solid:hover{color:var(--ink)}
+.btn .arr{font-size:14px;letter-spacing:0;transition:transform .45s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.dark .btn{border-color:var(--cream);color:var(--cream)}
+.dark .btn::before{background:var(--cream)}
+.dark .btn:hover{color:var(--black)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.tlink{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding-bottom:5px;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;transition:background-size .5s var(--ease)}
+.tlink:hover{background-size:30% 1px}
+.round{width:48px;height:48px;border-radius:50%;border:0;background:var(--paper);box-shadow:var(--neu-sm);cursor:pointer;font-size:16px;display:grid;place-items:center;transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
+.round:hover{transform:translateY(-2px)}
+.round:active{box-shadow:var(--neu-in);transform:none}
+
+/* ---------- status ---------- */
+.st{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.4}
+.st i{flex:none;width:7px;height:7px;border-radius:50%;background:currentColor;position:relative}
+.st.open{color:var(--ok)}
+.st.ask{color:var(--ask)}
+.st.open i::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid currentColor;animation:pulse 2.2s var(--ease) infinite}
+@keyframes pulse{from{transform:scale(.4);opacity:.9}to{transform:scale(1.7);opacity:0}}
+.dark .st{color:var(--cream-2)}
+.dark .st.open{color:var(--ok-lt)}
+
+/* ---------- preloader, curtain, cursor, IV progress ---------- */
+.pre{position:fixed;inset:0;z-index:120;background:var(--paper);display:grid;place-items:center;align-content:center;gap:22px;clip-path:inset(0 0 0 0);transition:clip-path .9s var(--ease-io)}
+.pre.out{clip-path:inset(0 0 100% 0)}
+.pre img{width:86px;height:86px}
+.pre svg{width:min(320px,70vw);height:42px;color:var(--ink)}
+.pre svg path{stroke-dasharray:440;stroke-dashoffset:440;animation:ecg 1.1s var(--ease) .1s forwards}
+@keyframes ecg{to{stroke-dashoffset:0}}
+.pre .pc{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums}
+.curtain{position:fixed;inset:0;z-index:110;background:var(--paper-2);display:grid;place-items:center;transform:translateY(101%);pointer-events:none}
+.curtain img{width:64px;height:64px}
+.curtain.cover{transform:none;transition:transform .5s var(--ease-io)}
+.curtain.leave{transform:translateY(-101%);transition:transform .6s var(--ease-io)}
+.cur{position:fixed;left:0;top:0;z-index:125;pointer-events:none;mix-blend-mode:difference;display:none}
+.has-cursor .cur.on{display:block}
+.cur .ring{position:absolute;left:0;top:0;width:38px;height:38px;margin:-19px 0 0 -19px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;transition:width .4s var(--ease),height .4s var(--ease),margin .4s var(--ease),background .4s}
+.cur .dot{position:absolute;left:0;top:0;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:#fff}
+.cur.link .ring{width:62px;height:62px;margin:-31px 0 0 -31px;background:rgba(255,255,255,.14)}
+.cur.txt .ring{width:86px;height:86px;margin:-43px 0 0 -43px;background:#fff}
+.cur em{font-style:normal;font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#000;opacity:0;transition:opacity .25s}
+.cur.txt em{opacity:1}
+.iv{position:fixed;right:calc(env(safe-area-inset-right,0px) + 22px);top:50%;transform:translateY(-50%);z-index:70;display:none;flex-direction:column;align-items:center;gap:10px;mix-blend-mode:difference;color:#fff;pointer-events:none}
+@media (min-width:1280px){.iv{display:flex}}
+.iv .ch{width:12px;height:22px;border:1px solid currentColor;border-radius:4px 4px 7px 7px;position:relative;overflow:hidden}
+.iv .ch i{position:absolute;left:50%;top:3px;width:3px;height:4px;margin-left:-1.5px;border-radius:50%;background:currentColor;animation:drip 1.7s ease-in infinite}
+@keyframes drip{0%{transform:translateY(0);opacity:1}80%{transform:translateY(12px);opacity:1}100%{transform:translateY(14px);opacity:0}}
+.iv .tr{width:1px;height:140px;background:rgba(255,255,255,.35);position:relative}
+.iv .tr b{position:absolute;inset:0;background:currentColor;transform-origin:top;transform:scaleY(var(--p,0))}
+.iv .pc{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;writing-mode:vertical-rl;font-variant-numeric:tabular-nums}
+
+/* ---------- masthead (CEREAL) ---------- */
+.mast{position:sticky;top:calc(env(safe-area-inset-top,0px) - var(--mast-top));z-index:60;background:var(--paper-glass);-webkit-backdrop-filter:blur(12px) saturate(1.1);backdrop-filter:blur(12px) saturate(1.1);border-bottom:1px solid var(--hair)}
+.mast-top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;height:var(--mast-top)}
+.soc{display:flex;gap:4px}
+.soc a{width:34px;height:34px;display:grid;place-items:center;color:var(--muted);border-radius:50%;transition:color .25s,box-shadow .35s var(--ease),transform .35s var(--ease)}
+.soc a:hover{color:var(--ink);box-shadow:var(--neu-sm);transform:translateY(-1px)}
+.soc svg{width:15px;height:15px}
+.logo{justify-self:center;display:block}
+.logo img{width:clamp(128px,12.5vw,170px)}
+.mast-st{justify-self:end;text-align:right}
+.mast-nav{border-top:1px solid var(--hair)}
+.mast-nav .wrap{position:relative;display:flex;justify-content:center;align-items:center;gap:clamp(18px,3vw,46px);height:var(--mast-nav)}
+.mast-nav a{font-family:var(--display);font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;text-decoration:none;padding-block:6px;position:relative}
+.mast-nav a:not(.mini)::after{content:"";position:absolute;left:50%;right:calc(50% + .16em);bottom:0;height:1px;background:var(--ink);transition:left .45s var(--ease),right .45s var(--ease)}
+.mast-nav a:not(.mini):hover::after,.mast-nav a[aria-current="page"]::after{left:0;right:.32em}
+.mast-nav .mini{position:absolute;left:var(--side-l);top:50%;transform:translateY(-50%) scale(.6);opacity:0;transition:opacity .35s,transform .5s var(--ease);pointer-events:none}
+.mini img{width:30px;height:30px}
+.mast.stuck .mini{opacity:1;transform:translateY(-50%);pointer-events:auto}
+.burger{display:none;justify-self:end;width:44px;height:44px;border-radius:50%;border:0;background:var(--paper);box-shadow:var(--neu-sm);cursor:pointer;place-items:center}
+.burger i{display:block;width:16px;height:1.5px;background:var(--ink);box-shadow:0 5px 0 var(--ink),0 -5px 0 var(--ink)}
+.burger[aria-expanded="true"]{box-shadow:var(--neu-in)}
+.drawer{border-top:1px solid var(--hair)}
+.drawer .wrap{display:grid;gap:2px;padding-block:14px 26px}
+.drawer .big{font-family:var(--display);font-size:28px;text-decoration:none;padding:6px 0}
+.drawer .soc{margin-top:12px}
+@media (max-width:860px){
+  .mast{top:env(safe-area-inset-top,0px)}
+  .mast-top{height:64px;grid-template-columns:auto 1fr}
+  .mast-top>.soc,.mast-st,.mast-nav{display:none}
+  .logo{justify-self:start}
+  .logo img{width:132px}
+  .burger{display:grid}
+}
+
+/* ---------- hero (Sweater Weather split) ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--hair)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:clamp(600px,52vw,740px)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:24px;padding-block:clamp(48px,6vw,88px);padding-right:clamp(16px,4vw,64px)}
+.hero h1 em{font-style:italic}
+@media (min-width:861px){.hero-live{display:none}}
+.stage{position:relative;isolation:isolate;color:var(--cream);min-height:520px}
+.stage::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:0;right:-60vw;background:radial-gradient(110% 70% at 32% 0%,var(--black-hi) 0%,var(--black) 62%)}
+.stage .bag{position:absolute;inset:16px 0 30px}
+.stage-tag{position:absolute;top:24px;left:clamp(16px,2.4vw,30px);font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cream-2);line-height:1.9;z-index:2}
+.stage-tag b{display:block;color:var(--cream);font-weight:700}
+.hint{position:absolute;top:24px;right:clamp(16px,2.4vw,30px);font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--cream-2);z-index:2;transition:opacity .6s}
+.hint.gone{opacity:0}
+.flv-wrap{display:grid;gap:12px;margin-top:6px}
+.flv{display:flex;flex-wrap:wrap;gap:10px}
+.flv button{display:inline-flex;align-items:center;gap:9px;border:0;background:var(--paper);color:var(--muted);border-radius:999px;padding:10px 15px;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:var(--neu-sm);transition:color .3s,box-shadow .35s var(--ease),transform .35s var(--ease)}
+.flv button:hover{color:var(--ink);transform:translateY(-1px)}
+.flv button i{width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 0 3px var(--paper)}
+.flv button[aria-pressed="true"]{color:var(--ink);box-shadow:var(--neu-in);transform:none}
+.bag{display:flex;justify-content:center;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.bag svg{display:block;width:100%;height:100%;overflow:visible}
+.bag.live svg{cursor:grab}
+.bag.grab svg{cursor:grabbing}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);min-height:0}
+  .hero-copy{padding-right:0;padding-block:40px 44px}
+  .stage{min-height:min(620px,140vw);margin-left:calc(-1 * var(--side-l));margin-right:calc(-1 * var(--side-r))}
+  .stage::before{right:0}
+  .stage .bag{inset:12px 0 24px}
+}
+
+/* ---------- marquee ---------- */
+.mq{overflow:hidden;border-bottom:1px solid var(--hair);padding-block:18px;--skew:0deg}
+.mq-track{display:flex;width:max-content;transform:translate3d(0,0,0) skewX(var(--skew));will-change:transform}
+.mq-track span{display:inline-flex;align-items:center;gap:30px;padding-right:30px;font-family:var(--display);font-size:clamp(14px,1.3vw,18px);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap}
+.mq-track svg{width:34px;height:14px;color:var(--taupe);flex:none}
+
+/* ---------- sections ---------- */
+.sec{padding-block:clamp(80px,10vw,140px)}
+.sec-head{display:grid;gap:18px;margin-bottom:clamp(40px,6vw,72px)}
+.sec-head.center{justify-items:center;text-align:center}
+.sec-head.center .lead{margin-inline:auto}
+.band{background:var(--paper-2)}
+.hr{border-top:1px solid var(--hair)}
+
+/* doses */
+.doses{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,26px)}
+.dose{border-radius:26px;background:var(--paper);box-shadow:var(--neu);padding:clamp(22px,2.4vw,30px);display:grid;gap:12px;align-content:start;transition:box-shadow .45s var(--ease),transform .45s var(--ease)}
+.dose:hover{transform:translateY(-4px)}
+.dose:active{box-shadow:var(--neu-in);transform:none}
+.dose .ic{height:112px;display:flex;align-items:flex-end;margin-bottom:6px}
+.dose .ic svg{height:100%;width:auto;overflow:visible}
+.dose .big{font-family:var(--display);font-size:clamp(46px,4.4vw,62px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.dose .big small{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-left:8px;color:var(--muted)}
+.dose h3{font-size:23px}
+.dose .spec{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.dose p{font-size:15px;line-height:1.6;color:var(--muted)}
+.ico{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ico .fillq{fill:var(--paper-2);stroke:none}
+.ico .red{fill:var(--red);stroke:none}
+@media (max-width:1040px){.doses{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.doses{grid-template-columns:minmax(0,1fr)}}
+.cmp-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:center;margin-top:clamp(72px,9vw,128px)}
+.cmp-copy{display:grid;gap:18px;align-content:center}
+.cmp{position:relative;margin:0;width:100%;max-width:500px;justify-self:center;aspect-ratio:765/1024;overflow:hidden;border-radius:6px;box-shadow:var(--neu);--pos:50%;user-select:none;-webkit-user-select:none}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp .hd{clip-path:inset(0 0 0 var(--pos))}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:var(--white);pointer-events:none}
+.cmp .knob{position:absolute;top:50%;left:var(--pos);width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:var(--paper);box-shadow:0 10px 26px rgba(0,0,0,.28);display:grid;place-items:center;pointer-events:none;font-family:var(--sans);font-size:13px;letter-spacing:.1em}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.cmp:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:5px}
+.cmp .tg{position:absolute;bottom:14px;font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white);background:rgba(20,19,18,.6);padding:7px 11px;border-radius:999px;pointer-events:none}
+.cmp .tg.l{left:14px}
+.cmp .tg.r{right:14px}
+@media (max-width:860px){.cmp-wrap{grid-template-columns:minmax(0,1fr)}}
+
+/* transfusion story */
+.tx-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px)}
+.tx-stage{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--mast-nav) + 24px);height:min(76vh,740px);align-self:start}
+.plate{position:relative;height:100%;border-radius:32px;background:var(--paper-2);box-shadow:-14px -14px 30px var(--hl),16px 18px 36px var(--sh);overflow:hidden}
+.plate .bag{position:absolute;inset:0 0 64px;transform-origin:50% 56%;transition:transform 1.2s var(--ease-io)}
+.plate.zoom .bag{transform:scale(1.9)}
+.plate .now{position:absolute;left:0;right:0;bottom:20px;text-align:center;display:grid;gap:2px;justify-items:center}
+.plate .now b{font-family:var(--display);font-weight:400;font-size:20px}
+.tx-steps{display:grid;padding-bottom:12vh}
+.step{position:relative;min-height:74vh;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:40px 0 40px 30px;border-left:1px solid var(--hair)}
+.step::before{content:"";position:absolute;left:-1px;top:0;width:1px;height:0;background:var(--ink);transition:height 1s var(--ease)}
+.step.on::before{height:100%}
+.step figure{margin:0;width:min(100%,300px);aspect-ratio:4/5;overflow:hidden}
+.step figure img{width:100%;height:100%;object-fit:cover}
+.chip{display:inline-flex;align-self:flex-start;gap:8px;align-items:center;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:9px 14px;border-radius:999px;background:var(--paper-2);box-shadow:var(--neu-in)}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.anat{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.anat li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:15px;line-height:1.55;color:var(--muted)}
+.anat li b{font-family:var(--sans);font-size:10px;color:var(--ink);padding-top:3px}
+@media (max-width:860px){
+  .tx-grid{grid-template-columns:minmax(0,1fr);gap:0}
+  .tx-stage{top:calc(env(safe-area-inset-top,0px) + 72px);height:46vh;z-index:3}
+  .plate{border-radius:24px}
+  .plate .bag{inset:0 0 54px}
+  .step{min-height:84vh;justify-content:flex-end;padding:0 0 10vh 22px}
+  .step figure{width:min(100%,220px)}
+}
+
+/* signature rail */
+.sig-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:24px;margin-bottom:clamp(28px,4vw,44px)}
+.sig-head .row{flex-wrap:nowrap}
+.rail{display:flex;gap:clamp(12px,1.6vw,20px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-left:max(var(--side-l),calc((100% - var(--wrap))/2 + var(--gut)));padding-right:var(--side-r);scroll-padding-left:max(var(--side-l),calc((100% - var(--wrap))/2 + var(--gut)));padding-block:8px 34px;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{display:none}
+.rail.drag{scroll-snap-type:none;cursor:grabbing}
+.rail.drag .tile{pointer-events:none}
+.tile{flex:0 0 clamp(236px,23vw,290px);scroll-snap-align:start;background:var(--black);color:var(--cream);text-decoration:none;position:relative;display:block;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .7s var(--ease);box-shadow:0 22px 40px -24px rgba(0,0,0,.55)}
+.tile figure{margin:0;aspect-ratio:4/5;overflow:hidden;position:relative;background:#FEFEFE}
+.tile figure img{width:100%;height:100%;object-fit:cover;transition:scale 1s var(--ease)}
+.tile:hover figure img{scale:1.06}
+.tile::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.16),transparent 46%);opacity:0;transition:opacity .45s}
+.tile:hover::after{opacity:1}
+.tile .meta{padding:18px 20px 22px;display:grid;gap:6px}
+.tile h3{font-size:22px;letter-spacing:-.01em}
+.tile .s{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-2)}
+.tile .s .star{color:var(--taupe-lt)}
+.tile .d{font-family:var(--sans);font-size:12px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.steam{position:absolute;left:38%;top:0;width:24%;height:28%;overflow:visible;pointer-events:none}
+.steam path{fill:none;stroke:rgba(110,96,84,.38);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:60 120;animation:steam 3.6s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:1.2s}
+.steam path:nth-child(3){animation-delay:2.4s}
+@keyframes steam{0%{stroke-dashoffset:60;opacity:0;transform:translateY(10px)}25%{opacity:.9}100%{stroke-dashoffset:-120;opacity:0;transform:translateY(-14px)}}
+
+/* details (CEREAL journal) */
+.det-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,52px) clamp(8px,.8vw,12px)}
+.det{display:grid;gap:12px;align-content:start;text-align:center}
+.det figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--paper-2);position:relative}
+.det figure img{width:100%;height:100%;object-fit:cover}
+.det h3{font-size:13px;letter-spacing:.3em;text-transform:uppercase;margin-top:8px}
+.det .sub{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.det p{font-size:15px;color:var(--muted);line-height:1.6;max-width:28em;margin-inline:auto;padding-inline:10px}
+.det a{text-decoration:none}
+.type-tile{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:10px;padding:20px;box-shadow:var(--neu-in)}
+.clock{font-family:var(--display);font-size:clamp(46px,5vw,74px);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.clock small{font-size:.32em;letter-spacing:.1em;margin-left:6px}
+.bucket{display:flex;align-items:flex-end;gap:clamp(10px,1.6vw,18px)}
+.bucket span{display:grid;justify-items:center;gap:6px;font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.bucket svg{width:auto;overflow:visible}
+@media (max-width:900px){.det-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.det-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* snellen */
+.chart{display:grid;justify-items:center;gap:clamp(4px,.9vw,12px);padding-block:clamp(8px,2vw,24px)}
+.ln{position:relative;display:block;width:100%;text-align:center}
+.ln span{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;line-height:1.08;padding-left:.14em;background:linear-gradient(180deg,#B4966A 0%,#86683F 55%,#5F472A 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:blur(var(--b,0px)) drop-shadow(0 2px 1px rgba(60,40,20,.18))}
+.ln i{position:absolute;right:0;top:50%;transform:translateY(-50%);font-style:normal;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--muted);font-variant-numeric:tabular-nums}
+.ln:nth-child(1) span{font-size:clamp(46px,10vw,124px)}
+.ln:nth-child(2) span{font-size:clamp(38px,8.2vw,100px)}
+.ln:nth-child(3) span{font-size:clamp(26px,5.6vw,72px)}
+.ln:nth-child(4) span{font-size:clamp(22px,4.4vw,56px)}
+.ln:nth-child(5) span{font-size:clamp(17px,3.3vw,42px)}
+.ln:nth-child(6) span{font-size:clamp(14px,2.5vw,31px)}
+.ln:nth-child(7) span{font-size:clamp(12px,1.85vw,23px)}
+@media (max-width:700px){.ln i{display:none}}
+
+/* crash cart */
+.cc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,110px);align-items:center}
+.cc+.cc{margin-top:clamp(80px,10vw,140px)}
+.cc .shot{position:relative;margin:0;isolation:isolate;width:min(100%,500px);justify-self:center}
+.clip{display:block;overflow:hidden}
+.cc .shot::before{content:"";position:absolute;z-index:-1;inset:9% -6% -6% 9%;border:1px solid var(--ink)}
+.cc.alt .shot::before{inset:-7% 14% 12% -7%;border:0;background:var(--black)}
+.cc.alt .copy{order:-1}
+.cc .shot img{width:100%;aspect-ratio:var(--ar,4/5);object-fit:cover}
+.cc .copy{display:grid;gap:16px;align-content:center}
+.cc .price{font-family:var(--display);font-size:clamp(30px,3vw,42px);line-height:1}
+.cc dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 20px;margin:6px 0 0;font-size:15px}
+.cc dt{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.cc dd{margin:0}
+.kitchen{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0;margin-top:clamp(80px,10vw,140px);border-radius:28px;background:var(--paper);box-shadow:var(--neu);overflow:hidden}
+.kitchen figure{margin:0;min-height:260px}
+.kitchen figure img{width:100%;height:100%;object-fit:cover}
+.kitchen .copy{padding:clamp(24px,4vw,52px);display:grid;gap:14px;align-content:center}
+@media (max-width:860px){.cc,.kitchen{grid-template-columns:minmax(0,1fr)}.cc.alt .copy{order:0}.cc .shot{width:88%;justify-self:start}}
+
+/* branches */
+.map{background:var(--paper-2);border-block:1px solid var(--hair);margin-bottom:clamp(36px,5vw,60px)}
+.map-in{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,56px);padding-block:clamp(16px,2.6vw,36px)}
+.map-scroll{overflow-x:auto;scrollbar-width:thin}
+.map svg{display:block;width:100%;min-width:620px;height:auto}
+.map .box{border:1px solid var(--ink);padding:22px 30px;text-align:center;display:grid;gap:6px}
+.map .box b{font-family:var(--display);font-weight:400;font-size:13px;letter-spacing:.3em;text-transform:uppercase}
+.map .box span{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:900px){.map-in{grid-template-columns:minmax(0,1fr)}.map .box{justify-self:start}}
+.mp-line{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.mp-sea{fill:none;stroke:var(--taupe);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:2 9}
+.mp-st{fill:var(--white);stroke:var(--ink);stroke-width:2.6}
+.mp-st.soon{stroke-dasharray:3 4;fill:var(--paper-2)}
+.mp-name{font-family:var(--display);font-size:15px;letter-spacing:.24em;text-transform:uppercase;fill:var(--ink)}
+.mp-sub{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;fill:var(--muted)}
+.mp-isl{font-family:var(--display);font-size:60px;letter-spacing:.22em;fill:var(--ink);opacity:.07}
+.mp-pulse{fill:none;stroke:var(--ok);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:mp 2.4s var(--ease) infinite}
+@keyframes mp{from{transform:scale(.6);opacity:.9}to{transform:scale(2.2);opacity:0}}
+.map a:focus-visible .mp-st{stroke-width:4}
+.br-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,.9vw,12px)}
+.br{display:grid;gap:10px;align-content:start;text-align:center;text-decoration:none}
+.br figure{margin:0;aspect-ratio:3/4;overflow:hidden;background:var(--paper-2)}
+.br figure img{width:100%;height:100%;object-fit:cover;transition:scale 1s var(--ease)}
+.br:hover figure img{scale:1.05}
+.br h3{font-size:13px;letter-spacing:.3em;text-transform:uppercase;margin-top:6px}
+.br .sub{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.br .st{justify-self:center}
+.br.soon figure{display:grid;place-items:center;align-content:center;gap:10px;background:transparent;border:1px dashed var(--hair);box-shadow:var(--neu-in)}
+.br.soon figure b{font-family:var(--display);font-weight:400;font-size:clamp(28px,2.6vw,36px);font-style:italic}
+@media (max-width:1100px){.br-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.br-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* rooms teaser */
+.rt{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.rt a{display:grid;gap:8px;align-content:start;padding:26px 24px;border-radius:24px;background:var(--paper);box-shadow:var(--neu);text-decoration:none;transition:box-shadow .45s var(--ease),transform .45s var(--ease)}
+.rt a:hover{transform:translateY(-4px)}
+.rt a:active{box-shadow:var(--neu-in);transform:none}
+.rt b{font-weight:400;font-size:23px;line-height:1.2}
+.rt span{font-size:14.5px;color:var(--muted);line-height:1.55}
+.rt em{font-style:normal;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+@media (max-width:1040px){.rt{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.rt{grid-template-columns:minmax(0,1fr)}}
+
+/* story */
+.story-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:end}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px);margin-top:clamp(40px,6vw,64px)}
+.fact{padding:28px 26px;border-radius:24px;background:var(--paper);box-shadow:var(--neu-in);display:grid;gap:10px;align-content:start}
+.fact b{font-family:var(--display);font-weight:400;font-size:clamp(38px,4vw,54px);line-height:1;font-variant-numeric:tabular-nums}
+.fact span{font-size:15px;color:var(--muted);line-height:1.55}
+@media (max-width:860px){.story-grid,.facts{grid-template-columns:minmax(0,1fr)}}
+
+/* contact (Sweater Weather newsletter) */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.visit{display:grid;margin-top:30px;border-top:1px solid var(--hair)}
+.visit a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 18px;padding:16px 0;border-bottom:1px solid var(--hair);text-decoration:none;transition:padding .45s var(--ease)}
+.visit a:hover{padding-left:10px}
+.visit b{font-weight:400;font-size:20px}
+.visit span{grid-column:1;font-size:14px;color:var(--muted);line-height:1.5}
+.visit em{grid-column:2;grid-row:1/span 3;align-self:center;font-style:normal;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.2em}
+.form{padding:clamp(24px,3vw,40px);background:var(--white);border:1px solid var(--hair);display:grid;gap:16px}
+.form h3{font-size:26px}
+.field{display:grid;gap:6px}
+.field label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--hair);background:var(--paper);padding:12px 14px;font-size:16px;border-radius:0;transition:border-color .25s,box-shadow .3s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);box-shadow:var(--neu-in)}
+.field textarea{min-height:120px;resize:vertical}
+.status{font-size:15px;line-height:1.6;padding:14px 16px;background:var(--paper-2)}
+.status pre{white-space:pre-wrap;font-family:var(--sans);font-size:13px;margin:10px 0 0}
+@media (max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* footer (CEREAL) */
+footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
+.foot{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px clamp(20px,3vw,40px)}
+.foot a{font-family:var(--display);font-size:11px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none}
+.foot .flogo img{width:130px}
+.foot .soc a{width:34px}
+.legal{margin-top:34px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;font-family:var(--sans);font-size:11px;color:var(--muted);text-align:center}
+
+/* placeholders */
+.ph{width:100%;height:100%;min-height:200px;display:grid;place-items:center;align-content:center;gap:10px;padding:24px;text-align:center;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(26,26,26,.03) 14px 15px),var(--paper-2);border:1px dashed var(--hair);color:var(--muted)}
+.ph svg{width:26px;height:26px}
+.ph .t{font-size:14px;line-height:1.5;max-width:24em}
+.ph .K{font-family:var(--display);font-size:64px;line-height:1;color:var(--ink);opacity:.16}
+
+/* ---------- branch pages ---------- */
+.crumbs{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;padding-block:20px;border-bottom:1px solid var(--hair)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tabs a{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:9px 14px;border-radius:999px;color:var(--muted);transition:box-shadow .3s,color .3s}
+.tabs a:hover{color:var(--ink);box-shadow:var(--neu-sm)}
+.tabs a[aria-current="page"]{color:var(--ink);box-shadow:var(--neu-in)}
+.b-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,7vw,110px);align-items:center;padding-block:clamp(48px,7vw,96px)}
+.b-copy{display:grid;gap:20px;align-content:center;justify-items:start}
+.b-copy .lg{width:150px}
+.frame{position:relative;margin:0;isolation:isolate}
+.frame::before{content:"";position:absolute;z-index:-1;inset:8% -6% -6% 8%;border:1px solid var(--ink)}
+.frame img,.frame .ph{width:100%;aspect-ratio:4/5;object-fit:cover}
+.b-hero .frame,.r-hero .frame{width:min(100%,440px);justify-self:center}
+.b-info{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);padding-block:clamp(48px,6vw,80px);border-top:1px solid var(--hair)}
+.cells{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--hair);align-content:start}
+.cell{padding:20px 20px 20px 0;border-bottom:1px solid var(--hair);display:grid;gap:8px;align-content:start;justify-items:start}
+.cell.r{padding-left:20px;border-left:1px solid var(--hair)}
+.cell.wide{grid-column:1/-1;padding-left:0;border-left:0}
+.cell p{font-size:16px;line-height:1.6}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border-radius:999px;background:var(--paper);box-shadow:var(--neu-sm)}
+.b-panel{padding:clamp(24px,3vw,36px);border-radius:28px;background:var(--paper);box-shadow:var(--neu);display:grid;gap:14px;align-content:start}
+.b-panel ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.b-panel li{padding-left:22px;position:relative;font-size:15px;line-height:1.55}
+.b-panel li::before{content:"+";position:absolute;left:0;top:0;color:var(--taupe);font-family:var(--sans);font-weight:700}
+.b-panel .about{font-size:15.5px;color:var(--muted);line-height:1.65}
+.b-gal{padding-block:0 clamp(48px,6vw,80px)}
+.b-wide img,.b-wide .ph{width:100%;aspect-ratio:16/7;object-fit:cover}
+.b-trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,.9vw,12px);margin-top:clamp(8px,.9vw,12px)}
+.b-trio figure{margin:0;display:grid;gap:10px;align-content:start;overflow:hidden}
+.b-trio img,.b-trio .ph{width:100%;aspect-ratio:4/5;object-fit:cover}
+.b-trio figcaption,.b-wide figcaption{font-family:var(--display);font-size:11px;letter-spacing:.3em;text-transform:uppercase;text-align:center}
+.b-wide{margin:0;display:grid;gap:10px;overflow:hidden}
+.b-next{display:grid;justify-items:center;gap:10px;padding-block:clamp(56px,8vw,110px);border-top:1px solid var(--hair);text-align:center;text-decoration:none}
+.b-next b{font-family:var(--display);font-weight:400;font-size:clamp(38px,6vw,82px);line-height:1.05;transition:letter-spacing .7s var(--ease)}
+.b-next:hover b{letter-spacing:.02em}
+@media (max-width:860px){.b-hero,.b-info{grid-template-columns:minmax(0,1fr)}.cells{grid-template-columns:minmax(0,1fr)}.cell.r{padding-left:0;border-left:0}.b-trio{grid-template-columns:minmax(0,1fr)}.b-wide img,.b-wide .ph{aspect-ratio:4/3}.frame,.b-hero .frame,.r-hero .frame{width:88%;justify-self:start}}
+
+/* ---------- rooms ---------- */
+.r-hero .frame,.r-icu .frame{width:min(100%,520px);justify-self:center}
+.r-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,7vw,110px);align-items:center;padding-block:clamp(48px,7vw,96px)}
+.r-hero .copy{display:grid;gap:20px;justify-items:start}
+.r-band{background:var(--black);color:var(--cream)}
+.r-band .wrap{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(24px,5vw,72px);align-items:center;padding-block:clamp(56px,7vw,96px)}
+.r-band .stack{font-family:var(--display);font-size:clamp(28px,3.4vw,46px);line-height:1.08;letter-spacing:.14em}
+.r-band h2{font-size:clamp(28px,3vw,42px)}
+.r-band p{color:var(--cream-2);font-size:15px;line-height:1.7}
+.rooms-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:30px}
+.pick{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pick label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.pick select{-webkit-appearance:none;appearance:none;padding:13px 46px 13px 20px;border:0;border-radius:999px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231A1A1A' stroke-width='1.5'/%3E%3C/svg%3E") right 18px center/12px 8px no-repeat;box-shadow:var(--neu-sm);font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.pick .count{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+.room-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,32px)}
+.room{border-radius:28px;background:var(--paper);box-shadow:var(--neu);overflow:hidden;display:grid;align-content:start}
+.room figure{margin:0;position:relative;aspect-ratio:16/10;overflow:hidden}
+.room figure img,.room figure .ph{width:100%;height:100%;object-fit:cover;border:0}
+.badge{position:absolute;top:14px;left:14px;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:var(--paper);padding:7px 12px;border-radius:999px}
+.rhead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:22px 24px;align-items:center}
+.rhead h3{font-size:26px}
+.rhead .sub{grid-column:1;font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.rhead .rate{grid-column:1;font-size:14px;color:var(--taupe)}
+.plus{grid-column:2;grid-row:1/span 3;width:46px;height:46px;border-radius:50%;border:0;background:var(--paper);box-shadow:var(--neu-sm);cursor:pointer;font-size:22px;line-height:1;transition:transform .45s var(--ease),box-shadow .3s}
+.plus[aria-expanded="true"]{transform:rotate(45deg);box-shadow:var(--neu-in)}
+.more{padding:0 24px 24px;display:grid;gap:14px}
+.more:not([hidden]){animation:unfold .55s var(--ease)}
+@keyframes unfold{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.more .tags{display:flex;flex-wrap:wrap;gap:8px}
+.more .tags span{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:999px;box-shadow:var(--neu-in)}
+.empty{grid-column:1/-1;padding:clamp(28px,4vw,48px);border-radius:28px;box-shadow:var(--neu-in);display:grid;gap:12px;justify-items:start}
+.r-icu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,7vw,110px);align-items:center;padding-block:clamp(64px,8vw,110px)}
+.r-icu .copy{display:grid;gap:18px;justify-items:start}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px);counter-reset:s}
+.steps li{counter-increment:s;padding:28px 26px;border-radius:24px;background:var(--paper);box-shadow:var(--neu);display:grid;gap:8px;align-content:start}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:46px;line-height:1;color:var(--taupe)}
+.steps b{font-weight:400;font-size:21px}
+.steps span{font-size:15px;color:var(--muted);line-height:1.55}
+@media (max-width:860px){.r-hero,.r-icu{grid-template-columns:minmax(0,1fr)}.r-hero .frame,.r-icu .frame{width:88%;justify-self:start}.room-grid,.steps{grid-template-columns:minmax(0,1fr)}.r-band .wrap{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- menu ---------- */
+.m-head{padding-block:clamp(48px,7vw,96px) clamp(28px,4vw,44px);display:grid;gap:18px;justify-items:center;text-align:center}
+.menu-bar{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--mast-nav));z-index:20;background:var(--paper-glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-block:1px solid var(--hair)}
+.menu-bar .wrap{display:flex;gap:12px;align-items:center;padding-block:10px}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0;padding:6px 4px}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:9px 14px;border-radius:999px;color:var(--muted);transition:box-shadow .3s,color .3s}
+.chips a:hover{color:var(--ink);box-shadow:var(--neu-sm)}
+.bestbtn{flex:none;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px 16px;border-radius:999px;border:0;background:var(--paper);box-shadow:var(--neu-sm);cursor:pointer;transition:box-shadow .3s,color .3s}
+.bestbtn[aria-pressed="true"]{box-shadow:var(--neu-in);color:var(--taupe)}
+.cols{columns:3 300px;column-gap:clamp(28px,4vw,56px);padding-block:clamp(36px,5vw,64px)}
+.cat{break-inside:avoid;margin-bottom:clamp(30px,4vw,44px);scroll-margin-top:150px}
+.cat h3{font-size:13px;letter-spacing:.3em;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.cat h3 small{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.14em;color:var(--muted)}
+.cat table{width:100%;font-size:15.5px}
+.cat th{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:right;padding:10px 0 4px 10px}
+.cat td{padding:7px 0;border-bottom:1px dotted var(--hair);vertical-align:baseline}
+.cat td+td{text-align:right;padding-left:10px;font-variant-numeric:tabular-nums;white-space:nowrap;width:1%}
+.cat td.na{color:var(--hair)}
+.star{color:var(--taupe);margin-left:6px;font-size:.85em}
+.cols tr{transition:opacity .4s}
+.cols.best tr.reg{opacity:.25}
+.menu-foot{display:grid;gap:6px;padding-block:28px 72px;border-top:1px solid var(--hair);font-size:14px;color:var(--muted);text-align:center}
+
+/* drinks shelf (menu page) */
+.shelf{padding-block:clamp(8px,2vw,24px) clamp(56px,7vw,96px)}
+.shelf-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 28px;margin-bottom:clamp(24px,3vw,40px)}
+.shelf-head h2{font-size:clamp(30px,3.4vw,46px)}
+.shelf-f{display:flex;flex-wrap:wrap;gap:8px}
+.shelf-f button{border:0;background:var(--paper);box-shadow:var(--neu-sm);border-radius:999px;padding:10px 15px;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:box-shadow .35s var(--ease),color .3s}
+.shelf-f button:hover{color:var(--ink)}
+.shelf-f button[aria-pressed="true"]{box-shadow:var(--neu-in);color:var(--ink)}
+.shelf-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.drink{margin:0;display:grid;gap:10px;align-content:start;text-align:center}
+.drink .pic{display:block;aspect-ratio:3/4;overflow:hidden;background:#FEFEFE;border-radius:18px;box-shadow:var(--neu-sm);transition:box-shadow .5s var(--ease),transform .5s var(--ease)}
+.drink .pic img{width:100%;height:100%;object-fit:cover;transition:scale .9s var(--ease)}
+.drink:hover .pic{transform:translateY(-4px);box-shadow:var(--neu)}
+.drink:hover .pic img{scale:1.05}
+.drink h3{font-size:17px;letter-spacing:.02em}
+.drink .star{font-size:.8em}
+.drink .pr{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--taupe);font-variant-numeric:tabular-nums}
+.drink.in{animation:up .6s var(--ease) backwards;animation-delay:var(--d,0ms)}
+.shelf-note{margin-top:20px;text-align:center}
+@media (max-width:1000px){.shelf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.drink h3{font-size:15px}}
+
+/* ---------- motion: everything rests visible; animations play as an element arrives ---------- */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .12em 0;margin:0 -.06em -.12em 0}
+.wi{display:inline-block}
+@media (prefers-reduced-motion:no-preference){
+  [data-anim].play{animation:up .95s var(--ease) backwards;animation-delay:var(--d,0ms)}
+  [data-anim="wipe"].play{animation:wipe 1.25s var(--ease-io) backwards;animation-delay:var(--d,0ms)}
+  [data-anim="wipe"].play img{animation:zoomout 1.9s var(--ease) backwards;animation-delay:var(--d,0ms)}
+  [data-anim="split"].play,[data-anim="kids"].play,[data-anim="draw"].play,[data-anim="count"].play{animation:none}
+  [data-anim="split"].play .wi{animation:rise 1s var(--ease) backwards;animation-delay:calc(var(--i,0) * 55ms + var(--d,0ms))}
+  [data-anim="kids"].play>*{animation:up .9s var(--ease) backwards;animation-delay:calc(var(--i,0) * 95ms + var(--d,0ms))}
+}
+@keyframes up{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes wipe{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes zoomout{from{scale:calc(var(--s,1) * 1.18)}to{scale:var(--s,1)}}
+[data-px]{--s:1.12;scale:var(--s)}
+@keyframes rise{from{transform:translateY(112%)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3c.4 2.3 1.8 3.8 4.1 4.1v3.3c-1.5 0-2.9-.4-4.1-1.2v6.2a5.9 5.9 0 1 1-5.9-5.9h.4v3.4h-.4a2.5 2.5 0 1 0 2.5 2.5V3h3.4z"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.6 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21h3.1z"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M4 8h3l1.6-2.4h6.8L17 8h3v11H4z"/><circle cx="12" cy="13.2" r="3.6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-ecg" viewBox="0 0 34 14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7h9l2-4 3 9 3-11 3 9 2-3h10"/></symbol>
+</svg>
+
+<div class="pre" id="pre" hidden aria-hidden="true">
+  <img src="assets/mark-ink.png" alt="" width="320" height="320">
+  <svg viewBox="0 0 320 42"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M2 24h96l8-14 10 28 12-36 12 34 8-12h40l6-8 6 8h118"/></svg>
+  <span class="pc" id="prePc">Preparing your dose 0%</span>
+</div>
+<script>
+/* Decide on the intro before first paint: once per visit, never with reduced motion. */
+(function(){ try{
+  var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches, seen = false;
+  try{ seen = sessionStorage.getItem('dc-intro') === '1'; }catch(e){}
+  if (!rm && !seen){ document.getElementById('pre').hidden = false; document.documentElement.classList.add('intro'); }
+}catch(e){} })();
+</script>
+<div class="curtain" id="curtain" aria-hidden="true"><img src="assets/mark-ink.png" alt="" width="320" height="320"></div>
+<div class="cur" id="cur" aria-hidden="true"><span class="ring"><em id="curTxt"></em></span><span class="dot"></span></div>
+<div class="iv" aria-hidden="true"><span class="ch"><i></i></span><span class="tr"><b id="ivBar"></b></span><span class="pc" id="ivPc">Dose 0%</span></div>
+<a class="skip" href="#main" id="skip">Skip to content</a>
+
+<header class="mast" id="mast">
+  <div class="wrap mast-top">
+    <nav class="soc" aria-label="Dr. Coffee on social media">
+      <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+      <a href="https://www.tiktok.com/@drcoffeecebu" target="_blank" rel="noopener" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
+      <a href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+    </nav>
+    <a class="logo" href="#home" aria-label="Dr. Coffee home"><img src="assets/logo-ink.png" alt="Dr. Coffee" width="1196" height="474"></a>
+    <div class="mast-st"><span class="over">Cebu City &middot; Mandaue &middot; Talisay soon</span></div>
+    <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="drawer"><span class="sr">Open navigation</span><i aria-hidden="true"></i></button>
+  </div>
+  <nav class="mast-nav" aria-label="Main">
+    <div class="wrap">
+      <a class="mini" href="#home" aria-label="Back to the top" tabindex="-1"><img src="assets/mark-ink.png" alt="" width="320" height="320"></a>
+      <a href="#branches" data-nav="branches">Branches</a>
+      <a href="#transfusion" data-nav="transfusion">Transfusion</a>
+      <a href="#rooms" data-nav="rooms">Rooms</a>
+      <a href="#menu" data-nav="menu">Menu</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </div>
+  </nav>
+  <div class="drawer" id="drawer" hidden>
+    <div class="wrap">
+      <a class="big" href="#branches">Branches</a><a class="big" href="#transfusion">Transfusion</a><a class="big" href="#rooms">Rooms</a><a class="big" href="#menu">Menu</a><a class="big" href="#contact">Contact</a>
+      <nav class="soc" aria-label="Social media">
+        <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+        <a href="https://www.tiktok.com/@drcoffeecebu" target="_blank" rel="noopener" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
+        <a href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- =============== HOME =============== -->
+<div class="view" data-view="home">
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="over" data-anim>Coffee by the dose · Cebu</p>
+        <h1 data-anim="split">Your daily <em>&ldquo;dose&rdquo;</em> of remedy.</h1>
+        <p class="lead" data-anim style="--d:300ms">A hospital-inspired café where sizes are doses and the signature drink comes in a Transfusion bag. Brewed with care, and tested before it reaches your cup.</p>
+        <div class="row" data-anim style="--d:450ms"><a class="btn solid" data-magnetic href="#dose">Choose your dose <span class="arr" aria-hidden="true">&rarr;</span></a><a class="btn" data-magnetic href="#branches">Find a branch</a></div>
+        <div class="flv-wrap" data-anim style="--d:620ms"><p class="over">Try the Transfusion in</p><div class="flv" id="heroFlv" role="group" aria-label="Transfusion flavour"></div></div>
+      </div>
+      <div class="stage dark">
+        <p class="stage-tag">The Transfusion<b>Iced &middot; &#8369;260</b></p>
+        <p class="hint" id="heroHint" aria-hidden="true">Drag to swing</p>
+        <div class="bag" id="heroBag" role="img" aria-label="An animated Transfusion bag: a clear IV-style bag of Spanish Latte with a sipping tube, a white clamp and the Dr. Coffee label."></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mq" aria-label="Brewed with care. Choose your dose. Tested before it reaches your cup.">
+    <div class="mq-track" id="mqTrack" aria-hidden="true"></div>
+  </div>
+
+  <section class="sec" id="dose">
+    <div class="wrap">
+      <header class="sec-head center">
+        <p class="label rule" data-anim>The dose system</p>
+        <h2 data-anim="split">Choose your dose.</h2>
+        <p class="lead" data-anim style="--d:200ms">Every drink is measured in doses. Pick the one your day calls for, from a 12 oz Low Dose to a one-litre Overdose for the table.</p>
+      </header>
+      <div class="doses" data-anim="kids">
+        <article class="dose">
+          <div class="ic" data-anim="draw"><svg class="ico" viewBox="0 0 90 120" aria-hidden="true"><path class="fillq" d="M24 70h42l-3.6 42H27.6z"/><path d="M22 44c6-10 40-10 46 0"/><path d="M18 46h54"/><path d="M21 48l7 64h34l7-64"/><path d="M52 18l-6 40"/><path d="M30 78l8-2 2 8-8 2z"/><path d="M46 86l7-3 3 7-7 3z"/></svg></div>
+          <div class="big"><span data-count="12">12</span><small>oz</small></div>
+          <h3>Low Dose</h3>
+          <span class="spec">355 ml &middot; from &#8369;120</span>
+          <p>The everyday cup: classic brews, espresso drinks and coffee-free favourites.</p>
+        </article>
+        <article class="dose">
+          <div class="ic" data-anim="draw"><svg class="ico" viewBox="0 0 90 120" aria-hidden="true"><path class="fillq" d="M21 52h48l-4.8 60H25.8z"/><path d="M20 26c6-11 44-11 50 0"/><path d="M16 28h58"/><path d="M19 30l7 82h38l7-82"/><path d="M53 2l-6 40"/><path d="M28 64l8-2 2 8-8 2z"/><path d="M48 74l7-3 3 7-7 3z"/><path d="M33 90l7-2 2 7-7 2z"/></svg></div>
+          <div class="big"><span data-count="16">16</span><small>oz</small></div>
+          <h3>High Dose</h3>
+          <span class="spec">473 ml &middot; from &#8369;160</span>
+          <p>The same drink, more of it, for long shifts and late study nights.</p>
+        </article>
+        <article class="dose" id="overdose">
+          <div class="ic" data-anim="draw"><svg class="ico" viewBox="0 0 90 120" aria-hidden="true"><path class="fillq" d="M24 46h42v58a8 8 0 0 1-8 8H32a8 8 0 0 1-8-8z"/><path d="M36 2h18v12H36z"/><path d="M38 14v10c0 4-14 8-14 18v62a8 8 0 0 0 8 8h26a8 8 0 0 0 8-8V42c0-10-14-14-14-18V14"/><path d="M28 60h34v30H28z"/><path d="M33 68v12M33 68h4a3 3 0 0 1 0 6h-4M36 74l5 6M39 80l-4 4"/><path d="M44 70h14M44 76h14M44 82h10"/></svg></div>
+          <div class="big"><span data-count="1000" data-fmt="ml">1,000</span><small>ml</small></div>
+          <h3>Overdose</h3>
+          <span class="spec">1 litre &middot; from &#8369;360</span>
+          <p>A full litre in a prescription bottle for the table, good for three to four.</p>
+        </article>
+        <article class="dose">
+          <div class="ic" data-anim="draw"><svg class="ico" viewBox="0 0 90 120" aria-hidden="true"><path class="fillq" d="M16 50h58v40l-14 14H30L16 90z"/><path d="M30 2v22"/><path d="M27 12h6v8h-6z"/><path d="M58 14v10"/><path d="M22 24h46l6 6v60l-14 14H30L16 90V30z"/><path d="M22 54h46v28H22z"/><path class="red" d="M58 57h7v7h-7z"/><path d="M26 62h12M26 68h18M26 74h10M48 64l2 2 4-5"/><path d="M38 104h14v10H38z"/></svg></div>
+          <div class="big"><span data-count="4">4</span><small>flavours</small></div>
+          <h3>Transfusion</h3>
+          <span class="spec">Iced bag &middot; &#8369;260</span>
+          <p>The signature bag, with a tube to sip from. Spanish Latte, Green Apple Yakult, Cold Brew or Vietnamese.</p>
+        </article>
+      </div>
+
+      <div class="cmp-wrap">
+        <div class="cmp-copy">
+          <p class="label rule" data-anim>Same drink, two doses</p>
+          <h3 data-anim="split" style="font-size:clamp(30px,3.4vw,46px)">Low Dose or High Dose?</h3>
+          <p class="lead" data-anim style="--d:150ms">Drag across the cup to compare 12 oz and 16 oz. This is a Caramel Macchiato, one of our best sellers, in the Rx cup with its name written under the prescription mark.</p>
+          <p class="small" data-anim style="--d:250ms">Hot drinks come in their own cup. Low and High Dose prices are on the <a href="#menu">menu</a>.</p>
+        </div>
+        <figure class="cmp" id="cmp" data-anim="wipe">
+          <img src="assets/cm-ld.jpg" alt="Caramel Macchiato in a Low Dose Rx cup." width="765" height="1024" loading="lazy">
+          <img class="hd" src="assets/cm-hd.jpg" alt="The same Caramel Macchiato in a taller High Dose Rx cup." width="765" height="1024" loading="lazy">
+          <span class="bar" aria-hidden="true"></span><span class="knob" aria-hidden="true">&harr;</span>
+          <span class="tg l" aria-hidden="true">Low &middot; 12 oz</span><span class="tg r" aria-hidden="true">High &middot; 16 oz</span>
+          <input type="range" id="cmpIn" min="0" max="100" value="50" aria-label="Compare Low Dose and High Dose. Move left to see more of the High Dose cup.">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="transfusion">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="label rule" data-anim>The Transfusion</p>
+        <h2 data-anim="split">Brewed to save your day.</h2>
+        <p class="lead" data-anim style="--d:200ms">Our signature iced drink comes in a clear IV-style bag with a tube to sip from and a white label, ticked for your drink. Four flavours, &#8369;260 each.</p>
+      </header>
+      <div class="tx-grid">
+        <div class="tx-stage">
+          <div class="plate" id="txPlate">
+            <div class="bag" id="txBag" role="img" aria-label="The Transfusion bag changing flavour as you scroll."></div>
+            <p class="now" aria-live="polite"><span class="over">Now showing</span><b id="txNow">Spanish Latte</b></p>
+          </div>
+        </div>
+        <div class="tx-steps" id="txSteps">
+          <article class="step on" data-flavor="spanish-latte">
+            <span class="chip" style="--c:#CBA37A"><i></i>Spanish Latte</span>
+            <h3>Espresso, milk and a sweet, creamy finish.</h3>
+            <p class="lead">The bag in our photos. Iced, with a layer of foam on top.</p>
+            <figure data-anim="wipe"><img src="assets/p-statbag.jpg" alt="A Spanish Latte Transfusion bag held up by its tube against green leaves." width="880" height="1100" loading="lazy" data-px="0.06"></figure>
+          </article>
+          <article class="step" data-flavor="green-apple-yakult">
+            <span class="chip" style="--c:#BCD34B"><i></i>Green Apple Yakult</span>
+            <h3>Green apple and Yakult, bright and cold.</h3>
+            <p class="lead">From our coffee-free list, in the same bag and the same label.</p>
+            <figure data-anim="wipe"><img src="assets/p-tb-green.jpg" alt="A Green Apple Yakult Transfusion bag held by its tube." width="880" height="1100" loading="lazy" data-px="0.06"></figure>
+          </article>
+          <article class="step" data-flavor="cold-brew">
+            <span class="chip" style="--c:#56341F"><i></i>Cold Brew</span>
+            <h3>Coffee steeped cold, poured over ice.</h3>
+            <p class="lead">Dark and smooth. On the label it gets the Cold Brew tick.</p>
+          </article>
+          <article class="step" data-flavor="vietnamese">
+            <span class="chip" style="--c:#A07046"><i></i>Vietnamese</span>
+            <h3>Strong coffee with condensed milk.</h3>
+            <p class="lead">The Vietnamese way, iced in a bag.</p>
+          </article>
+          <article class="step" data-flavor="label">
+            <span class="chip" style="--c:var(--red)"><i></i>Read the label</span>
+            <h3>Every bag wears the same white label.</h3>
+            <ul class="anat">
+              <li><b>01</b><span>&ldquo;100% Arabica&rdquo; in the top corner.</span></li>
+              <li><b>02</b><span>&ldquo;Brewed to save your day&rdquo; beside a red cross.</span></li>
+              <li><b>03</b><span>A checklist with your drink ticked.</span></li>
+              <li><b>04</b><span>A heartbeat signature and a barcode.</span></li>
+            </ul>
+            <div class="row"><a class="btn solid" data-magnetic href="#menu">See the menu <span class="arr" aria-hidden="true">&rarr;</span></a></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="signatures">
+    <div class="wrap sig-head">
+      <div class="sec-head" style="margin:0">
+        <p class="label rule" data-anim>Signature doses</p>
+        <h2 data-anim="split">From the counter.</h2>
+        <p class="lead" data-anim style="--d:200ms">The drinks people come back for. Drag the row or use the arrows, or <a href="#menu">see every drink</a>.</p>
+      </div>
+      <div class="row"><button class="round" type="button" id="railPrev" aria-label="Scroll back">&larr;</button><button class="round" type="button" id="railNext" aria-label="Scroll forward">&rarr;</button></div>
+    </div>
+    <div class="rail" id="rail" data-cursor="Drag"></div>
+  </section>
+
+  <section class="sec band" id="details">
+    <div class="wrap">
+      <header class="sec-head center">
+        <p class="label rule" data-anim>The details</p>
+        <h2 data-anim="split">What makes it Dr. Coffee.</h2>
+      </header>
+      <div class="det-grid">
+        <article class="det" data-anim>
+          <figure data-anim="wipe"><img src="assets/cm-ld.jpg" alt="An Rx cup with Caramel Macchiato written by hand under the Rx mark." width="765" height="1024" loading="lazy" style="object-position:50% 58%"></figure>
+          <h3>The Rx cup</h3><span class="sub">Your drink, by name</span>
+          <p>Cups carry an Rx label with your drink written underneath and a Sig. line, like a prescription slip.</p>
+        </article>
+        <article class="det" data-anim style="--d:100ms">
+          <figure data-anim="wipe" style="background:#FEFEFE"><img src="assets/s-1l.jpg" alt="The one-litre Overdose bottle in its Dr. Coffee label." width="900" height="1200" loading="lazy" style="object-fit:contain"></figure>
+          <h3>The Overdose bottle</h3><span class="sub">One litre</span>
+          <p>A full litre in a labelled bottle, made for the table and good for three to four.</p>
+        </article>
+        <article class="det" data-anim style="--d:200ms">
+          <figure data-anim="wipe"><img src="assets/casa-mira-occupied.jpg" alt="A laptop and iced drink beside a card reading: Hi! This seat is occupied." loading="lazy"></figure>
+          <h3>The Intensive Work Unit</h3><span class="sub">Casa Mira</span>
+          <p>Curtained work stations past the dining floor. A card on your desk tells everyone the seat is taken.</p>
+        </article>
+        <article class="det" data-anim>
+          <figure data-anim="wipe"><img src="assets/cebu-main-lounge.jpg" alt="A long shared table, a sofa and warm cove lighting at Cebu Main." loading="lazy"></figure>
+          <h3>Rooms that open in turn</h3><span class="sub">Cebu Main</span>
+          <p>The Conference Room opens first, then the Dr&rsquo;s Lounge, then the Portal Space as the café fills.</p>
+        </article>
+        <article class="det" data-anim style="--d:100ms">
+          <figure data-anim="wipe" style="background:#FEFEFE"><img src="assets/s-cafe-latte.jpg" alt="An iced Café Latte in the Dr. Coffee botanical sleeve." width="900" height="1200" loading="lazy" style="object-position:50% 58%"></figure>
+          <h3>The botanical sleeve</h3><span class="sub">Every iced dose</span>
+          <p>Coffee leaves, beans and cups drawn in line art wrap every iced cup, with the logo front and centre.</p>
+        </article>
+        <article class="det" data-anim style="--d:200ms">
+          <figure><div class="type-tile">
+            <div class="bucket" aria-hidden="true">
+              <span><svg class="ico" viewBox="0 0 40 40" style="height:34px"><path d="M6 10h28l-4 26H10z"/><path d="M4 10h32"/></svg>Micro</span>
+              <span><svg class="ico" viewBox="0 0 40 52" style="height:46px"><path d="M5 12h30l-4 36H9z"/><path d="M3 12h34"/></svg>Macro</span>
+              <span><svg class="ico" viewBox="0 0 40 64" style="height:58px"><path d="M4 14h32l-4 46H8z"/><path d="M2 14h36"/></svg>Mega</span>
+            </div>
+            <span class="over">The Bucket</span>
+          </div></figure>
+          <h3>Dr. Chicken</h3><span class="sub">Shares the floor at Cebu Main</span>
+          <p>Korean fried chicken from our sister brand, by the bucket: Micro 200 g, Macro 400 g or Mega 800 g.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="chart" aria-labelledby="chartT">
+    <div class="wrap">
+      <header class="sec-head center" style="margin-bottom:clamp(24px,3vw,40px)">
+        <p class="label rule" id="chartT" data-anim>On the wall</p>
+      </header>
+      <div class="chart" id="chartLines" aria-label="An eye chart reading Vision, Focus, Proficiency, Victory, Achievement, Foresight, Accomplishment.">
+        <div class="ln"><span>Vision</span><i>20/200</i></div>
+        <div class="ln"><span>Focus</span><i>20/100</i></div>
+        <div class="ln"><span>Proficiency</span><i>20/70</i></div>
+        <div class="ln"><span>Victory</span><i>20/50</i></div>
+        <div class="ln"><span>Achievement</span><i>20/40</i></div>
+        <div class="ln"><span>Foresight</span><i>20/30</i></div>
+        <div class="ln"><span>Accomplishment</span><i>20/20</i></div>
+      </div>
+      <p class="small" style="text-align:center;margin-top:clamp(20px,3vw,32px)" data-anim>Our brass eye chart, in raised letters. Scroll to bring it into focus.</p>
+    </div>
+  </section>
+
+  <section class="sec band" id="crash-cart">
+    <div class="wrap">
+      <header class="sec-head center">
+        <p class="label rule" data-anim>The Crash Cart</p>
+        <h2 data-anim="split">Something to eat with your dose.</h2>
+        <p class="lead" data-anim style="--d:200ms">Three snack combos with clinic names, made to share over coffee. All three are best sellers.</p>
+      </header>
+      <article class="cc">
+        <figure class="shot" data-anim="wipe"><span class="clip"><img src="assets/f-fries.jpg" alt="Remedy Fries on a white plate with a creamy pink dip." width="900" height="1125" loading="lazy" data-px="0.05"></span></figure>
+        <div class="copy">
+          <p class="over" data-anim>Combo 01</p>
+          <h3 data-anim="split" style="font-size:clamp(32px,3.6vw,48px)">Remedy Fries</h3>
+          <p class="price" data-anim>&#8369;159</p>
+          <p class="lead" data-anim>Fries with a creamy dip on the side.</p>
+          <dl data-anim><dt>Pairs with</dt><dd>A Cold Brew or an Americano</dd><dt>Menu</dt><dd>Crash Cart &middot; best seller &#9733;</dd></dl>
+        </div>
+      </article>
+      <article class="cc alt">
+        <div class="copy">
+          <p class="over" data-anim>Combo 02</p>
+          <h3 data-anim="split" style="font-size:clamp(32px,3.6vw,48px)">Emergency Burger Combo</h3>
+          <p class="price" data-anim>&#8369;169</p>
+          <p class="lead" data-anim>A crispy chicken burger with fries and a dip.</p>
+          <dl data-anim><dt>Pairs with</dt><dd>A Spanish Latte, Low or High Dose</dd><dt>Menu</dt><dd>Crash Cart &middot; best seller &#9733;</dd></dl>
+        </div>
+        <figure class="shot" data-anim="wipe" style="--ar:5/4"><span class="clip"><img src="assets/f-burger.jpg" alt="The Emergency Burger Combo: a chicken burger, fries and a dip on a tray." width="1000" height="730" loading="lazy"></span></figure>
+      </article>
+      <article class="cc">
+        <figure class="shot" data-anim="wipe" style="--ar:5/4"><span class="clip"><img src="assets/f-nachos.jpg" alt="Code Red Nachos topped with beef, cheese sauce and shredded greens on a wooden board." width="1000" height="805" loading="lazy"></span></figure>
+        <div class="copy">
+          <p class="over" data-anim>Combo 03</p>
+          <h3 data-anim="split" style="font-size:clamp(32px,3.6vw,48px)">Code Red Nachos</h3>
+          <p class="price" data-anim>&#8369;179</p>
+          <p class="lead" data-anim>Tortilla chips with seasoned beef, cheese sauce and greens.</p>
+          <dl data-anim><dt>Pairs with</dt><dd>An Overdose for the table</dd><dt>Menu</dt><dd>Crash Cart &middot; best seller &#9733;</dd></dl>
+        </div>
+      </article>
+      <article class="kitchen" data-anim>
+        <figure><img src="assets/f-adobo.jpg" alt="Dr. Chicken Adobo rice meal with two fried eggs, rice topped with adobo flakes and cucumber." width="1000" height="800" loading="lazy"></figure>
+        <div class="copy">
+          <p class="label rule">From the kitchen</p>
+          <h3 style="font-size:clamp(28px,3vw,40px)">Dr. Chicken Adobo</h3>
+          <p class="lead">A house rice meal with fried eggs, regular or spicy, &#8369;239. A best seller, also sold by the bottle for &#8369;270.</p>
+          <p><a class="tlink" href="#menu">Rice meals, pasta &amp; pastries &rarr;</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="branches" style="padding-bottom:clamp(48px,6vw,80px)">
+    <div class="wrap">
+      <header class="sec-head center">
+        <p class="label rule" data-anim>Our branches</p>
+        <h2 data-anim="split">Find your nearest dose.</h2>
+        <p class="lead" data-anim style="--d:200ms">Three branches open in Cebu City and Mandaue, with Talisay on the way. Tap a stop on the map or a card below.</p>
+      </header>
+    </div>
+    <div class="map" data-anim>
+      <div class="wrap map-in">
+      <div class="box"><b>Four stops</b><span>Talisay to Mandaue</span></div>
+      <div class="map-scroll">
+        <svg viewBox="30 20 960 380" role="group" aria-label="A route map of Dr. Coffee branches, not to scale." data-anim="draw" id="mapSvg">
+          <text class="mp-isl" x="80" y="110">Cebu</text>
+          <path class="mp-line dr" d="M290 330L470 266L650 196L830 120"/>
+          <g id="mpStations"></g>
+          <g transform="translate(940 60)"><path class="mp-line" d="M0 18V-14M-7 -6L0 -16L7 -6" style="stroke-width:2"/><text class="mp-sub" x="0" y="38" text-anchor="middle">N</text></g>
+          <text class="mp-sub" x="40" y="380">Not to scale</text>
+        </svg>
+      </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="br-grid" id="brGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec band" id="rooms-teaser">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="label rule" data-anim>Rooms</p>
+        <h2 data-anim="split">Room for better focus.</h2>
+        <p class="lead" data-anim style="--d:200ms">Three rooms at Cebu Main and private work stations at Casa Mira. Rates and terms at the counter.</p>
+      </header>
+      <div class="rt" data-anim="kids">
+        <a href="#rooms-cebu-main"><em>Room 1 &middot; Meetings</em><b>Conference Room</b><span>Cebu Main. The first room to open as the floor fills.</span></a>
+        <a href="#rooms-cebu-main"><em>Room 2 &middot; Shared table</em><b>Dr&rsquo;s Lounge</b><span>Cebu Main. A long table, a sofa and warm lighting.</span></a>
+        <a href="#rooms-cebu-main"><em>Room 3 &middot; Most private</em><b>Portal Space</b><span>Cebu Main. The quietest room in the building.</span></a>
+        <a href="#rooms-casa-mira"><em>Work stations &middot; Solo work</em><b>Intensive Work Unit</b><span>Casa Mira. Curtained desks booked at the counter.</span></a>
+      </div>
+      <p style="margin-top:32px" data-anim><a class="tlink" href="#rooms">See all rooms &rarr;</a></p>
+    </div>
+  </section>
+
+  <section class="sec" id="story">
+    <div class="wrap">
+      <div class="story-grid">
+        <header class="sec-head" style="margin:0">
+          <p class="label rule" data-anim>Our story</p>
+          <h2 data-anim="split">First sketched on a flight.</h2>
+        </header>
+        <p class="lead" data-anim style="--d:150ms">Dr. Coffee started with a doctor who loved coffee. The concept and logo were drawn on a flight from Korea to the Philippines, every recipe was tested for months, and a small kiosk grew into a clinic-inspired café where sizes became doses.</p>
+      </div>
+      <div class="facts" data-anim="kids">
+        <div class="fact"><b>2&ndash;3</b><span>Months of tasting for each recipe, with several tasters, before it reaches the menu.</span></div>
+        <div class="fact"><b data-count="3">3</b><span>Highland names on our first kiosk&rsquo;s coffee: Baguio, Benguet and Atok.</span></div>
+        <div class="fact"><b data-count="3">3</b><span>Branches on one handbook, in Cebu City and Mandaue. Talisay is next.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <header class="sec-head" style="margin-bottom:0">
+          <p class="label rule" data-anim>Contact</p>
+          <h2 data-anim="split">Come get your dose.</h2>
+          <p class="lead" data-anim style="--d:200ms">Questions, group orders or a room booking? Visit a branch or send us a message.</p>
+        </header>
+        <div class="visit" id="visitList"></div>
+      </div>
+      <form class="form" id="msgForm" novalidate data-anim>
+        <h3>Message us</h3>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-branch">Branch</label>
+          <select id="f-branch" name="branch"><option value="">Any branch</option><option>Cebu Main</option><option>Casa Mira</option><option>JamesTown</option></select></div>
+        <div class="field"><label for="f-topic">About</label>
+          <select id="f-topic" name="topic"><option>A general question</option><option>Booking a room</option><option>A group or Overdose order</option><option>Feedback</option></select></div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+        <div><button class="btn solid" type="submit" data-magnetic>Copy my message <span class="arr" aria-hidden="true">&rarr;</span></button></div>
+        <p class="small">We reply on Facebook and Instagram. This copies your message so you can paste it into our chat.</p>
+        <div class="status" id="formStatus" hidden role="status"></div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- =============== BRANCH (one page per branch, rendered from data) =============== -->
+<div class="view" data-view="branch" hidden><div id="branchMount"></div></div>
+
+<!-- =============== ROOMS =============== -->
+<div class="view" data-view="rooms" hidden>
+  <section class="wrap r-hero">
+    <div class="copy">
+      <p class="over" data-anim>Rooms &middot; Cebu Main &amp; Casa Mira</p>
+      <h1 data-anim="split">Room for better focus.</h1>
+      <p class="lead" data-anim style="--d:200ms">Rooms for meetings, study and quiet work. Pick a branch below, then ask the counter or message us to book.</p>
+      <div class="row" data-anim style="--d:300ms"><a class="btn solid" data-magnetic href="#rooms" data-scroll="roomList">Explore the rooms <span class="arr" aria-hidden="true">&darr;</span></a></div>
+    </div>
+    <figure class="frame" data-anim="wipe"><span class="clip"><img src="assets/casa-mira-icu.jpg" alt="Casa Mira's work area under the lit Intensive Work Unit sign." width="1100" height="1375"></span></figure>
+  </section>
+  <section class="r-band dark">
+    <div class="wrap">
+      <p class="stack" data-anim="kids"><span style="display:block">Meet</span><span style="display:block">Study</span><span style="display:block">Focus</span></p>
+      <h2 data-anim="split">Book the room. We&rsquo;ll bring the dose.</h2>
+      <p data-anim>Three rooms at Cebu Main.<br>Work stations at Casa Mira.<br>Rates and terms at the counter.</p>
+    </div>
+  </section>
+  <section class="sec" id="roomList" style="padding-block:clamp(64px,8vw,110px)">
+    <div class="wrap">
+      <div class="rooms-bar">
+        <div class="sec-head" style="margin:0"><p class="label rule">Featured rooms</p></div>
+        <div class="pick">
+          <label for="roomBranch">Branch</label>
+          <select id="roomBranch">
+            <option value="all">All branches</option>
+            <option value="cebu-main">Cebu Main</option>
+            <option value="casa-mira">Casa Mira</option>
+            <option value="jamestown">JamesTown</option>
+          </select>
+          <span class="count" id="roomCount" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="room-grid" id="roomGrid"></div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap r-icu">
+      <figure class="frame" data-anim="wipe"><span class="clip"><img src="assets/casa-mira-stations.jpg" alt="Work stations with ergonomic chairs and a table card reading Hi! This seat is occupied." width="1600" height="1067" loading="lazy" style="aspect-ratio:3/2"></span></figure>
+      <div class="copy">
+        <p class="label rule" data-anim>The Intensive Work Unit</p>
+        <h2 data-anim="split">Made for focus.</h2>
+        <p class="lead" data-anim>Past Casa Mira&rsquo;s dining floor, private work stations sit behind curtains under the Intensive Work Unit sign. Book one at the counter, set your claim card on the desk, and the seat is yours.</p>
+        <div class="row" data-anim><a class="btn" data-magnetic href="#casa-mira">Visit Casa Mira <span class="arr" aria-hidden="true">&rarr;</span></a></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <header class="sec-head"><p class="label rule" data-anim>How booking works</p><h2 data-anim="split">Three steps to your room.</h2></header>
+      <ol class="steps" data-anim="kids">
+        <li><b>Pick a room and branch</b><span>Use the Branch filter above to see each branch&rsquo;s rooms.</span></li>
+        <li><b>Check it&rsquo;s free</b><span>Ask at the counter or message the branch. Rooms open in order as the dining floor fills.</span></li>
+        <li><b>Settle in</b><span>Take your claim card to the table and order from the counter.</span></li>
+      </ol>
+      <p class="small" style="margin-top:26px">Rates and booking terms are set by each branch. <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener">Message us on Facebook</a> to ask.</p>
+    </div>
+  </section>
+</div>
+
+<!-- =============== MENU =============== -->
+<div class="view" data-view="menu" hidden>
+  <section class="wrap m-head">
+    <p class="label rule" data-anim>The menu</p>
+    <h1 data-anim="split">What&rsquo;s on the counter.</h1>
+    <p class="lead" data-anim style="--d:200ms">Coffee by the dose, coffee-free drinks, rice meals, pasta, pastries and the Crash Cart. Prices in pesos.</p>
+  </section>
+  <section class="wrap shelf" id="shelf" aria-labelledby="shelfT">
+    <div class="shelf-head">
+      <div class="sec-head" style="margin:0"><p class="label rule" data-anim>The drinks, pictured</p><h2 id="shelfT" data-anim="split">Every drink in the sleeve.</h2></div>
+      <div class="shelf-f" id="shelfF" role="group" aria-label="Show drinks by group"></div>
+    </div>
+    <div class="shelf-grid" id="shelfGrid"></div>
+    <p class="small shelf-note" id="shelfNote" hidden>These are pictured but not on the printed menu yet. Ask at the counter for prices.</p>
+  </section>
+  <div class="menu-bar">
+    <div class="wrap">
+      <nav class="chips" aria-label="Menu categories" id="chips"></nav>
+      <button class="bestbtn" type="button" id="bestBtn" aria-pressed="false">&#9733; Best sellers</button>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="cols" id="menuCols"></div>
+    <div class="menu-foot">
+      <p><b>Low Dose</b> 12 oz &middot; <b>High Dose</b> 16 oz &middot; <b>Overdose</b> 1 L. Hot drinks come in their own cup.</p>
+      <p><b>&#9733;</b> marks a best seller. Availability can vary by branch.</p>
+      <p>Prices may change. Message the branch before a large order.</p>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#branches">Branches</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#menu">Menu</a>
+      <a class="flogo" href="#home" aria-label="Dr. Coffee home"><img src="assets/logo-ink.png" alt="Dr. Coffee" width="1196" height="474" loading="lazy"></a>
+      <a href="#transfusion">Transfusion</a>
+      <a href="#contact">Contact</a>
+      <nav class="soc" aria-label="Follow Dr. Coffee">
+        <a href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener" aria-label="Instagram, @dr.coffee_philippines"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+        <a href="https://www.tiktok.com/@drcoffeecebu" target="_blank" rel="noopener" aria-label="TikTok, @drcoffeecebu"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener" aria-label="Facebook, Dr. Coffee Cebu City"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+        <a href="https://www.instagram.com/dr.coffee_casamiralabangon/" target="_blank" rel="noopener" aria-label="Instagram, Casa Mira, @dr.coffee_casamiralabangon"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      </nav>
+    </div>
+    <div class="legal">
+      <span>Your daily &ldquo;dose&rdquo; of remedy.</span>
+      <span>&copy; 2026 Dr. Coffee &middot; #DrCoffeeCebu</span>
+      <span>The clinic theme is part of the fun. We serve coffee and food, not medical advice.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== BAG:START (the Transfusion bag; the 4K render page reuses this block) ===== */
+var DCBag = (function(){
+  var NS = 'http://www.w3.org/2000/svg', uid = 0;
+  var FLAVORS = [
+    {id:'spanish-latte',      name:'Spanish Latte',      c:['#E2C7A3','#CBA37A','#A57C55'], foam:'#F5ECDF', line3:'SPANISH LATTE',      check:2},
+    {id:'green-apple-yakult', name:'Green Apple Yakult', c:['#DCEA90','#BCD34B','#98B032'], foam:'#F4F8DE', line3:'GREEN APPLE YAKULT', check:2},
+    {id:'cold-brew',          name:'Cold Brew',          c:['#8C5B35','#56341F','#311D12'], foam:'#C9A47E', line3:'SPANISH LATTE',      check:3},
+    {id:'vietnamese',         name:'Vietnamese',         c:['#C69B70','#A07046','#7B502D'], foam:'#EEDFC6', line3:'VIETNAMESE',         check:2}
+  ];
+  var BY = {}; FLAVORS.forEach(function(f){ BY[f.id] = f; });
+  var ROWS = ['ESPRESSO','AMERICANO','','COLD BREW','LONG BLACK','EXTRA SHOT'];
+  // Geometry in bag units: the welded outline with hanging holes, the inner chamber, the tube from the left port.
+  var OUT = 'M92 0H508L560 46V792Q560 822 540 840L456 912V974Q456 990 440 990H160Q144 990 144 974V912L60 840Q40 822 40 792V46Z';
+  var HOLES = 'M107 44a11 11 0 1 0 22 0a11 11 0 1 0 -22 0ZM285 40a11 11 0 1 0 22 0a11 11 0 1 0 -22 0ZM272 936H328A11 11 0 0 1 328 958H272A11 11 0 0 1 272 936Z';
+  var CH = 'M58 96H542V788Q542 812 524 828L446 893Q432 905 412 905H188Q168 905 154 893L76 828Q58 812 58 788Z';
+  var TUBE = 'M215 -14V-170C215 -330 300 -380 300 -620V-3200';
+  var SIG = 'M88 560c7-1 11-5 15-4s5 7 9 6l5-12 5 20 5-26 6 30 4-14c5-1 9 2 14 1s9-7 15-6 7 6 13 5 6-6 10-7l4 9 4-12 4 11c8 1 16-3 24-2s14 3 22 1';
+  var PX = 300, PY = -1500, LVL = 186, BOT = 905, N = 34;
+
+  function rng(a){ return function(){ a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function hx(h){ return [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)]; }
+  function mix(a, b, t){ var A = hx(a), B = hx(b); return 'rgb(' + [0,1,2].map(function(k){ return Math.round(A[k] + (B[k] - A[k]) * t); }).join(',') + ')'; }
+  function clamp(v, a, b){ return v < a ? a : v > b ? b : v; }
+  function ease(t){ t = clamp(t, 0, 1); return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2; }
+  function back(t){ t = clamp(t, 0, 1); var c1 = 1.25, c3 = c1 + 1; return 1 + c3*Math.pow(t - 1, 3) + c1*Math.pow(t - 1, 2); }
+  function E(tag, a, parent){ var e = document.createElementNS(NS, tag); if (a) for (var k in a) e.setAttribute(k, a[k]); if (parent) parent.appendChild(e); return e; }
+
+  function create(host, o){
+    o = o || {};
+    var p = 'dcb' + (++uid) + '-', dark = o.theme === 'dark', R = rng(o.seed || 7), i, x, y, r;
+    var K = dark
+      ? {edge:'rgba(255,255,255,.62)', soft:'rgba(255,255,255,.2)', film:'rgba(255,255,255,.06)', weld:'rgba(255,255,255,.1)', tube:'rgba(255,255,255,.07)', cap:'rgba(236,236,232,.92)', clamp:'#ECECE8', shine:.42, cast:0}
+      : {edge:'rgba(48,54,58,.44)', soft:'rgba(48,54,58,.16)', film:'rgba(255,255,255,.34)', weld:'rgba(255,255,255,.6)', tube:'rgba(255,255,255,.5)', cap:'#F8F8F5', clamp:'#FBFBF9', shine:.8, cast:.2};
+    var svg = E('svg', {viewBox:o.viewBox || '-70 -380 740 1430', preserveAspectRatio:o.par || 'xMidYMax meet', 'aria-hidden':'true', focusable:'false'});
+    var defs = E('defs', null, svg);
+    E('path', {d:CH}, E('clipPath', {id:p + 'ch'}, defs));
+    function grad(id, v, stops, rad){
+      var g = E(rad ? 'radialGradient' : 'linearGradient', rad ? {id:p + id, cx:rad[0], cy:rad[1], r:rad[2]} : {id:p + id, x1:0, y1:0, x2:v ? 0 : 1, y2:v ? 1 : 0}, defs);
+      return stops.map(function(s){ return E('stop', {offset:s[0], 'stop-color':s[1], 'stop-opacity':s[2] == null ? 1 : s[2]}, g); });
+    }
+    var S0 = grad('l0', 1, [[0,'#000'],[.55,'#000'],[1,'#000']]), S1 = grad('l1', 1, [[0,'#000'],[.55,'#000'],[1,'#000']]);
+    grad('rim', 0, [[0,'#fff',.36],[.12,'#fff',0],[.88,'#fff',0],[1,'#fff',.3]]);
+    grad('sh', 1, [[0,'#fff',0],[.16,'#fff',K.shine],[.72,'#fff',K.shine*.4],[1,'#fff',0]]);
+    grad('men', 1, [[0,'#000',.17],[1,'#000',0]]);
+    grad('lab', 1, [[0,'#FFFFFF'],[1,'#EFEEE9']]);
+    grad('gl', 0, [[0,'#fff',.26],[1,'#fff',0]], [.3,.28,.62]);
+    grad('cast', 0, [[0,'#000',K.cast],[1,'#000',0]], [.5,.5,.5]);
+
+    var cast = E('ellipse', {cx:PX, cy:1052, rx:250, ry:24, fill:'url(#' + p + 'cast)'}, svg);
+    if (!K.cast) cast.setAttribute('display', 'none');
+    var dropG = E('g', null, svg), sw = E('g', null, dropG);
+
+    // tube, flow, clamp and ports
+    var T = E('g', null, sw);
+    E('path', {d:TUBE, fill:'none', stroke:K.tube, 'stroke-width':28}, T);
+    var resid = E('path', {d:TUBE, fill:'none', 'stroke-width':9, 'stroke-linecap':'round', 'stroke-dasharray':'3 46 5 90 2 64 4 120', opacity:.24}, T);
+    var flow = E('path', {d:TUBE, fill:'none', 'stroke-width':13, 'stroke-linecap':'round', 'stroke-dasharray':'70 46', opacity:0}, T);
+    E('path', {d:TUBE, fill:'none', stroke:K.edge, 'stroke-width':1.6, transform:'translate(-14 0)'}, T);
+    E('path', {d:TUBE, fill:'none', stroke:K.edge, 'stroke-width':1.6, transform:'translate(14 0)'}, T);
+    E('path', {d:TUBE, fill:'none', stroke:'#fff', 'stroke-opacity':.5, 'stroke-width':3.2, transform:'translate(-7 0)'}, T);
+    var Cl = E('g', null, sw);
+    E('rect', {x:189, y:-152, width:52, height:82, rx:8, fill:K.clamp, stroke:'rgba(0,0,0,.18)', 'stroke-width':1.2}, Cl);
+    E('rect', {x:195, y:-144, width:10, height:66, rx:4, fill:'rgba(0,0,0,.06)'}, Cl);
+    E('rect', {x:227, y:-144, width:7, height:66, rx:3, fill:'#fff', opacity:.85}, Cl);
+    E('path', {d:'M189 -120H241M189 -106H241', stroke:'rgba(0,0,0,.09)', 'stroke-width':1.2}, Cl);
+    var Pt = E('g', null, sw);
+    E('rect', {x:199, y:-24, width:32, height:150, rx:9, fill:K.film, stroke:K.edge, 'stroke-width':1.5}, Pt);
+    E('rect', {x:206, y:-20, width:6, height:140, rx:3, fill:'#fff', opacity:.4}, Pt);
+    E('rect', {x:361, y:-32, width:30, height:156, rx:9, fill:K.film, stroke:K.edge, 'stroke-width':1.5}, Pt);
+    E('rect', {x:367, y:-28, width:5, height:146, rx:2.5, fill:'#fff', opacity:.35}, Pt);
+    E('rect', {x:354, y:-60, width:44, height:36, rx:7, fill:K.cap, stroke:K.edge, 'stroke-width':1.2}, Pt);
+    E('path', {d:'M358 -48H394M358 -40H394', stroke:'rgba(0,0,0,.1)', 'stroke-width':1.2}, Pt);
+
+    // the welded film
+    E('path', {d:OUT + HOLES, 'fill-rule':'evenodd', fill:K.film}, sw);
+    E('path', {d:OUT + HOLES + CH, 'fill-rule':'evenodd', fill:K.weld}, sw);
+
+    // everything inside the chamber
+    var G = E('g', {'clip-path':'url(#' + p + 'ch)'}, sw);
+    var lq0 = E('path', {fill:'url(#' + p + 'l0)'}, G);
+    var lq1 = E('path', {fill:'url(#' + p + 'l1)', opacity:0}, G);
+    var rim = E('path', {fill:'url(#' + p + 'rim)'}, G);
+    var men = E('path', {fill:'url(#' + p + 'men)'}, G);
+    var foam = E('path', null, G);
+    var FBg = E('g', null, G), fb = [];
+    for (i = 0; i < 64; i++) fb.push({u:R(), v:R(), r:2.2 + R()*6.2, c:E('circle', {fill:'#fff', 'fill-opacity':.34, 'stroke-width':1}, FBg)});
+    var BBg = E('g', null, G), bb = [];
+    for (i = 0; i < 16; i++) bb.push({x:80 + R()*440, r:1.6 + R()*3.4, s:26 + R()*48, ph:R(), w:R()*6.28, c:E('circle', {fill:'none', stroke:'#fff', 'stroke-opacity':.6, 'stroke-width':1.1}, BBg)});
+    E('ellipse', {cx:220, cy:560, rx:200, ry:340, fill:'url(#' + p + 'gl)'}, G);
+    E('rect', {x:72, y:112, width:18, height:770, rx:9, fill:'url(#' + p + 'sh)'}, G);
+    E('rect', {x:512, y:150, width:8, height:660, rx:4, fill:'url(#' + p + 'sh)', opacity:.6}, G);
+    var CD = E('g', null, G);
+    for (i = 0; i < 80; i++){
+      x = 64 + R()*472; y = 214 + R()*690; r = 1.3 + Math.pow(R(), 2)*4.4;
+      if (x > 60 && x < 540 && y > 292 && y < 660) continue; // keep the label dry
+      E('ellipse', {cx:x.toFixed(1), cy:y.toFixed(1), rx:r.toFixed(2), ry:(r*1.18).toFixed(2), fill:'rgba(0,0,0,.09)'}, CD);
+      E('circle', {cx:(x - r*.32).toFixed(1), cy:(y - r*.42).toFixed(1), r:Math.max(.6, r*.34).toFixed(2), fill:'#fff', opacity:.82}, CD);
+    }
+    for (i = 0; i < 18; i++) E('circle', {cx:(70 + R()*460).toFixed(1), cy:(108 + R()*58).toFixed(1), r:(.9 + R()*2).toFixed(2), fill:'#fff', opacity:.34}, CD);
+    var RN = [];
+    for (i = 0; i < 3; i++){ var gr = E('g', null, G);
+      RN.push({T:7 + i*1.9, off:i*2.7, k:i, trail:E('path', {fill:'none', stroke:'#fff', 'stroke-opacity':.28, 'stroke-linecap':'round'}, gr), d:E('ellipse', {fill:'rgba(0,0,0,.1)'}, gr), h:E('circle', {fill:'#fff', opacity:.85}, gr)}); }
+
+    // the label
+    var L = E('g', {'font-family':"Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif", 'font-weight':700, fill:'#1C1C1C'}, sw);
+    E('rect', {x:69, y:305, width:468, height:350, rx:4, fill:'rgba(0,0,0,.16)'}, L);
+    E('rect', {x:66, y:300, width:468, height:350, rx:4, fill:'url(#' + p + 'lab)', stroke:'rgba(0,0,0,.07)'}, L);
+    function tx(x, y, s, size, ls, anchor){ var t = E('text', {x:x, y:y, 'font-size':size, 'letter-spacing':ls || 0}, L); if (anchor) t.setAttribute('text-anchor', anchor); t.textContent = s; return t; }
+    tx(88, 338, '100% ARABICA', 12.5, .9);
+    tx(452, 343, 'BREWED TO', 16, 1, 'end'); tx(452, 364, 'SAVE YOUR DAY', 16, 1, 'end');
+    E('rect', {x:462, y:318, width:48, height:48, fill:'#D3232E'}, L);
+    E('path', {d:'M480 326H492V336H502V348H492V358H480V348H470V336H480Z', fill:'#fff'}, L);
+    var img = E('image', {x:84, y:398, width:200, height:79.3, preserveAspectRatio:'xMinYMid meet'}, L);
+    img.setAttribute('href', o.logo || 'assets/logo-ink.png');
+    var nm = tx(88, 530, 'SPANISH LATTE', 15.5, 1);
+    E('path', {d:SIG, fill:'none', stroke:'#1C1C1C', 'stroke-width':1.3, 'stroke-linecap':'round', 'stroke-linejoin':'round'}, L);
+    var bx = 88, bc = rng(91);
+    while (bx < 262){ var bw = [1.2,1.2,2,2.8,3.6][Math.floor(bc()*5)]; E('rect', {x:bx.toFixed(1), y:584, width:bw, height:36}, L); bx += bw + [1.4,2.2,3][Math.floor(bc()*3)]; }
+    var rowsT = [], ticks = [];
+    for (i = 0; i < 6; i++){ y = 404 + i*36;
+      E('rect', {x:304, y:y - 15, width:18, height:18, fill:'none', stroke:'#1C1C1C', 'stroke-width':1.5}, L);
+      rowsT.push(tx(334, y, ROWS[i], 13, .8));
+      ticks.push(E('path', {d:'M306 ' + (y - 7) + 'l5.5 7l12 -17', fill:'none', stroke:'#1C1C1C', 'stroke-width':2.6, 'stroke-linecap':'round', 'stroke-linejoin':'round', 'stroke-dasharray':34, 'stroke-dashoffset':34}, L));
+    }
+
+    // edges and glints over everything
+    E('path', {d:OUT + HOLES, fill:'none', stroke:K.edge, 'stroke-width':2}, sw);
+    E('path', {d:CH, fill:'none', stroke:K.soft, 'stroke-width':1.4}, sw);
+    E('path', {d:CH, fill:'none', stroke:K.soft, 'stroke-width':6, 'stroke-dasharray':'1.2 4.2', opacity:.55}, sw);
+    E('path', {d:'M98 6H502', fill:'none', stroke:'#fff', 'stroke-opacity':.55, 'stroke-width':2.2}, sw);
+    E('path', {d:'M47 60V786', fill:'none', stroke:'#fff', 'stroke-opacity':.32, 'stroke-width':3}, sw);
+    E('path', {d:'M553 70V780', fill:'none', stroke:'#fff', 'stroke-opacity':.18, 'stroke-width':2}, sw);
+
+    host.appendChild(svg);
+
+    // ---------- state ----------
+    var st = {f:BY[o.flavor] || FLAVORS[0], to:null, tc:0, sw:0, th:0, om:0, s:0, sv:0, dy:0, bob:0, t:0, drop:null, push:0, drag:false, tgt:0, grab:0, tickT:null, fixed:null};
+    function paint(stops, f){ stops[0].setAttribute('stop-color', f.c[0]); stops[1].setAttribute('stop-color', f.c[1]); stops[2].setAttribute('stop-color', f.c[2]); }
+    function setLabel(f){ nm.textContent = f.name.toUpperCase(); rowsT[2].textContent = f.line3; }
+    function settle(){
+      paint(S0, st.f); lq1.setAttribute('opacity', 0); flow.setAttribute('opacity', 0);
+      foam.setAttribute('fill', st.f.foam); resid.setAttribute('stroke', st.f.c[1]);
+      FBg.setAttribute('stroke', mix(st.f.foam, st.f.c[2], .45)); setLabel(st.f);
+      nm.setAttribute('opacity', 1); rowsT[2].setAttribute('opacity', 1);
+      ticks.forEach(function(t, k){ t.setAttribute('stroke-dashoffset', k === st.f.check && st.tickT !== -1 ? 0 : 34); });
+    }
+    settle();
+
+    function step(dt, t){
+      var amb = .0042*Math.sin(t*.72) + .0024*Math.sin(t*1.93 + 1.3), acc;
+      if (st.drag){
+        var nth = st.th + (st.tgt - st.th)*Math.min(1, dt*16);
+        var nom = (nth - st.th)/dt; acc = (nom - st.om)/dt; st.om = nom; st.th = nth;
+      } else {
+        acc = -9*Math.sin(st.th) - .62*st.om + amb + st.push;
+        st.om += acc*dt; st.th += st.om*dt;
+      }
+      st.push *= Math.pow(.03, dt);
+      st.th = clamp(st.th, -.16, .16);
+      var sa = -38*st.s - 3.4*st.sv - .9*clamp(acc, -6, 6);
+      st.sv += sa*dt; st.s = clamp(st.s + st.sv*dt, -.3, .3);
+      if (st.drop != null){
+        var q = t - st.drop;
+        if (q < 0){ st.dy = -1400; st.bob = 0; }
+        else { st.dy = -1400*(1 - back(q/.95)); st.bob = q > .7 ? -10*Math.exp(-3.2*(q - .7))*Math.sin(11*(q - .7)) : 0;
+          if (q > .7 && !st.landed){ st.landed = 1; st.om += .06; }
+          if (q > 4){ st.drop = null; st.dy = 0; st.bob = 0; } }
+      }
+    }
+
+    function draw(t){
+      st.t = t;
+      var tilt = Math.tan(-st.th + st.s), amp = 1.6 + Math.min(7, Math.abs(st.om)*90), lv = LVL + st.bob;
+      var xs = [], ys = [], k;
+      for (k = 0; k < N; k++){ var xx = 40 + k*(520/(N - 1)); xs.push(xx); ys.push(lv + tilt*(xx - PX) + amp*Math.sin(xx*.017 - t*2.2) + 1.1*Math.sin(xx*.043 + t*3.1)); }
+      function Y(x){ var j = clamp((x - 40)/(520/(N - 1)), 0, N - 1.001), a = Math.floor(j); return ys[a] + (ys[a + 1] - ys[a])*(j - a); }
+      function edge(off, rev){ var s = ''; for (var m = 0; m < N; m++){ var n = rev ? N - 1 - m : m; s += (m || rev ? 'L' : 'M') + xs[n].toFixed(1) + ' ' + (ys[n] + off).toFixed(1); } return s; }
+      var liquid = edge(0) + 'L560 1000L40 1000Z';
+      lq0.setAttribute('d', liquid); rim.setAttribute('d', liquid);
+      men.setAttribute('d', edge(0) + edge(30, 1) + 'Z');
+      var fs = '';
+      for (k = 0; k < N; k++) fs += (k ? 'L' : 'M') + xs[k].toFixed(1) + ' ' + (ys[k] - (19 + 3.5*Math.sin(xs[k]*.05 + t*1.2) + 2*Math.sin(xs[k]*.11 - t*.8))).toFixed(1);
+      foam.setAttribute('d', fs + edge(3, 1) + 'Z');
+      for (k = 0; k < fb.length; k++){ var b = fb[k], cx = 62 + b.u*476; b.c.setAttribute('cx', cx.toFixed(1)); b.c.setAttribute('cy', (Y(cx) - b.v*17 - 2).toFixed(1)); b.c.setAttribute('r', b.r.toFixed(1)); }
+      var range = BOT - 60 - (LVL + 30);
+      for (k = 0; k < bb.length; k++){ var u = bb[k], by = BOT - 30 - ((t*u.s + u.ph*range) % range), bxx = u.x + 3.2*Math.sin(t*1.6 + u.w), gap = by - Y(bxx) - 8;
+        u.c.setAttribute('cx', bxx.toFixed(1)); u.c.setAttribute('cy', by.toFixed(1)); u.c.setAttribute('r', u.r.toFixed(1)); u.c.setAttribute('opacity', gap > 0 ? Math.min(1, gap/30).toFixed(2) : 0); }
+      for (k = 0; k < RN.length; k++){ var rn = RN[k], cyc = Math.floor((t + rn.off)/rn.T), q = ((t + rn.off) % rn.T)/rn.T, h = rng(cyc*31 + rn.k*7 + 3);
+        var side = h() < .5, x0 = side ? 72 + h()*26 : 502 + h()*28, y0 = 240 + h()*120, rr = 2.6 + h()*2.2;
+        if (!side && h() < .3){ x0 = 120 + h()*360; y0 = 680 + h()*40; }
+        var ye = y0 + Math.pow(q, 1.7)*(860 - y0), op = q < .08 ? q/.08 : q > .88 ? (1 - q)/.12 : 1;
+        rn.trail.setAttribute('d', 'M' + x0.toFixed(1) + ' ' + y0.toFixed(1) + 'L' + (x0 + .6).toFixed(1) + ' ' + (ye - rr).toFixed(1));
+        rn.trail.setAttribute('stroke-width', (rr*.8).toFixed(2)); rn.trail.setAttribute('opacity', (op*.9).toFixed(2));
+        rn.d.setAttribute('cx', (x0 + .6).toFixed(1)); rn.d.setAttribute('cy', ye.toFixed(1)); rn.d.setAttribute('rx', rr.toFixed(2)); rn.d.setAttribute('ry', (rr*1.3).toFixed(2)); rn.d.setAttribute('opacity', op.toFixed(2));
+        rn.h.setAttribute('cx', (x0 - rr*.25).toFixed(1)); rn.h.setAttribute('cy', (ye - rr*.5).toFixed(1)); rn.h.setAttribute('r', (rr*.36).toFixed(2)); rn.h.setAttribute('opacity', (op*.85).toFixed(2)); }
+
+      // a flavour change: the new drink runs down the tube and fills the bag from the bottom
+      if (st.to){
+        var g = t - st.tc, F = st.f, Tt = st.to;
+        flow.setAttribute('stroke', Tt.c[1]);
+        flow.setAttribute('opacity', (clamp(g/.25, 0, 1)*clamp((2.1 - g)/.4, 0, 1)*.95).toFixed(2));
+        flow.setAttribute('stroke-dashoffset', (g*520).toFixed(1));
+        resid.setAttribute('stroke', mix(F.c[1], Tt.c[1], clamp(g/1.2, 0, 1)));
+        var pr = ease((g - .55)/1.35), lev = BOT + 10 - pr*(BOT + 10 - LVL + 30), ns = '';
+        for (k = 0; k < N; k++) ns += (k ? 'L' : 'M') + xs[k].toFixed(1) + ' ' + Math.max(ys[k], lev + 7*Math.sin(xs[k]*.035 + g*6) + (1 - pr)*12*Math.sin(xs[k]*.012 - g*3)).toFixed(1);
+        lq1.setAttribute('d', ns + 'L560 1000L40 1000Z'); lq1.setAttribute('opacity', g > .5 ? 1 : 0);
+        var fm = clamp((g - 1)/.9, 0, 1);
+        foam.setAttribute('fill', mix(F.foam, Tt.foam, fm)); FBg.setAttribute('stroke', fm < .5 ? mix(F.foam, F.c[2], .45) : mix(Tt.foam, Tt.c[2], .45));
+        var a = g < .75 ? 1 - clamp((g - .45)/.3, 0, 1) : clamp((g - .75)/.3, 0, 1);
+        if (g >= .75 && !st.swapped){ setLabel(Tt); st.swapped = 1; }
+        nm.setAttribute('opacity', a.toFixed(2)); rowsT[2].setAttribute('opacity', a.toFixed(2));
+        ticks[F.check].setAttribute('stroke-dashoffset', (34*clamp((g - .15)/.3, 0, 1)).toFixed(1));
+        if (g > 1.1){ ticks.forEach(function(tk, j){ if (j !== Tt.check && j !== F.check) tk.setAttribute('stroke-dashoffset', 34); });
+          ticks[Tt.check].setAttribute('stroke-dashoffset', (34*(1 - ease((g - 1.1)/.45))).toFixed(1)); }
+        if (g > 2.2){ st.f = Tt; st.to = null; settle(); }
+      } else if (st.tickT != null && st.tickT >= 0){
+        ticks[st.f.check].setAttribute('stroke-dashoffset', (34*(1 - ease((t - st.tickT)/.5))).toFixed(1));
+        if (t - st.tickT > .6) st.tickT = null;
+      }
+
+      sw.setAttribute('transform', 'rotate(' + (st.th*57.29578).toFixed(3) + ' ' + PX + ' ' + PY + ')');
+      dropG.setAttribute('transform', 'translate(0 ' + st.dy.toFixed(1) + ')');
+      if (K.cast){ cast.setAttribute('cx', (PX - (1000 - PY)*Math.sin(st.th)).toFixed(1)); cast.setAttribute('opacity', clamp(1 + st.dy/500, 0, 1).toFixed(2)); }
+    }
+
+    // ---------- driving it ----------
+    var raf = 0, running = false, last = 0, simT = 0;
+    function now(){ return (window.performance ? performance.now() : Date.now())/1000; }
+    function loop(){
+      raf = requestAnimationFrame(loop);
+      var t = now(), dt = clamp(t - (last || t), 1/240, 1/30); last = t;
+      var n = Math.ceil(dt/(1/120)), h = dt/n; for (var j = 0; j < n; j++) step(h, t - dt + h*(j + 1));
+      draw(t);
+    }
+    var api = {
+      svg:svg, flavors:FLAVORS,
+      start:function(){ if (running) return; running = true; last = 0; raf = requestAnimationFrame(loop); },
+      stop:function(){ running = false; cancelAnimationFrame(raf); },
+      still:function(){ draw(st.t || 0); },
+      flavor:function(){ return (st.to || st.f).id; },
+      setFlavor:function(id, instant){
+        var f = BY[id]; if (!f) return;
+        if (st.to){ st.f = st.to; st.to = null; settle(); }
+        if (f === st.f) return;
+        if (instant || (!running && !o.video)){ st.f = f; settle(); draw(st.t || 0); return; }
+        st.to = f; st.tc = st.t; st.swapped = 0; st.tickT = null; st.om += .03; paint(S1, f);
+      },
+      drop:function(at){ st.drop = at == null ? now() : at; st.landed = 0; st.dy = -1400; },
+      tick:function(at){ st.tickT = at == null ? now() : at; ticks[st.f.check].setAttribute('stroke-dashoffset', 34); },
+      hideTick:function(){ st.tickT = -1; ticks.forEach(function(tk){ tk.setAttribute('stroke-dashoffset', 34); }); },
+      nudge:function(v){ st.push += v; },
+      // Deterministic time for video capture: steps the same physics on a fixed clock.
+      seek:function(t){ if (t < simT){ simT = 0; st.th = st.om = st.s = st.sv = 0; }
+        while (simT + 1/240 <= t){ simT += 1/240; step(1/240, simT); }
+        draw(t); },
+      state:st
+    };
+
+    if (o.interactive){
+      host.classList.add('live');
+      var lx = null, lt = 0;
+      function ang(e){ var m = svg.getScreenCTM(); if (!m) return 0; var pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; var q = pt.matrixTransform(m.inverse()); return Math.atan2(-(q.x - PX), q.y - PY); }
+      function ux(e){ var m = svg.getScreenCTM(); return m ? (e.clientX - m.e)/m.a : e.clientX; }
+      svg.addEventListener('pointerdown', function(e){ if (e.button) return; st.drag = true; st.grab = ang(e) - st.th; st.tgt = st.th; host.classList.add('grab'); try{ svg.setPointerCapture(e.pointerId); }catch(err){} if (o.onGrab) o.onGrab(); });
+      svg.addEventListener('pointermove', function(e){
+        if (st.drag){ st.tgt = clamp(ang(e) - st.grab, -.12, .12); return; }
+        var x = ux(e), t = e.timeStamp/1000;
+        if (lx != null && t > lt){ st.push = clamp(st.push - (x - lx)/(t - lt)*.0009, -1.2, 1.2); }
+        lx = x; lt = t;
+      });
+      function up(){ st.drag = false; host.classList.remove('grab'); }
+      svg.addEventListener('pointerup', up); svg.addEventListener('pointercancel', up);
+      svg.addEventListener('pointerleave', function(){ lx = null; });
+    }
+    draw(0);
+    return api;
+  }
+  return {create:create, flavors:FLAVORS};
+})();
+/* ===== BAG:END ===== */
+
+(function(){
+  'use strict';
+  var FB = 'https://www.facebook.com/profile.php?id=61552180229648', IG = 'https://www.instagram.com/dr.coffee_philippines/';
+  function mm(q){ return !!(window.matchMedia && matchMedia(q).matches); }
+  var reduce = mm('(prefers-reduced-motion: reduce)'), fine = mm('(hover: hover) and (pointer: fine)');
+  function $(s, r){ return (r || document).querySelector(s); }
+  function $$(s, r){ return [].slice.call((r || document).querySelectorAll(s)); }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); }
+  function clamp(v, a, b){ return v < a ? a : v > b ? b : v; }
+  function ph(t, big){ return '<div class="ph">' + (big ? '<span class="K" aria-hidden="true">' + esc(big) + '</span>' : '<svg aria-hidden="true"><use href="#i-cam"/></svg>') + '<span class="over">Photo needed</span><span class="t">' + esc(t) + '</span></div>'; }
+  function pic(p, extra){ return p.src ? '<img src="' + p.src + '" alt="' + esc(p.alt || '') + '" loading="lazy"' + (extra || '') + '>' : ph(p.ph); }
+
+  // ---------- Branch data ----------
+  var ORDER = ['cebu-main','casa-mira','jamestown'];
+  var B = {
+    'cebu-main': {n:'Cebu Main', area:'Fuente · Cebu City', region:'Cebu City', hours:'Being confirmed. Message the branch before you visit.',
+      tag:'The flagship, in Cebu’s medical district. Five spaces, from the main dining floor to three bookable rooms.',
+      addr:'2F Jaeja Building, cor. J. Llorente St., Osmeña Blvd., Cebu City',
+      dir:'https://www.google.com/maps/dir/?api=1&destination=Jaeja%20Building%2C%20J.%20Llorente%20St.%2C%20Osme%C3%B1a%20Blvd.%2C%20Cebu%20City',
+      spaces:['Main Dining','Al Fresco','Conference Room','Dr’s Lounge','Portal Space'],
+      why:['Three bookable rooms: Conference Room, Dr’s Lounge and Portal Space','Dr. Chicken, Korean fried chicken, on the same floor','Order ahead on foodpanda'],
+      rooms:true, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/jyg9/dr-coffee-j-llorente-street'},
+      photos:{hero:{src:'assets/cebu-main-lounge.jpg', alt:'Dr’s Lounge at Cebu Main: a long shared table, a sofa and warm cove lighting.'},
+              wide:{src:'assets/cebu-main-lounge-2.jpg', alt:'The Dr’s Lounge table and sofa from the far corner.'},
+              main:{ph:'A barista at the Cebu Main counter mid-pour, warm lights on, landscape'},
+              s1:{ph:'The hospital-style directory board, straight on'},
+              s2:{ph:'A Transfusion bag on the Cebu Main counter, close-up'}},
+      caps:['At the counter','Directory board','The Transfusion bag']},
+    'casa-mira': {n:'Casa Mira', area:'Labangon · Cebu City', region:'Cebu City', hours:'Being confirmed. Message the branch before you visit.',
+      tag:'Built for focus. Private work stations in the Intensive Work Unit.',
+      addr:'A4 Ground Floor, Casa Mira Tower, Salvador Ext., Labangon, Cebu City', dir:'https://maps.app.goo.gl/id6rguPjxUAkrcmt9',
+      spaces:['Dining Area','Intensive Work Unit'],
+      why:['Private work stations in the Intensive Work Unit, booked at the counter','A claim card on your desk shows the seat is yours','A calm dining floor for solo work or meetups','Follow @dr.coffee_casamiralabangon for branch news'],
+      rooms:true,
+      photos:{hero:{src:'assets/casa-mira-dining.jpg', alt:'Casa Mira’s dining floor with round black tables and the counter at the back.'},
+              wide:{src:'assets/casa-mira-icu-wide.jpg', alt:'The Intensive Work Unit sign over curtained work stations.'},
+              main:{src:'assets/casa-mira-icu.jpg', alt:'Guests working under the Intensive Work Unit sign.'},
+              s1:{src:'assets/casa-mira-occupied.jpg', alt:'A laptop and iced drink beside a card reading: Hi! This seat is occupied.'},
+              s2:{src:'assets/casa-mira-desks.jpg', alt:'Window desks with ergonomic chairs.'}},
+      caps:['The Intensive Work Unit','Your claim card','Window desks']},
+    'jamestown': {n:'JamesTown', area:'Tipolo · Mandaue City', region:'Mandaue City', hours:'Being confirmed. Message the branch before you visit.',
+      tag:'A two-storey glass-and-steel storefront in Mandaue.',
+      addr:'Stall No. 1, Jamestown Center, Mantawi International Drive, Tipolo, Mandaue City', dir:'https://www.google.com/maps/search/?api=1&query=Dr.%20Coffee%20Jamestown%20Center%20Mantawi%20International%20Drive%20Mandaue%20City',
+      spaces:['Dining Area','Al Fresco'],
+      why:['Al fresco seating under the glass canopy','Look for the IV bag hanging by the counter'],
+      rooms:false, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/f8ax/dr-coffee-jamestown'},
+      photos:{hero:{src:'assets/jamestown-storefront.jpg', alt:'The JamesTown storefront: a glass and steel canopy with the Dr. Coffee sign over the entrance.'},
+              wide:{ph:'JamesTown interior: the black counter with the white logo, straight on, landscape'},
+              main:{ph:'A guest at a JamesTown table with a drink, natural light'},
+              s1:{ph:'The IV bag on the wall beside the permits'},
+              s2:{ph:'The Overdose poster in the window'}},
+      caps:['Inside JamesTown','The IV bag','The Overdose poster']}
+  };
+  var COPY = {
+    'cebu-main': {about:'Our flagship sits on the second floor of the Jaeja Building on J. Llorente St., in Cebu’s medical district. It has the most space of any branch: a main dining floor, al fresco seating and three rooms that open as the café fills.',
+      note:'Need a private room? Ask the counter to reserve one.', walkin:'a main dining floor and al fresco seating'},
+    'casa-mira': {about:'Casa Mira in Labangon is built for focus. Past the dining floor, the Intensive Work Unit has curtained work stations with ergonomic chairs under its lit sign.',
+      note:'Book a work station at the counter.', walkin:'a dining area'},
+    'jamestown': {about:'JamesTown is our Mandaue branch: a two-storey glass-and-steel storefront at Jamestown Center, with a dining floor inside and al fresco tables under the canopy.',
+      note:'Order ahead on foodpanda, or walk in for al fresco seating.', walkin:'a dining area and al fresco seating'}
+  };
+  ORDER.forEach(function(id){ for (var k in COPY[id]) B[id][k] = COPY[id][k]; });
+  var N = ORDER.length;
+
+  // ---------- Hours (Asia/Manila) ----------
+  function manila(){ try{ var o = {}; new Intl.DateTimeFormat('en-US', {timeZone:'Asia/Manila', hour:'numeric', minute:'2-digit', hour12:false}).formatToParts(new Date()).forEach(function(x){ o[x.type] = x.value; }); return {h:parseInt(o.hour, 10) % 24, m:parseInt(o.minute, 10)}; }catch(e){ return null; } }
+  function fmt(h){ h = h % 24; return (h % 12 || 12) + ':00 ' + (h < 12 ? 'AM' : 'PM'); }
+  function status(b){
+    var t = manila(); if (b.open == null || !t) return {cls:'ask', txt:'Message the branch for hours'};
+    var now = t.h + t.m/60, open = (now >= b.open && now < b.close) || (b.close > 24 && now < b.close - 24);
+    return open ? {cls:'open', txt:'Open now · until ' + fmt(b.close)} : {cls:'closed', txt:'Closed · opens ' + fmt(b.open)};
+  }
+  function stHtml(b){ var s = status(b); return '<span class="st ' + s.cls + '">' + (s.cls === 'ask' ? '' : '<i aria-hidden="true"></i>') + s.txt + '</span>'; }
+  function paintStatus(){
+    $$('[data-status]').forEach(function(el){ var b = B[el.dataset.status]; if (!b) return; var s = status(b);
+      el.className = 'st ' + s.cls; el.innerHTML = (s.cls === 'ask' ? '' : '<i aria-hidden="true"></i>') + esc((el.dataset.prefix || '') + s.txt); });
+    var t = manila(), c = $('#clock');
+    if (c && t) c.innerHTML = ((t.h % 12) || 12) + ':' + ('0' + t.m).slice(-2) + '<small>' + (t.h < 12 ? 'AM' : 'PM') + '</small>';
+    var g = $('#mpStations'); if (g) $$('.mp-pulse', g).forEach(function(c){ c.style.display = status(B[c.dataset.b]).cls === 'open' ? '' : 'none'; });
+  }
+
+  // ---------- Home: route map, branch cards, visit list ----------
+  var MAP = [
+    {id:'cebu-main', x:650, y:196, lx:672, ly:238, a:'start', sub:'Fuente · Cebu City', hub:1},
+    {id:'casa-mira', x:470, y:266, lx:450, ly:252, a:'end', sub:'Labangon · Cebu City'},
+    {id:'jamestown', x:830, y:120, lx:852, ly:126, a:'start', sub:'Mandaue City'},
+    {id:'talisay', x:290, y:330, lx:270, ly:322, a:'end', sub:'Coming soon', soon:1}
+  ];
+  $('#mpStations').innerHTML = MAP.map(function(m){
+    var nm = m.soon ? 'Talisay' : B[m.id].n, r = m.hub ? 13 : 10;
+    var inner = (m.soon ? '' : '<circle class="mp-pulse" data-b="' + m.id + '" cx="' + m.x + '" cy="' + m.y + '" r="' + r + '"/>') +
+      '<circle class="mp-st' + (m.soon ? ' soon' : '') + '" cx="' + m.x + '" cy="' + m.y + '" r="' + r + '"/>' + (m.hub ? '<circle cx="' + m.x + '" cy="' + m.y + '" r="5" fill="var(--ink)"/>' : '') +
+      '<text class="mp-name" x="' + m.lx + '" y="' + m.ly + '" text-anchor="' + m.a + '">' + nm + '</text>' +
+      '<text class="mp-sub" x="' + m.lx + '" y="' + (m.ly + 18) + '" text-anchor="' + m.a + '">' + m.sub + '</text>';
+    return m.soon ? '<g>' + inner + '</g>' : '<a href="#' + m.id + '" aria-label="' + esc(nm) + ', ' + m.sub + '">' + inner + '</a>';
+  }).join('');
+  var ms = $('.map-scroll'); if (ms) requestAnimationFrame(function(){ if (ms.scrollWidth > ms.clientWidth) ms.scrollLeft = (ms.scrollWidth - ms.clientWidth)*.75; });
+  var CARD = {'cebu-main':'assets/cebu-main-lounge.jpg', 'casa-mira':'assets/casa-mira-dining.jpg', 'jamestown':'assets/jamestown-storefront.jpg'};
+  $('#brGrid').innerHTML = ORDER.map(function(id, i){ var b = B[id], src = CARD[id];
+    return '<a class="br" href="#' + id + '" data-anim style="--d:' + (i*90) + 'ms"><figure data-anim="wipe" style="--d:' + (i*90) + 'ms">' + (src ? '<img src="' + src + '" alt="' + esc(b.photos.hero.alt || b.n) + '" loading="lazy">' : ph('Storefront photo coming', b.n.charAt(0))) + '</figure>' +
+      '<h3>' + esc(b.n) + '</h3><span class="sub">' + esc(b.area) + '</span></a>'; }).join('') +
+    '<a class="br soon" href="' + FB + '" target="_blank" rel="noopener" data-anim style="--d:360ms"><figure><b>Coming soon</b><span class="over">Follow us for the date</span></figure><h3>Talisay</h3><span class="sub">Talisay City · Cebu</span></a>';
+  $('#visitList').innerHTML = ORDER.map(function(id){ var b = B[id];
+    return '<a href="#' + id + '"><b>' + esc(b.n) + '</b><span>' + esc(b.addr) + '</span><span>Hours: ' + esc(b.hours.split('.')[0].toLowerCase()) + '</span><em>View &rarr;</em></a>'; }).join('');
+
+  // ---------- Home: signature rail ----------
+  var SIG = [
+    {n:'Transfusion', s:'Spanish Latte', img:'assets/p-statbag.jpg', alt:'A Spanish Latte Transfusion bag held up by its tube against green leaves.', d:'Iced bag · ₱260'},
+    {n:'Transfusion', s:'Green Apple Yakult', img:'assets/p-tb-green.jpg', alt:'A Green Apple Yakult Transfusion bag held by its tube.', d:'Iced bag · ₱260'},
+    {n:'Spanish Latte', s:'Best seller', star:1, img:'assets/s-spanish-latte.jpg', alt:'An iced Spanish Latte in the Dr. Coffee sleeve, layered espresso over milk.', d:'Hot ₱160 · Low ₱160 · High ₱190'},
+    {n:'Overdose', s:'One litre', img:'assets/s-1l.jpg', alt:'The one-litre Overdose bottle with the Dr. Coffee label.', d:'1 L · from ₱360'},
+    {n:'Caramel Macchiato', s:'Best seller', star:1, img:'assets/s-caramel-macchiato.jpg', alt:'An iced Caramel Macchiato with caramel running through the milk.', d:'Hot ₱160 · Low ₱160 · High ₱190'},
+    {n:'Cryoccino', s:'Blended', img:'assets/s-cryoccino.jpg', alt:'A blended Cryoccino topped with whipped cream.', d:'₱230'},
+    {n:'Caphé Muối', s:'Salted cream coffee', img:'assets/s-ca-phe-muoi.jpg', alt:'Caphé Muối with a salted cream top in the Dr. Coffee sleeve.', d:'Hot ₱120 · Low ₱120 · High ₱160'},
+    {n:'Matcha Latte', s:'Best seller', star:1, img:'assets/s-matcha-latte.jpg', alt:'An iced Matcha Latte, green matcha over milk.', d:'Hot ₱160 · Low ₱160 · High ₱190'},
+    {n:'Dr. Black Coffee', s:'Classic brew', img:'assets/s-dr-coffee-black.jpg', alt:'A hot Dr. Black Coffee in a black and white sleeved cup.', d:'Hot ₱120', steam:1},
+    {n:'Blue Lagoon', s:'Coffee-free', img:'assets/s-blue-lagoon.jpg', alt:'An iced Blue Lagoon, bright blue over ice.', d:'Low ₱160 · High ₱190'},
+    {n:'Cold Brew', s:'Classic brew', img:'assets/s-cold-brew.jpg', alt:'An iced Cold Brew, dark coffee over ice.', d:'Low ₱120 · High ₱160'},
+    {n:'Cookies & Cream', s:'Blended', img:'assets/s-cookies-cream.jpg', alt:'A blended Cookies & Cream topped with cream and a cookie.', d:'₱230'}
+  ];
+  $('#rail').innerHTML = SIG.map(function(t, i){
+    return '<a class="tile" href="#menu" draggable="false"><figure' + (t.contain ? ' style="background:var(--white)"' : '') + '><img src="' + t.img + '" alt="' + esc(t.alt) + '" loading="lazy" draggable="false"' + (t.contain ? ' style="object-fit:contain"' : '') + '>' +
+      (t.steam ? '<svg class="steam" viewBox="0 0 60 80" aria-hidden="true"><path d="M18 78c-8-14 8-22 0-36s8-22 2-34"/><path d="M32 78c-8-14 8-22 0-36s8-22 2-34"/><path d="M46 78c-8-14 8-22 0-36s8-22 2-34"/></svg>' : '') + '</figure>' +
+      '<div class="meta"><span class="s">' + esc(t.s) + (t.star ? ' <span class="star" aria-hidden="true">&#9733;</span>' : '') + '</span><h3>' + esc(t.n) + '</h3><span class="d">' + esc(t.d) + '</span></div></a>'; }).join('');
+
+  // ---------- Branch page ----------
+  function renderBranch(id){
+    var b = B[id], i = ORDER.indexOf(id), nx = ORDER[(i + 1) % N], P = b.photos;
+    var tabs = ORDER.map(function(o){ return '<a href="#' + o + '"' + (o === id ? ' aria-current="page"' : '') + '>' + esc(B[o].n) + '</a>'; }).join('');
+    var third = b.rooms ? '<a class="tlink" href="#rooms-' + id + '">See the rooms &rarr;</a>' : (b.extra ? '<a class="tlink" href="' + b.extra.u + '" target="_blank" rel="noopener">' + esc(b.extra.t) + ' &rarr;</a>' : '<a class="tlink" href="' + FB + '" target="_blank" rel="noopener">Message the branch &rarr;</a>');
+    var spaces = b.spaces.length ? '<div class="pills">' + b.spaces.map(function(s){ return '<span class="pill">' + esc(s) + '</span>'; }).join('') + '</div>' : '<p>Space list coming soon.</p>';
+    var trio = ['main','s1','s2'].map(function(k, j){ var p = P[k];
+      return '<figure data-anim="wipe" style="--d:' + (j*110) + 'ms">' + pic(p) + (p.src ? '<figcaption>' + esc(b.caps[j]) + '</figcaption>' : '') + '</figure>'; }).join('');
+    $('#branchMount').innerHTML =
+      '<div class="wrap"><nav class="crumbs" aria-label="Branches"><a class="tlink" href="#branches">&larr; All branches</a><div class="tabs">' + tabs + '</div></nav></div>' +
+      '<section class="wrap b-hero">' +
+        '<div class="b-copy"><img class="lg" src="assets/logo-ink.png" alt="" width="1196" height="474" data-anim>' +
+          '<p class="over" data-anim>' + esc(b.area) + ' &middot; Branch 0' + (i + 1) + ' of 0' + N + '</p>' +
+          '<h1 data-anim="split">' + esc(b.n) + '</h1><p class="lead" data-anim style="--d:200ms">' + esc(b.tag) + '</p>' +
+          '<div class="row" data-anim style="--d:360ms"><a class="btn solid" data-magnetic href="' + b.dir + '" target="_blank" rel="noopener">Get directions <span class="arr" aria-hidden="true">&nearr;</span></a>' +
+          (b.rooms ? '<a class="btn" data-magnetic href="#rooms-' + id + '">Book a room</a>' : (b.extra ? '<a class="btn" data-magnetic href="' + b.extra.u + '" target="_blank" rel="noopener">' + esc(b.extra.t) + '</a>' : '')) + '</div></div>' +
+        '<figure class="frame" data-anim="wipe"><span class="clip">' + pic(P.hero, ' data-px="0.05"') + '</span></figure>' +
+      '</section>' +
+      '<section class="wrap b-info">' +
+        '<div class="cells" data-anim="kids">' +
+          '<div class="cell"><span class="over">Address</span><p>' + esc(b.addr) + '</p></div>' +
+          '<div class="cell r"><span class="over">Hours</span><p>' + esc(b.hours) + '</p></div>' +
+          '<div class="cell wide"><span class="over">Good to know</span><p>' + esc(b.note) + '</p></div>' +
+          '<div class="cell wide"><span class="over">Spaces</span>' + spaces + '</div>' +
+          '<div class="cell"><a class="tlink" href="' + b.dir + '" target="_blank" rel="noopener">Get directions &rarr;</a></div>' +
+          '<div class="cell r">' + third + '</div>' +
+        '</div>' +
+        '<aside class="b-panel" data-anim><p class="label rule">This branch</p><h3>Why come here?</h3><p class="about">' + esc(b.about) + '</p><ul>' + b.why.map(function(w){ return '<li>' + esc(w) + '</li>'; }).join('') + '</ul></aside>' +
+      '</section>' +
+      '<section class="wrap b-gal">' +
+        '<figure class="b-wide" data-anim="wipe">' + pic(P.wide, ' data-px="0.05"') + '</figure>' +
+        '<div class="b-trio">' + trio + '</div>' +
+      '</section>' +
+      '<a class="wrap b-next" href="#' + nx + '"><span class="over">Next branch</span><b>' + esc(B[nx].n) + ' &rarr;</b></a>';
+  }
+
+  // ---------- Rooms ----------
+  var ROOMS = [
+    {n:'Conference Room', br:'cebu-main', badge:'Meetings', sub:'Room 1', desc:'A private room for team meetings, pitches and group study. It is the first room to open when the dining floor fills.', best:['Team meetings','Presentations','Group study'], photo:{ph:'Conference Room: the full table from the doorway, lights on'}},
+    {n:'Dr’s Lounge', br:'cebu-main', badge:'Shared table', sub:'Room 2', desc:'A long shared table with ergonomic chairs, a sofa and warm cove lighting. Opens after the Conference Room.', best:['Study groups','Long work sessions','Small gatherings'], photo:{src:'assets/cebu-main-lounge.jpg', alt:'The Dr’s Lounge long table and sofa.'}},
+    {n:'Portal Space', br:'cebu-main', badge:'Most private', sub:'Room 3', desc:'The last room to open and the quietest in the building. Made for the call or one-on-one that needs privacy.', best:['Private calls','One-on-ones','Focused work'], photo:{ph:'Portal Space: the room from the entrance, empty'}},
+    {n:'Intensive Work Unit', br:'casa-mira', badge:'Solo work', sub:'Work stations', desc:'Curtained work stations past the dining floor. Book one at the counter and a claim card on your desk shows the seat is yours.', best:['Solo deep work','Laptop sessions','Exam review'], photo:{src:'assets/casa-mira-icu.jpg', alt:'Work stations under the Intensive Work Unit sign.'}}
+  ];
+  var sel = $('#roomBranch'), grid = $('#roomGrid');
+  function renderRooms(){
+    var v = sel.value, list = ROOMS.filter(function(r){ return v === 'all' || r.br === v; });
+    $('#roomCount').textContent = list.length + ' room' + (list.length === 1 ? '' : 's');
+    if (!list.length){ var b = B[v];
+      grid.innerHTML = '<div class="empty"><p class="over">' + esc(b.n) + '</p><h3>No bookable rooms here yet.</h3><p>' + (b.walkin ? esc(b.n) + ' has ' + esc(b.walkin) + ' for walk-ins.' : esc(b.n) + '’s space list is coming soon.') + ' For a private room, try Cebu Main or Casa Mira.</p><div class="row"><a class="btn" href="#' + v + '">Visit ' + esc(b.n) + '</a><button class="btn" type="button" data-all>Show all rooms</button></div></div>';
+      return; }
+    grid.innerHTML = list.map(function(r, k){ var b = B[r.br];
+      return '<article class="room" data-anim style="--d:' + (k*90) + 'ms"><figure>' + pic(r.photo) + '<span class="badge">' + esc(r.badge) + '</span></figure>' +
+        '<div class="rhead"><h3>' + esc(r.n) + '</h3><span class="sub">' + esc(b.n) + ' &middot; ' + esc(r.sub) + '</span><span class="rate">Rate on request</span>' +
+        '<button class="plus" type="button" aria-expanded="false" aria-controls="rm-' + k + '" aria-label="Details for ' + esc(r.n) + '">+</button></div>' +
+        '<div class="more" id="rm-' + k + '" hidden><p>' + esc(r.desc) + '</p><div class="tags">' + r.best.map(function(t){ return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' +
+        '<div class="row"><a class="btn solid" href="' + FB + '" target="_blank" rel="noopener">Ask to book</a><a class="btn" href="#' + r.br + '">' + esc(b.n) + '</a></div></div></article>'; }).join('');
+    observe(grid);
+  }
+  sel.addEventListener('change', renderRooms);
+  grid.addEventListener('click', function(e){
+    if (e.target.closest('[data-all]')){ sel.value = 'all'; renderRooms(); return; }
+    var p = e.target.closest('.plus'); if (!p) return;
+    var open = p.getAttribute('aria-expanded') !== 'true'; p.setAttribute('aria-expanded', open); document.getElementById(p.getAttribute('aria-controls')).hidden = !open;
+  });
+
+  // ---------- Menu ----------
+  var H = ['Hot','Low','High'];
+  var MENU = [
+    {id:'classic', name:'Classic brews', cols:H, items:[['Dr. Black Coffee',120,null,null],['Vietnamese',120,120,160],['Caphé Muối',120,120,160],['Cold Brew',null,120,160]]},
+    {id:'espresso', name:'Espresso-based', cols:H, items:[['Espresso, single shot',75,null,null],['Doppio, double shot',100,null,null],['Americano',160,160,190,1],['Biscoff Latte',160,160,190,1],['Café Latte',160,160,190],['Cappuccino',160,160,190],['Café Mocha',160,160,190],['Caramel Macchiato',160,160,190,1],['SeaSalt Caramel',160,160,190,1],['White Chocolate Mocha',160,160,190],['Spanish Latte',160,160,190,1],['Vanilla Latte',160,160,190],['Espresso Sunrise',null,160,190]]},
+    {id:'transfusions', name:'Signature Transfusions', tag:'Iced only', items:[['Vietnamese',260],['Spanish Latte',260],['Green Apple Yakult',260],['Cold Brew',260]]},
+    {id:'overdose', name:'Overdose', tag:'1 L · good for 3–4', items:[['Vietnamese',360],['Americano',490],['Café Latte',490],['Cappuccino',490],['Café Mocha',490],['Caramel Macchiato',490],['Flat White Chocolate Mocha',490],['Matcha Espresso',490],['SeaSalt Caramel',490],['Spanish Latte',490]]},
+    {id:'coffee-free', name:'Coffee-free', cols:H, items:[['Chocolate Latte',160,160,190,1],['Matcha Latte',160,160,190,1],['Blue Lagoon',null,160,190],['Green Apple Yakult',null,160,190],['Lychee',null,160,190],['Strawberry Ade',null,160,190],['Strawberry Latte',null,160,190],['Yuzu Lemonade',null,160,190]]},
+    {id:'blended', name:'Blended', items:[['Biscoff Frappe',230],['Caramello',230],['Cookies & Cream',230],['Cryoccino',230],['Dirty Matcha',230],['Java Chip',230],['Matcha Cloud',230],['Mochaccino',230]]},
+    {id:'tea', name:'Tea', items:[['Chamomile',150],['Pure Peppermint',150],['English Breakfast',150],['Earl Grey',150]]},
+    {id:'rice', name:'Rice meals', items:[['Katsu Silog',239],['Corned Beef Silog',239],['Sausage Silog',239],['Beef Tapsilog',239],['Chicken Tocilog',239],['Dr. Chicken Adobo, regular',239,1],['Dr. Chicken Adobo, spicy',239,1],['Beef Siomai Rice',159],['Chicken Siomai Rice',159],['Dr. Chicken Adobo Bottle',270]]},
+    {id:'pasta', name:'Pasta & sandwiches', items:[['Spaghetti with Meatballs (beef)',249],['Chicken Carbonara Supreme',249,1],['Tuna Pesto Delight',249],['Loaded Tuna Sandwich',249],['Dr. Coffee Clubhouse Sandwich',260,1],['Chicken Fajita',260]]},
+    {id:'pastries', name:'Pastries', items:[['Chocolate Chip Cookies',105,1],['Revel Bar',140,1],['Blueberry Cheesecake Slice',230,1],['Biscoff Cheesecake',230],['Chocolate Banana Muffin',110],['Choco Tart',75],['Special Carrot Cake Slice',85],['Red Velvet Cake',120],['Chocolate Moist Cake',120],['Ube Cake',120],['Boston Cream Cake',120]]},
+    {id:'crash-cart', name:'Crash Cart combos', items:[['Remedy Fries',159,1],['Emergency Burger Combo',169,1],['Code Red Nachos',179,1]]}
+  ];
+  var SHOTS = [
+    ['classic','Dr. Black Coffee','dr-coffee-black'],['classic','Caphé Muối','ca-phe-muoi'],['classic','Cold Brew','cold-brew'],
+    ['espresso','Spanish Latte','spanish-latte'],['espresso','Caramel Macchiato','caramel-macchiato'],['espresso','Americano','americano'],['espresso','Biscoff Latte','biscoff-latte'],
+    ['espresso','SeaSalt Caramel','seasalt-caramel'],['espresso','Café Latte','cafe-latte'],['espresso','Cappuccino','cappuccino'],['espresso','Vanilla Latte','vanilla-latte'],['espresso','Espresso Sunrise','espresso-sunrise'],
+    ['coffee-free','Matcha Latte','matcha-latte'],['coffee-free','Chocolate Latte','chocolate-latte'],['coffee-free','Blue Lagoon','blue-lagoon'],['coffee-free','Green Apple Yakult','green-apple-yakult'],
+    ['coffee-free','Strawberry Latte','strawberry-latte'],['coffee-free','Strawberry Ade','strawberry-ade'],['coffee-free','Yuzu Lemonade','yuzu-lemonade'],
+    ['blended','Cryoccino','cryoccino'],['blended','Cookies & Cream','cookies-cream'],['blended','Java Chip','java-chip'],['blended','Caramello','caramello'],['blended','Mochaccino','mochaccino'],
+    ['overdose','Overdose, 1 litre','1l'],
+    ['more','Caramel Latte','caramel-latte'],['more','Coco Matcha','coco-matcha'],['more','Biscoff Matcha','biscoff-matcha'],['more','Matcha Strawberry','matcha-strawberry'],
+    ['more','Matcha Espresso','matcha-espresso'],['more','Flat White Mocha','flatwhite-mocha'],['more','Lychee Yakult','lychee-yakult'],['more','Strawberry Frappe','strawberry-frappe']
+  ];
+  var GROUPS = [['all','All'],['classic','Classic'],['espresso','Espresso-based'],['coffee-free','Coffee-free'],['blended','Blended'],['overdose','Overdose'],['more','More to try']];
+  function priceOf(cat, name){
+    if (cat === 'overdose') return {txt:'1 L · from ₱360'};
+    var c = MENU.filter(function(m){ return m.id === cat; })[0]; if (!c) return null;
+    var it = c.items.filter(function(x){ return x[0] === name; })[0]; if (!it) return null;
+    if (c.cols){ var parts = []; for (var i = 1; i <= 3; i++) if (it[i] != null) parts.push(c.cols[i - 1] + ' ₱' + it[i]); return {txt:parts.join(' · '), star:it[4]}; }
+    return {txt:'₱' + it[1], star:it[2]};
+  }
+  var shelfGrid = $('#shelfGrid'), shelfF = $('#shelfF');
+  shelfF.innerHTML = GROUPS.map(function(g, i){ return '<button type="button" data-g="' + g[0] + '" aria-pressed="' + (i ? 'false' : 'true') + '">' + g[1] + '</button>'; }).join('');
+  function renderShelf(g){
+    var list = SHOTS.filter(function(x){ return g === 'all' || x[0] === g; });
+    shelfGrid.innerHTML = list.map(function(x, k){ var pr = priceOf(x[0], x[1]);
+      return '<figure class="drink' + (g === 'all' ? '' : ' in') + '" style="--d:' + Math.min(k, 8)*50 + 'ms"><span class="pic"><img src="assets/s-' + x[2] + '.jpg" alt="' + esc(x[1]) + ' in the Dr. Coffee sleeve." width="900" height="1200" loading="lazy"></span>' +
+        '<figcaption><h3>' + esc(x[1]) + (pr && pr.star ? '<span class="star" aria-label="best seller">&#9733;</span>' : '') + '</h3><span class="pr">' + (pr ? esc(pr.txt) : 'Ask at the counter') + '</span></figcaption></figure>'; }).join('');
+    $('#shelfNote').hidden = !(g === 'more' || g === 'all');
+  }
+  shelfF.addEventListener('click', function(e){ var b = e.target.closest('[data-g]'); if (!b) return;
+    $$('button', shelfF).forEach(function(x){ x.setAttribute('aria-pressed', x === b); }); renderShelf(b.dataset.g); });
+
+  var colsEl = $('#menuCols'), html = '', chip = '';
+  MENU.forEach(function(c){
+    chip += '<a href="#menu" data-cat="m-' + c.id + '">' + esc(c.name) + '</a>';
+    var multi = !!c.cols, rows = '';
+    c.items.forEach(function(it){ var best = multi ? it[4] : it[2];
+      rows += '<tr class="' + (best ? 'bs' : 'reg') + '"><td>' + esc(it[0]) + (best ? '<span class="star" aria-label="best seller">&#9733;</span>' : '') + '</td>';
+      if (multi){ for (var i = 1; i <= 3; i++) rows += it[i] == null ? '<td class="na" aria-label="not available">&ndash;</td>' : '<td>' + it[i] + '</td>'; } else rows += '<td>' + it[1] + '</td>';
+      rows += '</tr>'; });
+    var head = multi ? '<thead><tr><th scope="col"><span class="sr">Item</span></th>' + c.cols.map(function(h){ return '<th scope="col">' + h + '</th>'; }).join('') + '</tr></thead>' : '';
+    html += '<div class="cat" id="m-' + c.id + '" data-anim><h3>' + esc(c.name) + (c.tag ? ' <small>' + esc(c.tag) + '</small>' : '') + '</h3><table>' + head + '<tbody>' + rows + '</tbody></table></div>';
+  });
+  colsEl.innerHTML = html; $('#chips').innerHTML = chip;
+  renderShelf('all');
+  $('#chips').addEventListener('click', function(e){ var a = e.target.closest('[data-cat]'); if (!a) return; e.preventDefault(); document.getElementById(a.dataset.cat).scrollIntoView({behavior:reduce ? 'auto' : 'smooth'}); });
+  var bestBtn = $('#bestBtn');
+  bestBtn.onclick = function(){ var on = bestBtn.getAttribute('aria-pressed') !== 'true'; bestBtn.setAttribute('aria-pressed', on); colsEl.classList.toggle('best', on); };
+
+  // ---------- Contact form: no server, so it hands the message to Messenger ----------
+  $('#msgForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var st = $('#formStatus'), nameEl = $('#f-name'), msgEl = $('#f-msg'), name = nameEl.value.trim(), msg = msgEl.value.trim(), br = $('#f-branch').value, topic = $('#f-topic').value;
+    if (!name || !msg){ st.hidden = false; st.innerHTML = 'Please add your name and a message.'; (name ? msgEl : nameEl).focus(); return; }
+    var text = 'Hi Dr. Coffee' + (br ? ' ' + br : '') + '! I’m ' + name + '. ' + topic + ': ' + msg;
+    function done(copied){ st.hidden = false;
+      st.innerHTML = (copied ? 'Your message is copied. ' : 'Copy your message below. ') + 'Paste it into our <a href="' + FB + '" target="_blank" rel="noopener">Facebook page</a> or <a href="' + IG + '" target="_blank" rel="noopener">Instagram</a> chat and we’ll reply there.' + (copied ? '' : '<pre>' + esc(text) + '</pre>'); }
+    try{ navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); }); }catch(err){ done(false); }
+  });
+
+  // ---------- Motion: split words, play-on-arrival, counters, line drawing ----------
+  function split(el){
+    if (el.dataset.split) return; el.dataset.split = '1'; var n = 0;
+    (function walk(node){
+      [].slice.call(node.childNodes).forEach(function(c){
+        if (c.nodeType === 3){
+          var parts = c.textContent.split(/(\s+)/), frag = document.createDocumentFragment();
+          parts.forEach(function(p){ if (!p) return; if (/^\s+$/.test(p)){ frag.appendChild(document.createTextNode(p)); return; }
+            var w = document.createElement('span'), wi = document.createElement('span'); w.className = 'w'; wi.className = 'wi'; wi.style.setProperty('--i', n++); wi.textContent = p; w.appendChild(wi); frag.appendChild(w); });
+          node.replaceChild(frag, c);
+        } else if (c.nodeType === 1) walk(c);
+      });
+    })(el);
+  }
+  function count(el){
+    var to = parseFloat(el.dataset.count), t0 = null, dur = 1500, comma = el.dataset.fmt === 'ml';
+    function f(v){ v = Math.round(v); return comma ? v.toLocaleString('en-US') : String(v); }
+    function tick(t){ if (t0 == null) t0 = t; var p = clamp((t - t0)/dur, 0, 1), e = 1 - Math.pow(1 - p, 3); el.textContent = f(to*e); if (p < 1) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+  }
+  function drawIn(svg){
+    var paths = $$('path:not(.fillq):not(.red), line, rect:not(.fillq)', svg).filter(function(p){ return !p.closest('text') && p.getTotalLength; });
+    paths.forEach(function(p, i){ var len; try{ len = p.getTotalLength(); }catch(e){ return; } if (!len) return;
+      p.style.transition = 'none'; p.style.strokeDasharray = len; p.style.strokeDashoffset = len;
+      p.getBoundingClientRect();
+      p.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(.2,.7,.2,1) ' + (i*90) + 'ms'; p.style.strokeDashoffset = 0;
+      setTimeout(function(){ p.style.strokeDasharray = ''; p.style.strokeDashoffset = ''; p.style.transition = ''; }, 1600 + i*90); });
+  }
+  function play(el){
+    el.classList.add('play');
+    var type = el.dataset.anim;
+    if (type === 'draw') drawIn(el.tagName.toLowerCase() === 'svg' ? el : $('svg', el) || el);
+    $$('[data-count]', el).concat(el.dataset.count ? [el] : []).forEach(count);
+  }
+  var io = null;
+  if (!reduce && 'IntersectionObserver' in window){
+    io = new IntersectionObserver(function(en){ en.forEach(function(x){ if (x.isIntersecting){ play(x.target); io.unobserve(x.target); } }); }, {rootMargin:'0px 0px 60px 0px', threshold:0});
+  }
+  function observe(root){
+    $$('[data-anim]', root).forEach(function(el){
+      if (el.dataset.armed) return; el.dataset.armed = '1';
+      if (el.dataset.anim === 'split') split(el);
+      if (el.dataset.anim === 'kids') [].slice.call(el.children).forEach(function(c, i){ c.style.setProperty('--i', i); });
+      if (io) io.observe(el);
+    });
+  }
+
+  // ---------- The two bags ----------
+  var heroHost = $('#heroBag'), txHost = $('#txBag'), hint = $('#heroHint');
+  var hero = DCBag.create(heroHost, {theme:'dark', interactive:!reduce, onGrab:function(){ hint.classList.add('gone'); }});
+  var tx = DCBag.create(txHost, {theme:'light', viewBox:'-70 -250 740 1330', seed:23});
+  var flv = $('#heroFlv');
+  flv.innerHTML = DCBag.flavors.map(function(f, i){ return '<button type="button" aria-pressed="' + (i ? 'false' : 'true') + '" data-f="' + f.id + '" style="--c:' + f.c[1] + '"><i aria-hidden="true"></i>' + f.name + '</button>'; }).join('');
+  flv.addEventListener('click', function(e){ var b = e.target.closest('[data-f]'); if (!b) return;
+    $$('button', flv).forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
+    hero.setFlavor(b.dataset.f, reduce); hint.classList.add('gone');
+    heroHost.setAttribute('aria-label', 'An animated Transfusion bag of ' + b.textContent + ' with a sipping tube, a white clamp and the Dr. Coffee label.'); });
+  function watch(host, bag){
+    if (reduce || !('IntersectionObserver' in window)){ bag.still(); return; }
+    new IntersectionObserver(function(en){ en.forEach(function(x){ if (x.isIntersecting && !document.hidden) bag.start(); else bag.stop(); }); }, {rootMargin:'120px 0px'}).observe(host);
+  }
+  watch(heroHost, hero); watch(txHost, tx);
+  document.addEventListener('visibilitychange', function(){ if (document.hidden){ hero.stop(); tx.stop(); } });
+
+  // Sticky story: each step sets the bag
+  var steps = $$('#txSteps .step'), plate = $('#txPlate'), txNow = $('#txNow');
+  function setStep(s){
+    steps.forEach(function(x){ x.classList.toggle('on', x === s); });
+    var f = s.dataset.flavor;
+    if (f === 'label'){ plate.classList.add('zoom'); txNow.textContent = 'The label'; return; }
+    plate.classList.remove('zoom'); tx.setFlavor(f, reduce);
+    var fl = DCBag.flavors.filter(function(x){ return x.id === f; })[0]; if (fl) txNow.textContent = fl.name;
+  }
+  if ('IntersectionObserver' in window){
+    var so = new IntersectionObserver(function(en){ en.forEach(function(x){ if (x.isIntersecting) setStep(x.target); }); }, {rootMargin:'-45% 0px -45% 0px'});
+    steps.forEach(function(s){ so.observe(s); });
+  }
+
+  // ---------- Marquee (speeds and leans with scroll) ----------
+  var mqItems = ['Choose your dose','Brewed with care','Tested before it reaches your cup','Philippine beans first','Every drink in the botanical sleeve','Cebu City · Mandaue','Talisay, coming soon'];
+  var mqOne = mqItems.map(function(t){ return '<span>' + esc(t) + '<svg aria-hidden="true"><use href="#i-ecg"/></svg></span>'; }).join('');
+  var mqT = $('#mqTrack'); mqT.innerHTML = mqOne + mqOne;
+
+  // ---------- Compare slider ----------
+  var cmp = $('#cmp'), cmpIn = $('#cmpIn');
+  cmpIn.addEventListener('input', function(){ cmp.style.setProperty('--pos', cmpIn.value + '%'); });
+
+  // ---------- Rail: drag with inertia, arrows, tilt ----------
+  var rail = $('#rail');
+  function railBy(dir){ var t = rail.querySelector('.tile'); rail.scrollBy({left:dir*(t ? t.getBoundingClientRect().width + 18 : 300), behavior:reduce ? 'auto' : 'smooth'}); }
+  $('#railPrev').onclick = function(){ railBy(-1); }; $('#railNext').onclick = function(){ railBy(1); };
+  (function(){
+    var down = false, sx = 0, sl = 0, moved = 0, v = 0, lx = 0, lt = 0, inertia = 0;
+    rail.addEventListener('pointerdown', function(e){ if (e.pointerType !== 'mouse' || e.button) return; down = true; moved = 0; sx = lx = e.clientX; sl = rail.scrollLeft; lt = e.timeStamp; v = 0; cancelAnimationFrame(inertia); });
+    window.addEventListener('pointermove', function(e){ if (!down) return; var dx = e.clientX - sx; if (Math.abs(dx) > 4 && !rail.classList.contains('drag')) rail.classList.add('drag');
+      moved = Math.max(moved, Math.abs(dx)); rail.scrollLeft = sl - dx; var dt = e.timeStamp - lt; if (dt > 0) v = (e.clientX - lx)/dt; lx = e.clientX; lt = e.timeStamp; });
+    window.addEventListener('pointerup', function(){ if (!down) return; down = false;
+      if (reduce || Math.abs(v) < .05){ rail.classList.remove('drag'); return; }
+      var vel = v*16;
+      (function glide(){ vel *= .94; rail.scrollLeft -= vel; if (Math.abs(vel) > .4) inertia = requestAnimationFrame(glide); else rail.classList.remove('drag'); })(); });
+    rail.addEventListener('click', function(e){ if (moved > 6){ e.preventDefault(); e.stopPropagation(); } }, true);
+  })();
+  if (fine && !reduce){
+    rail.addEventListener('pointermove', function(e){ var t = e.target.closest('.tile'); if (!t || rail.classList.contains('drag')) return;
+      var r = t.getBoundingClientRect(), px = (e.clientX - r.left)/r.width, py = (e.clientY - r.top)/r.height;
+      t.style.setProperty('--ry', ((px - .5)*10).toFixed(2) + 'deg'); t.style.setProperty('--rx', ((.5 - py)*8).toFixed(2) + 'deg');
+      t.style.setProperty('--gx', (px*100).toFixed(1) + '%'); t.style.setProperty('--gy', (py*100).toFixed(1) + '%'); });
+    rail.addEventListener('pointerout', function(e){ var t = e.target.closest('.tile'); if (t && !t.contains(e.relatedTarget)){ t.style.setProperty('--rx', '0deg'); t.style.setProperty('--ry', '0deg'); } });
+  }
+
+  // ---------- Cursor and magnetic buttons ----------
+  var cur = $('#cur'), curTxt = $('#curTxt'), cx = -100, cy = -100, rx = -100, ry = -100;
+  if (fine && !reduce){
+    document.documentElement.classList.add('has-cursor');
+    var ring = $('.ring', cur), dot = $('.dot', cur);
+    window.addEventListener('pointermove', function(e){ if (!cur.classList.contains('on')){ cur.classList.add('on'); rx = e.clientX; ry = e.clientY; } cx = e.clientX; cy = e.clientY; dot.style.transform = 'translate(' + cx + 'px,' + cy + 'px)'; }, {passive:true});
+    document.addEventListener('pointerover', function(e){
+      var t = e.target, lab = t.closest && (t.closest('#heroBag') ? 'Swing' : t.closest('[data-cursor]') ? t.closest('[data-cursor]').dataset.cursor : t.closest('.cmp') ? 'Drag' : '');
+      cur.classList.toggle('txt', !!lab); curTxt.textContent = lab || '';
+      cur.classList.toggle('link', !lab && !!(t.closest && t.closest('a,button,select,input,textarea,label'))); });
+    document.documentElement.addEventListener('pointerleave', function(){ cur.classList.remove('on'); });
+    $$('[data-magnetic]').forEach(magnet);
+  }
+  function magnet(el){
+    if (!fine || reduce || el.dataset.mag) return; el.dataset.mag = '1';
+    el.addEventListener('pointermove', function(e){ var r = el.getBoundingClientRect(); el.style.translate = ((e.clientX - r.left - r.width/2)*.25).toFixed(1) + 'px ' + ((e.clientY - r.top - r.height/2)*.35).toFixed(1) + 'px'; });
+    el.addEventListener('pointerleave', function(){ el.style.translate = ''; });
+    el.style.transition = (el.style.transition ? el.style.transition + ',' : '') + 'translate .5s cubic-bezier(.2,.7,.2,1)';
+  }
+
+  // ---------- One frame loop for scroll-linked effects ----------
+  var mast = $('#mast'), ivBar = $('#ivBar'), ivPc = $('#ivPc'), chartLines = $$('#chartLines .ln span');
+  var lastY = window.scrollY, vel = 0, mqX = 0, skew = 0, lastT = 0, mqVisible = true;
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(en){ mqVisible = en[0].isIntersecting; }).observe($('.mq'));
+  function frame(t){
+    requestAnimationFrame(frame);
+    var dt = lastT ? Math.min(.05, (t - lastT)/1000) : .016; lastT = t;
+    var y = window.scrollY, vh = window.innerHeight, home = !views[0].hidden;
+    vel += ((y - lastY)/Math.max(dt, .001) - vel)*.2; lastY = y;
+    mast.classList.toggle('stuck', y > 90);
+    var max = Math.max(1, document.documentElement.scrollHeight - vh), p = clamp(y/max, 0, 1);
+    ivBar.style.setProperty('--p', p.toFixed(3)); ivPc.textContent = 'Dose ' + Math.round(p*100) + '%';
+    if (fine && !reduce){ rx += (cx - rx)*.18; ry += (cy - ry)*.18; ring.style.transform = 'translate(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px)'; }
+    if (reduce) return;
+    if (home && mqVisible){
+      mqX -= (42 + Math.min(900, Math.abs(vel))*.35)*dt; var half = mqT.scrollWidth/2; if (half && -mqX > half) mqX += half;
+      skew += (clamp(-vel/180, -9, 9) - skew)*.12;
+      mqT.style.transform = 'translate3d(' + mqX.toFixed(1) + 'px,0,0) skewX(' + skew.toFixed(2) + 'deg)';
+    }
+    pxEls.forEach(function(img){ var r = img.getBoundingClientRect(); if (r.bottom < -100 || r.top > vh + 100) return;
+      var off = (r.top + r.height/2 - vh/2)*parseFloat(img.dataset.px); img.style.translate = '0 ' + (-off).toFixed(1) + 'px'; });
+    if (home && chartLines.length){
+      var cr = chartLines[0].parentNode.parentNode.getBoundingClientRect(), prog = clamp((vh - cr.top)/(vh*.9), 0, 1.4);
+      chartLines.forEach(function(s, i){ var b = clamp((.3 + i*.08 - prog)/.22, 0, 1)*5; s.style.setProperty('--b', b.toFixed(2) + 'px'); });
+    }
+  }
+
+  // ---------- Router: one file, several pages (hash = page) ----------
+  var views = $$('.view'), curtain = $('#curtain'), current = null, curH = null, busy = false, pxEls = [];
+  function show(name){ views.forEach(function(v){ var on = v.dataset.view === name; v.hidden = !on; }); }
+  function navMark(key){ $$('[data-nav]').forEach(function(a){ if (a.dataset.nav === key) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); }); }
+  function viewFor(h){ return B[h] ? 'branch' : /^rooms(?:-(.+))?$/.test(h) ? 'rooms' : h === 'menu' ? 'menu' : 'home'; }
+  function apply(h, name, wasHidden){
+    $('#drawer').hidden = true; $('#burger').setAttribute('aria-expanded', 'false');
+    if (name === 'branch'){ show('branch'); renderBranch(h); navMark('branches'); document.title = B[h].n + ' · Dr. Coffee'; window.scrollTo(0, 0); }
+    else if (name === 'rooms'){ var m = /^rooms(?:-(.+))?$/.exec(h); show('rooms'); navMark('rooms'); document.title = 'Rooms · Dr. Coffee';
+      if (m[1] && B[m[1]]){ sel.value = m[1]; renderRooms(); setTimeout(function(){ $('#roomList').scrollIntoView(); }, 40); } else { renderRooms(); window.scrollTo(0, 0); } }
+    else if (name === 'menu'){ show('menu'); navMark('menu'); document.title = 'Menu · Dr. Coffee'; window.scrollTo(0, 0); }
+    else { show('home'); document.title = 'Dr. Coffee';
+      navMark(h === 'branches' || h === 'contact' || h === 'transfusion' ? h : '');
+      var el = h && h !== 'home' && h !== 'top' && document.getElementById(h);
+      if (el && views[0].contains(el)) setTimeout(function(){ el.scrollIntoView({behavior:wasHidden || reduce ? 'auto' : 'smooth'}); }, wasHidden ? 40 : 0);
+      else if (h === 'home' || h === 'top' || wasHidden) window.scrollTo({top:0, behavior:wasHidden || reduce ? 'auto' : 'smooth'}); }
+    var v = views.filter(function(x){ return !x.hidden; })[0];
+    observe(v); $$('[data-magnetic]', v).forEach(magnet); paintStatus();
+    pxEls = reduce ? [] : $$('[data-px]', v);
+    current = name; curH = h;
+  }
+  function route(){
+    var h = (location.hash || '').slice(1), name = viewFor(h), wasHidden = views[0].hidden;
+    if (busy) return;
+    if (current === null || reduce || (name === current && name !== 'branch')){ apply(h, name, wasHidden); return; }
+    busy = true;
+    curtain.className = 'curtain cover';
+    setTimeout(function(){ apply(h, name, wasHidden); curtain.className = 'curtain leave';
+      setTimeout(function(){ curtain.className = 'curtain'; busy = false; if ((location.hash || '').slice(1) !== curH) route(); }, 620); }, 520);
+  }
+  $$('[data-scroll]').forEach(function(a){ a.addEventListener('click', function(e){ e.preventDefault(); document.getElementById(a.dataset.scroll).scrollIntoView({behavior:reduce ? 'auto' : 'smooth'}); }); });
+  $('#skip').addEventListener('click', function(e){ e.preventDefault(); $('#main').focus(); });
+  window.addEventListener('hashchange', route);
+  $('#burger').onclick = function(){ var d = $('#drawer'), open = d.hidden; d.hidden = !open; this.setAttribute('aria-expanded', open); };
+
+  // ---------- Start: intro once per visit, then the page plays in ----------
+  function begin(){
+    route();
+    if (!reduce){ hero.drop(); setTimeout(function(){ hero.tick(); }, 1300); }
+    requestAnimationFrame(frame);
+  }
+  paintStatus(); setInterval(paintStatus, 30000);
+  var pre = $('#pre');
+  if (pre.hidden){ begin(); }
+  else {
+    try{ sessionStorage.setItem('dc-intro', '1'); }catch(e){}
+    hero.hideTick();
+    var pc = $('#prePc'), t0 = performance.now(), D = 1250;
+    (function bump(t){ var p = clamp((t - t0)/D, 0, 1); pc.textContent = 'Preparing your dose ' + Math.round(p*100) + '%'; if (p < 1) requestAnimationFrame(bump); })(t0);
+    setTimeout(function(){ pre.classList.add('out'); begin(); setTimeout(function(){ pre.hidden = true; document.documentElement.classList.remove('intro'); }, 950); }, D + 150);
+  }
+})();
+</script>
+
+</body>
+</html>
