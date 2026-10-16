@@ -367,6 +367,16 @@ p{margin:0}
 .kitchen figure{margin:0;min-height:260px}
 .kitchen figure img{width:100%;height:100%;object-fit:cover}
 .kitchen .copy{padding:clamp(24px,4vw,52px);display:grid;gap:14px;align-content:center}
+.pastry{margin-top:clamp(56px,7vw,96px);display:grid;gap:22px}
+.pc-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
+.pc{display:grid;gap:12px;align-content:start}
+.pc figure{margin:0;aspect-ratio:1;border-radius:22px;overflow:hidden;background:#FEFAF4;box-shadow:var(--neu)}
+.pc figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.pc:hover figure img{transform:scale(1.04)}
+.pc h4{margin:0;font-weight:400;font-size:clamp(19px,1.7vw,23px);line-height:1.25}
+.pc .price{margin:4px 0 0;font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.06em}
+.pc .price span{color:var(--muted);font-weight:600;letter-spacing:.04em;margin-left:6px}
+@media (max-width:600px){.pc-row{grid-template-columns:minmax(0,1fr)}.pc{grid-template-columns:112px minmax(0,1fr);align-items:center;gap:18px}.pc figure{border-radius:16px}}
 @media (max-width:860px){.cc,.kitchen{grid-template-columns:minmax(0,1fr)}.cc.alt .copy{order:0}.cc .shot{width:88%;justify-self:start}}
 
 /* branches */
@@ -779,12 +789,13 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           </article>
           <article class="step" data-flavor="label">
             <span class="chip" style="--c:var(--red)"><i></i>Read the label</span>
-            <h3>Every bag wears the same white label.</h3>
+            <h3>Every bag wears a white label.</h3>
+            <figure data-anim="wipe"><img src="assets/p-tx-batch.jpg" alt="A tray of Spanish Latte Transfusion bags, each label ticked for Spanish Latte." width="1200" height="1187" loading="lazy" data-px="0.06"></figure>
             <ul class="anat">
-              <li><b>01</b><span>&ldquo;100% Arabica&rdquo; in the top corner.</span></li>
-              <li><b>02</b><span>&ldquo;Brewed to save your day&rdquo; beside a red cross.</span></li>
+              <li><b>01</b><span>The Dr. Coffee mark, heartbeat line and all.</span></li>
+              <li><b>02</b><span>A red cross in the corner.</span></li>
               <li><b>03</b><span>A checklist with your drink ticked.</span></li>
-              <li><b>04</b><span>A heartbeat signature and a barcode.</span></li>
+              <li><b>04</b><span>A barcode, like the real thing.</span></li>
             </ul>
             <div class="row"><a class="btn solid" data-magnetic href="#menu">See the menu <span class="arr" aria-hidden="true">&rarr;</span></a></div>
           </article>
@@ -818,9 +829,9 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           <p>Cups carry an Rx label with your drink written underneath and a Sig. line, like a prescription slip.</p>
         </article>
         <article class="det" data-anim style="--d:100ms">
-          <figure data-anim="wipe" style="background:#FEFEFE"><img src="assets/s-1l.jpg" alt="The one-litre Overdose bottle in its Dr. Coffee label." width="900" height="1200" loading="lazy" style="object-fit:contain"></figure>
+          <figure data-anim="wipe"><img src="assets/p-overdose-rx.jpg" alt="Two one-litre Overdose bottles with Rx prescription labels, named Normal Sinus Rhythm and No Salt Restriction." width="1200" height="1187" loading="lazy" style="object-position:50% 45%"></figure>
           <h3>The Overdose bottle</h3><span class="sub">One litre</span>
-          <p>A full litre in a labelled bottle, made for the table and good for three to four.</p>
+          <p>A full litre with its own Rx label and a clinic name for each blend. Made for the table, good for three to four.</p>
         </article>
         <article class="det" data-anim style="--d:200ms">
           <figure data-anim="wipe"><img src="assets/casa-mira-occupied.jpg" alt="A laptop and iced drink beside a card reading: Hi! This seat is occupied." loading="lazy"></figure>
@@ -917,6 +928,14 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           <p><a class="tlink" href="#menu">Rice meals, pasta &amp; pastries &rarr;</a></p>
         </div>
       </article>
+      <div class="pastry">
+        <p class="label rule" data-anim>From the pastry case</p>
+        <div class="pc-row">
+          <article class="pc" data-anim><figure><img src="assets/f-cookies.jpg" alt="A chocolate chip cookie with chocolate chunks on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Chocolate Chip Cookies</h4><p class="price">&#8369;105 <span>&#9733; best seller</span></p></div></article>
+          <article class="pc" data-anim style="--d:100ms"><figure><img src="assets/f-biscoff-cheesecake.jpg" alt="A slice of Biscoff cheesecake on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Biscoff Cheesecake</h4><p class="price">&#8369;230</p></div></article>
+          <article class="pc" data-anim style="--d:200ms"><figure><img src="assets/f-carrot-cake.jpg" alt="A slice of carrot cake with cream cheese frosting and a piped carrot on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Special Carrot Cake Slice</h4><p class="price">&#8369;85</p></div></article>
+        </div>
+      </div>
     </div>
   </section>
 
