@@ -776,7 +776,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           <article class="step on" data-flavor="spanish-latte">
             <span class="chip" style="--c:#CBA37A"><i></i>Spanish Latte</span>
             <h3>Espresso, milk and a sweet, creamy finish.</h3>
-            <p class="lead">The bag in our photos. Iced, with a layer of foam on top.</p>
+            <p class="lead">Iced, with a soft layer of foam on top.</p>
             <figure data-anim="wipe"><img src="assets/p-statbag.jpg" alt="A Spanish Latte Transfusion bag held up by its tube against green leaves." width="880" height="1100" loading="lazy" data-px="0.06"></figure>
           </article>
           <article class="step" data-flavor="green-apple-yakult">
@@ -1005,7 +1005,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <div class="facts" data-anim="kids">
         <div class="fact"><b>2&ndash;3</b><span>Months of tasting for each recipe, with several tasters, before it reaches the menu.</span></div>
         <div class="fact"><b data-count="3">3</b><span>Highland names on our first kiosk&rsquo;s coffee: Baguio, Benguet and Atok.</span></div>
-        <div class="fact"><b data-count="3">3</b><span>Branches on one handbook, in Cebu City and Mandaue. Talisay is next.</span></div>
+        <div class="fact"><b data-count="3">3</b><span>Branches open today, in Cebu City and Mandaue. Talisay is next.</span></div>
       </div>
     </div>
   </section>
@@ -1054,7 +1054,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
   <section class="r-band dark">
     <div class="wrap">
       <p class="stack" data-anim="kids"><span style="display:block">Meet</span><span style="display:block">Study</span><span style="display:block">Focus</span></p>
-      <h2 data-anim="split">Book the room. We&rsquo;ll bring the dose.</h2>
+      <h2 data-anim="split">Book the room. Order your dose.</h2>
       <p data-anim>Three rooms at Cebu Main.<br>Work stations at Casa Mira.<br>Rates and terms at the counter.</p>
     </div>
   </section>
@@ -1093,7 +1093,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <ol class="steps" data-anim="kids">
         <li><b>Pick a room and branch</b><span>Use the Branch filter above to see each branch&rsquo;s rooms.</span></li>
         <li><b>Check it&rsquo;s free</b><span>Ask at the counter or message the branch. Rooms open in order as the dining floor fills.</span></li>
-        <li><b>Settle in</b><span>Take your claim card to the table and order from the counter.</span></li>
+        <li><b>Settle in</b><span>Order your dose at the counter and get to work. At Casa Mira, a claim card on your desk shows the seat is yours.</span></li>
       </ol>
       <p class="small" style="margin-top:26px">Rates and booking terms are set by each branch. <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener">Message us on Facebook</a> to ask.</p>
     </div>
@@ -1168,13 +1168,13 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 var DCBag = (function(){
   var NS = 'http://www.w3.org/2000/svg', uid = 0;
   var FLAVORS = [
-    {id:'spanish-latte',      name:'Spanish Latte',      c:['#E2C7A3','#CBA37A','#A57C55'], foam:'#F5ECDF', line3:'SPANISH LATTE',      check:2},
-    {id:'green-apple-yakult', name:'Green Apple Yakult', c:['#DCEA90','#BCD34B','#98B032'], foam:'#F4F8DE', line3:'GREEN APPLE YAKULT', check:2},
-    {id:'cold-brew',          name:'Cold Brew',          c:['#8C5B35','#56341F','#311D12'], foam:'#C9A47E', line3:'SPANISH LATTE',      check:3},
-    {id:'vietnamese',         name:'Vietnamese',         c:['#C69B70','#A07046','#7B502D'], foam:'#EEDFC6', line3:'VIETNAMESE',         check:2}
+    {id:'spanish-latte',      name:'Spanish Latte',      c:['#E2C7A3','#CBA37A','#A57C55'], foam:'#F5ECDF', check:0},
+    {id:'green-apple-yakult', name:'Green Apple Yakult', c:['#DCEA90','#BCD34B','#98B032'], foam:'#F4F8DE', check:1},
+    {id:'cold-brew',          name:'Cold Brew',          c:['#8C5B35','#56341F','#311D12'], foam:'#C9A47E', check:2},
+    {id:'vietnamese',         name:'Vietnamese',         c:['#C69B70','#A07046','#7B502D'], foam:'#EEDFC6', check:3}
   ];
   var BY = {}; FLAVORS.forEach(function(f){ BY[f.id] = f; });
-  var ROWS = ['ESPRESSO','AMERICANO','','COLD BREW','LONG BLACK','EXTRA SHOT'];
+  var ROWS = ['SPANISH LATTE','GREEN APPLE YAKULT','COLD BREW','VIETNAMESE','LYCHEE YAKULT','ICED AMERICANO'];
   // Geometry in bag units: the welded outline with hanging holes, the inner chamber, the tube from the left port.
   var OUT = 'M92 0H508L560 46V792Q560 822 540 840L456 912V974Q456 990 440 990H160Q144 990 144 974V912L60 840Q40 822 40 792V46Z';
   var HOLES = 'M107 44a11 11 0 1 0 22 0a11 11 0 1 0 -22 0ZM285 40a11 11 0 1 0 22 0a11 11 0 1 0 -22 0ZM272 936H328A11 11 0 0 1 328 958H272A11 11 0 0 1 272 936Z';
@@ -1302,12 +1302,12 @@ var DCBag = (function(){
     // ---------- state ----------
     var st = {f:BY[o.flavor] || FLAVORS[0], to:null, tc:0, sw:0, th:0, om:0, s:0, sv:0, dy:0, bob:0, t:0, drop:null, push:0, drag:false, tgt:0, grab:0, tickT:null, fixed:null};
     function paint(stops, f){ stops[0].setAttribute('stop-color', f.c[0]); stops[1].setAttribute('stop-color', f.c[1]); stops[2].setAttribute('stop-color', f.c[2]); }
-    function setLabel(f){ nm.textContent = f.name.toUpperCase(); rowsT[2].textContent = f.line3; }
+    function setLabel(f){ nm.textContent = f.name.toUpperCase(); }
     function settle(){
       paint(S0, st.f); lq1.setAttribute('opacity', 0); flow.setAttribute('opacity', 0);
       foam.setAttribute('fill', st.f.foam); resid.setAttribute('stroke', st.f.c[1]);
       FBg.setAttribute('stroke', mix(st.f.foam, st.f.c[2], .45)); setLabel(st.f);
-      nm.setAttribute('opacity', 1); rowsT[2].setAttribute('opacity', 1);
+      nm.setAttribute('opacity', 1);
       ticks.forEach(function(t, k){ t.setAttribute('stroke-dashoffset', k === st.f.check && st.tickT !== -1 ? 0 : 34); });
     }
     settle();
@@ -1374,7 +1374,7 @@ var DCBag = (function(){
         foam.setAttribute('fill', mix(F.foam, Tt.foam, fm)); FBg.setAttribute('stroke', fm < .5 ? mix(F.foam, F.c[2], .45) : mix(Tt.foam, Tt.c[2], .45));
         var a = g < .75 ? 1 - clamp((g - .45)/.3, 0, 1) : clamp((g - .75)/.3, 0, 1);
         if (g >= .75 && !st.swapped){ setLabel(Tt); st.swapped = 1; }
-        nm.setAttribute('opacity', a.toFixed(2)); rowsT[2].setAttribute('opacity', a.toFixed(2));
+        nm.setAttribute('opacity', a.toFixed(2));
         ticks[F.check].setAttribute('stroke-dashoffset', (34*clamp((g - .15)/.3, 0, 1)).toFixed(1));
         if (g > 1.1){ ticks.forEach(function(tk, j){ if (j !== Tt.check && j !== F.check) tk.setAttribute('stroke-dashoffset', 34); });
           ticks[Tt.check].setAttribute('stroke-dashoffset', (34*(1 - ease((g - 1.1)/.45))).toFixed(1)); }
@@ -1600,6 +1600,7 @@ var DCBag = (function(){
           '<div class="cell wide"><span class="over">Spaces</span>' + spaces + '</div>' +
           '<div class="cell"><a class="tlink" href="' + b.dir + '" target="_blank" rel="noopener">Get directions &rarr;</a></div>' +
           '<div class="cell r">' + third + '</div>' +
+          (b.rooms && b.extra ? '<div class="cell wide"><a class="tlink" href="' + b.extra.u + '" target="_blank" rel="noopener">' + esc(b.extra.t) + ' &rarr;</a></div>' : '') +
         '</div>' +
         '<aside class="b-panel" data-anim><p class="label rule">This branch</p><h3>Why come here?</h3><p class="about">' + esc(b.about) + '</p><ul>' + b.why.map(function(w){ return '<li>' + esc(w) + '</li>'; }).join('') + '</ul></aside>' +
       '</section>' +
@@ -1670,7 +1671,7 @@ var DCBag = (function(){
     ['overdose','Overdose, 1 litre','overdose-pair',null,'Two one-litre Overdose bottles with Rx labels.'],
     ['tea','Chamomile',null],['tea','Pure Peppermint',null],['tea','English Breakfast',null],['tea','Earl Grey',null],
     ['more','Caramel Latte','caramel-latte'],['more','Coco Matcha','coco-matcha'],['more','Biscoff Matcha','biscoff-matcha'],['more','Matcha Strawberry','matcha-strawberry'],
-    ['more','Matcha Espresso','matcha-espresso'],['more','Flat White Mocha','flatwhite-mocha'],['more','Lychee Yakult','lychee-yakult'],['more','Strawberry Frappe','strawberry-frappe']
+    ['overdose','Matcha Espresso','matcha-espresso'],['overdose','Flat White Chocolate Mocha','flatwhite-mocha'],['more','Lychee Yakult','lychee-yakult'],['more','Strawberry Frappe','strawberry-frappe']
   ];
   var GROUPS = [['all','All'],['transfusions','Transfusion'],['classic','Classic'],['espresso','Espresso-based'],['coffee-free','Coffee-free'],['blended','Blended'],['overdose','Overdose'],['tea','Tea'],['more','More to try']];
   var FOOD = [
@@ -1687,7 +1688,8 @@ var DCBag = (function(){
   ];
   var FOOD_GROUPS = [['all','All'],['crash-cart','Crash Cart'],['rice','Rice meals'],['pasta','Pasta & sandwiches'],['pastries','Pastries']];
   function priceOf(cat, name){
-    if (cat === 'overdose') return {txt:'1 L · from ₱360'};
+    if (cat === 'overdose'){ var od = MENU.filter(function(m){ return m.id === 'overdose'; })[0].items.filter(function(x){ return x[0] === name; })[0];
+      return {txt:od ? 'Overdose 1 L · ₱' + od[1] : '1 L · from ₱360'}; }
     var c = MENU.filter(function(m){ return m.id === cat; })[0]; if (!c) return null;
     var it = c.items.filter(function(x){ return x[0] === name; })[0]; if (!it) return null;
     if (c.cols){ var parts = []; for (var i = 1; i <= 3; i++) if (it[i] != null) parts.push(c.cols[i - 1] + ' ₱' + it[i]); return {txt:parts.join(' · '), star:it[4]}; }
