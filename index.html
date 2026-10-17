@@ -829,17 +829,17 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           <p>Cups carry an Rx label with your drink written underneath and a Sig. line, like a prescription slip.</p>
         </article>
         <article class="det" data-anim style="--d:100ms">
-          <figure data-anim="wipe"><img src="assets/p-overdose-rx.jpg" alt="Two one-litre Overdose bottles with Rx prescription labels, named Normal Sinus Rhythm and No Salt Restriction." width="1200" height="1187" loading="lazy" style="object-position:50% 45%"></figure>
+          <figure data-anim="wipe" style="background:#FBFBFC"><img src="assets/s-overdose-pair.jpg" alt="Two one-litre Overdose bottles with Rx prescription labels, named Normal Sinus Rhythm and No Salt Restriction." width="900" height="1200" loading="lazy" style="object-fit:contain"></figure>
           <h3>The Overdose bottle</h3><span class="sub">One litre</span>
           <p>A full litre with its own Rx label and a clinic name for each blend. Made for the table, good for three to four.</p>
         </article>
         <article class="det" data-anim style="--d:200ms">
-          <figure data-anim="wipe"><img src="assets/casa-mira-occupied.jpg" alt="A laptop and iced drink beside a card reading: Hi! This seat is occupied." loading="lazy"></figure>
+          <figure data-anim="wipe"><img src="assets/casa-mira-icu-wide.jpg" alt="The Intensive Work Unit sign over curtained work stations at Casa Mira." loading="lazy"></figure>
           <h3>The Intensive Work Unit</h3><span class="sub">Casa Mira</span>
           <p>Curtained work stations past the dining floor. A card on your desk tells everyone the seat is taken.</p>
         </article>
         <article class="det" data-anim>
-          <figure data-anim="wipe"><img src="assets/cebu-main-lounge.jpg" alt="A long shared table, a sofa and warm cove lighting at Cebu Main." loading="lazy"></figure>
+          <figure data-anim="wipe"><img src="assets/cebu-main-lounge-sofa.jpg" alt="A long shared table, a sofa and warm cove lighting at Cebu Main." loading="lazy"></figure>
           <h3>Rooms that open in turn</h3><span class="sub">Cebu Main</span>
           <p>The Conference Room opens first, then the Dr&rsquo;s Lounge, then the Portal Space as the café fills.</p>
         </article>
@@ -1449,24 +1449,24 @@ var DCBag = (function(){
       spaces:['Main Dining','Al Fresco','Conference Room','Dr’s Lounge','Portal Space'],
       why:['Three bookable rooms: Conference Room, Dr’s Lounge and Portal Space','Dr. Chicken, Korean fried chicken, on the same floor','Order ahead on foodpanda'],
       rooms:true, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/jyg9/dr-coffee-j-llorente-street'},
-      photos:{hero:{src:'assets/cebu-main-lounge.jpg', alt:'Dr’s Lounge at Cebu Main: a long shared table, a sofa and warm cove lighting.'},
-              wide:{src:'assets/cebu-main-lounge-2.jpg', alt:'The Dr’s Lounge table and sofa from the far corner.'},
-              main:{ph:'A barista at the Cebu Main counter mid-pour, warm lights on, landscape'},
-              s1:{ph:'The hospital-style directory board, straight on'},
-              s2:{ph:'A Transfusion bag on the Cebu Main counter, close-up'}},
-      caps:['At the counter','Directory board','The Transfusion bag']},
+      photos:{hero:{src:'assets/cebu-main-dining.jpg', alt:'The Cebu Main dining room: white tables and chairs under the lit Dr. Coffee sign.'},
+              wide:{src:'assets/cebu-main-tiered.jpg', alt:'Tiered seating with cushions and small tables under a wall that reads: Work until you no longer have to introduce yourself.'},
+              main:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table, black chairs and a TV.'},
+              s1:{src:'assets/cebu-main-lounge-sofa.jpg', alt:'The Dr’s Lounge: a long shared table, a sofa and warm cove lighting.'},
+              s2:{src:'assets/s-transfusion-sl.jpg', alt:'A Spanish Latte Transfusion bag with its ticked white label.'}},
+      caps:['Conference Room','Dr’s Lounge','The Transfusion bag']},
     'casa-mira': {n:'Casa Mira', area:'Labangon · Cebu City', region:'Cebu City', hours:'Being confirmed. Message the branch before you visit.',
       tag:'Built for focus. Private work stations in the Intensive Work Unit.',
       addr:'A4 Ground Floor, Casa Mira Tower, Salvador Ext., Labangon, Cebu City', dir:'https://maps.app.goo.gl/id6rguPjxUAkrcmt9',
       spaces:['Dining Area','Intensive Work Unit'],
       why:['Private work stations in the Intensive Work Unit, booked at the counter','A claim card on your desk shows the seat is yours','A calm dining floor for solo work or meetups','Follow @dr.coffee_casamiralabangon for branch news'],
       rooms:true,
-      photos:{hero:{src:'assets/casa-mira-dining.jpg', alt:'Casa Mira’s dining floor with round black tables and the counter at the back.'},
+      photos:{hero:{src:'assets/casa-mira-entrance.jpg', alt:'The Casa Mira storefront under the sign Your daily dose of remedy, with a Dr. Coffee cup held up in front.'},
               wide:{src:'assets/casa-mira-icu-wide.jpg', alt:'The Intensive Work Unit sign over curtained work stations.'},
               main:{src:'assets/casa-mira-icu.jpg', alt:'Guests working under the Intensive Work Unit sign.'},
-              s1:{src:'assets/casa-mira-occupied.jpg', alt:'A laptop and iced drink beside a card reading: Hi! This seat is occupied.'},
+              s1:{src:'assets/casa-mira-dining.jpg', alt:'Casa Mira’s dining floor with round black tables and the counter at the back.'},
               s2:{src:'assets/casa-mira-desks.jpg', alt:'Window desks with ergonomic chairs.'}},
-      caps:['The Intensive Work Unit','Your claim card','Window desks']},
+      caps:['The Intensive Work Unit','The dining floor','Window desks']},
     'jamestown': {n:'JamesTown', area:'Tipolo · Mandaue City', region:'Mandaue City', hours:'Being confirmed. Message the branch before you visit.',
       tag:'A two-storey glass-and-steel storefront in Mandaue.',
       addr:'Stall No. 1, Jamestown Center, Mantawi International Drive, Tipolo, Mandaue City', dir:'https://www.google.com/maps/search/?api=1&query=Dr.%20Coffee%20Jamestown%20Center%20Mantawi%20International%20Drive%20Mandaue%20City',
@@ -1524,7 +1524,7 @@ var DCBag = (function(){
     return m.soon ? '<g>' + inner + '</g>' : '<a href="#' + m.id + '" aria-label="' + esc(nm) + ', ' + m.sub + '">' + inner + '</a>';
   }).join('');
   var ms = $('.map-scroll'); if (ms) requestAnimationFrame(function(){ if (ms.scrollWidth > ms.clientWidth) ms.scrollLeft = (ms.scrollWidth - ms.clientWidth)*.75; });
-  var CARD = {'cebu-main':'assets/cebu-main-lounge.jpg', 'casa-mira':'assets/casa-mira-dining.jpg', 'jamestown':'assets/jamestown-storefront.jpg'};
+  var CARD = {'cebu-main':'assets/cebu-main-dining.jpg', 'casa-mira':'assets/casa-mira-entrance.jpg', 'jamestown':'assets/jamestown-storefront.jpg'};
   $('#brGrid').innerHTML = ORDER.map(function(id, i){ var b = B[id], src = CARD[id];
     return '<a class="br" href="#' + id + '" data-anim style="--d:' + (i*90) + 'ms"><figure data-anim="wipe" style="--d:' + (i*90) + 'ms">' + (src ? '<img src="' + src + '" alt="' + esc(b.photos.hero.alt || b.n) + '" loading="lazy">' : ph('Storefront photo coming', b.n.charAt(0))) + '</figure>' +
       '<h3>' + esc(b.n) + '</h3><span class="sub">' + esc(b.area) + '</span></a>'; }).join('') +
@@ -1534,10 +1534,10 @@ var DCBag = (function(){
 
   // ---------- Home: signature rail ----------
   var SIG = [
-    {n:'Transfusion', s:'Spanish Latte', img:'assets/p-statbag.jpg', alt:'A Spanish Latte Transfusion bag held up by its tube against green leaves.', d:'Iced bag · ₱260'},
+    {n:'Transfusion', s:'Spanish Latte', img:'assets/s-transfusion-sl.jpg', alt:'A Spanish Latte Transfusion bag with its ticked white label.', d:'Iced bag · ₱260'},
     {n:'Transfusion', s:'Green Apple Yakult', img:'assets/p-tb-green.jpg', alt:'A Green Apple Yakult Transfusion bag held by its tube.', d:'Iced bag · ₱260'},
     {n:'Spanish Latte', s:'Best seller', star:1, img:'assets/s-spanish-latte.jpg', alt:'An iced Spanish Latte in the Dr. Coffee sleeve, layered espresso over milk.', d:'Hot ₱160 · Low ₱160 · High ₱190'},
-    {n:'Overdose', s:'One litre', img:'assets/s-1l.jpg', alt:'The one-litre Overdose bottle with the Dr. Coffee label.', d:'1 L · from ₱360'},
+    {n:'Overdose', s:'One litre', img:'assets/s-overdose-pair.jpg', alt:'Two one-litre Overdose bottles with Rx labels.', d:'1 L · from ₱360'},
     {n:'Caramel Macchiato', s:'Best seller', star:1, img:'assets/s-caramel-macchiato.jpg', alt:'An iced Caramel Macchiato with caramel running through the milk.', d:'Hot ₱160 · Low ₱160 · High ₱190'},
     {n:'Cryoccino', s:'Blended', img:'assets/s-cryoccino.jpg', alt:'A blended Cryoccino topped with whipped cream.', d:'₱230'},
     {n:'Caphé Muối', s:'Salted cream coffee', img:'assets/s-ca-phe-muoi.jpg', alt:'Caphé Muối with a salted cream top in the Dr. Coffee sleeve.', d:'Hot ₱120 · Low ₱120 · High ₱160'},
@@ -1590,8 +1590,8 @@ var DCBag = (function(){
 
   // ---------- Rooms ----------
   var ROOMS = [
-    {n:'Conference Room', br:'cebu-main', badge:'Meetings', sub:'Room 1', desc:'A private room for team meetings, pitches and group study. It is the first room to open when the dining floor fills.', best:['Team meetings','Presentations','Group study'], photo:{ph:'Conference Room: the full table from the doorway, lights on'}},
-    {n:'Dr’s Lounge', br:'cebu-main', badge:'Shared table', sub:'Room 2', desc:'A long shared table with ergonomic chairs, a sofa and warm cove lighting. Opens after the Conference Room.', best:['Study groups','Long work sessions','Small gatherings'], photo:{src:'assets/cebu-main-lounge.jpg', alt:'The Dr’s Lounge long table and sofa.'}},
+    {n:'Conference Room', br:'cebu-main', badge:'Meetings', sub:'Room 1', desc:'A private room for team meetings, pitches and group study. It is the first room to open when the dining floor fills.', best:['Team meetings','Presentations','Group study'], photo:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table and a TV.'}},
+    {n:'Dr’s Lounge', br:'cebu-main', badge:'Shared table', sub:'Room 2', desc:'A long shared table with ergonomic chairs, a sofa and warm cove lighting. Opens after the Conference Room.', best:['Study groups','Long work sessions','Small gatherings'], photo:{src:'assets/cebu-main-lounge-sofa.jpg', alt:'The Dr’s Lounge long table and sofa.'}},
     {n:'Portal Space', br:'cebu-main', badge:'Most private', sub:'Room 3', desc:'The last room to open and the quietest in the building. Made for the call or one-on-one that needs privacy.', best:['Private calls','One-on-ones','Focused work'], photo:{ph:'Portal Space: the room from the entrance, empty'}},
     {n:'Intensive Work Unit', br:'casa-mira', badge:'Solo work', sub:'Work stations', desc:'Curtained work stations past the dining floor. Book one at the counter and a claim card on your desk shows the seat is yours.', best:['Solo deep work','Laptop sessions','Exam review'], photo:{src:'assets/casa-mira-icu.jpg', alt:'Work stations under the Intensive Work Unit sign.'}}
   ];
@@ -1639,7 +1639,7 @@ var DCBag = (function(){
     ['coffee-free','Matcha Latte','matcha-latte'],['coffee-free','Chocolate Latte','chocolate-latte'],['coffee-free','Blue Lagoon','blue-lagoon'],['coffee-free','Green Apple Yakult','green-apple-yakult'],
     ['coffee-free','Strawberry Latte','strawberry-latte'],['coffee-free','Strawberry Ade','strawberry-ade'],['coffee-free','Yuzu Lemonade','yuzu-lemonade'],
     ['blended','Cryoccino','cryoccino'],['blended','Cookies & Cream','cookies-cream'],['blended','Java Chip','java-chip'],['blended','Caramello','caramello'],['blended','Mochaccino','mochaccino'],
-    ['overdose','Overdose, 1 litre','1l'],
+    ['overdose','Overdose, 1 litre','overdose-pair'],
     ['more','Caramel Latte','caramel-latte'],['more','Coco Matcha','coco-matcha'],['more','Biscoff Matcha','biscoff-matcha'],['more','Matcha Strawberry','matcha-strawberry'],
     ['more','Matcha Espresso','matcha-espresso'],['more','Flat White Mocha','flatwhite-mocha'],['more','Lychee Yakult','lychee-yakult'],['more','Strawberry Frappe','strawberry-frappe']
   ];
