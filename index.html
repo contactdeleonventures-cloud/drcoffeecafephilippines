@@ -461,6 +461,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 .ph{width:100%;height:100%;min-height:200px;display:grid;place-items:center;align-content:center;gap:10px;padding:24px;text-align:center;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(26,26,26,.03) 14px 15px),var(--paper-2);border:1px dashed var(--hair);color:var(--muted)}
 .ph svg{width:26px;height:26px}
 .ph .t{font-size:14px;line-height:1.5;max-width:24em}
+.tbc{color:var(--muted);font-style:italic}
 .ph .K{font-family:var(--display);font-size:64px;line-height:1;color:var(--ink);opacity:.16}
 
 /* ---------- branch pages ---------- */
@@ -584,6 +585,13 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 .drink .pr{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--taupe);font-variant-numeric:tabular-nums}
 .drink.in{animation:up .6s var(--ease) backwards;animation-delay:var(--d,0ms)}
 .shelf-note{margin-top:20px;text-align:center}
+.shelf.food{padding-top:0}
+.food .drink .pic{background:#FEFAF4}
+.food .drink .pic img{object-fit:cover}
+.drink .pic.ph{display:grid;place-items:center;align-content:center;gap:8px;min-height:0;height:auto;border-radius:18px;box-shadow:none;padding:16px;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(26,26,26,.03) 14px 15px),var(--paper-2);border:1px dashed var(--hair)}
+.drink .pic.ph .t{font-size:12px}
+.drink.soon h3{color:var(--muted)}
+.drink.soon:hover .pic{transform:none;box-shadow:none}
 @media (max-width:1000px){.shelf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:620px){.shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.drink h3{font-size:15px}}
 
@@ -781,11 +789,13 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
             <span class="chip" style="--c:#56341F"><i></i>Cold Brew</span>
             <h3>Coffee steeped cold, poured over ice.</h3>
             <p class="lead">Dark and smooth. On the label it gets the Cold Brew tick.</p>
+            <figure data-anim="wipe"><div class="ph"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="over">Photo needed</span><span class="t">Cold Brew Transfusion bag, white studio</span></div></figure>
           </article>
           <article class="step" data-flavor="vietnamese">
             <span class="chip" style="--c:#A07046"><i></i>Vietnamese</span>
             <h3>Strong coffee with condensed milk.</h3>
             <p class="lead">The Vietnamese way, iced in a bag.</p>
+            <figure data-anim="wipe"><div class="ph"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="over">Photo needed</span><span class="t">Vietnamese Transfusion bag, white studio</span></div></figure>
           </article>
           <article class="step" data-flavor="label">
             <span class="chip" style="--c:var(--red)"><i></i>Read the label</span>
@@ -1018,8 +1028,9 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
         <div class="field"><label for="f-topic">About</label>
           <select id="f-topic" name="topic"><option>A general question</option><option>Booking a room</option><option>A group or Overdose order</option><option>Feedback</option></select></div>
         <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
-        <div><button class="btn solid" type="submit" data-magnetic>Copy my message <span class="arr" aria-hidden="true">&rarr;</span></button></div>
-        <p class="small">We reply on Facebook and Instagram. This copies your message so you can paste it into our chat.</p>
+        <div class="field" id="f-reply-wrap" hidden><label for="f-reply">Email or mobile number</label><input id="f-reply" name="reply" autocomplete="email"></div>
+        <div><button class="btn solid" type="submit" data-magnetic><span id="f-btn">Copy my message</span> <span class="arr" aria-hidden="true">&rarr;</span></button></div>
+        <p class="small" id="f-note">We reply on Facebook and Instagram. This copies your message so you can paste it into our chat.</p>
         <div class="status" id="formStatus" hidden role="status"></div>
       </form>
     </div>
@@ -1103,6 +1114,13 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
     </div>
     <div class="shelf-grid" id="shelfGrid"></div>
     <p class="small shelf-note" id="shelfNote" hidden>These are pictured but not on the printed menu yet. Ask at the counter for prices.</p>
+  </section>
+  <section class="wrap shelf food" id="kitchen" aria-labelledby="kitchenT">
+    <div class="shelf-head">
+      <div class="sec-head" style="margin:0"><p class="label rule" data-anim>The kitchen, pictured</p><h2 id="kitchenT" data-anim="split">Something to eat with your dose.</h2></div>
+      <div class="shelf-f" id="foodF" role="group" aria-label="Show food by group"></div>
+    </div>
+    <div class="shelf-grid" id="foodGrid"></div>
   </section>
   <div class="menu-bar">
     <div class="wrap">
@@ -1449,6 +1467,7 @@ var DCBag = (function(){
       spaces:['Main Dining','Al Fresco','Conference Room','Dr’s Lounge','Portal Space'],
       why:['Three bookable rooms: Conference Room, Dr’s Lounge and Portal Space','Dr. Chicken, Korean fried chicken, on the same floor','Order ahead on foodpanda'],
       rooms:true, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/jyg9/dr-coffee-j-llorente-street'},
+      phone:'', msg:{t:'Facebook', u:'https://www.facebook.com/profile.php?id=61552180229648'},
       photos:{hero:{src:'assets/cebu-main-dining.jpg', alt:'The Cebu Main dining room: white tables and chairs under the lit Dr. Coffee sign.'},
               wide:{src:'assets/cebu-main-tiered.jpg', alt:'The Portal Space: tiered seating with cushions and small tables under a wall that reads: Work until you no longer have to introduce yourself.'},
               main:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table, black chairs and a TV.'},
@@ -1460,19 +1479,20 @@ var DCBag = (function(){
       addr:'A4 Ground Floor, Casa Mira Tower, Salvador Ext., Labangon, Cebu City', dir:'https://maps.app.goo.gl/id6rguPjxUAkrcmt9',
       spaces:['Dining Area','Intensive Work Unit'],
       why:['Private work stations in the Intensive Work Unit, booked at the counter','A claim card on your desk shows the seat is yours','A calm dining floor for solo work or meetups','Follow @dr.coffee_casamiralabangon for branch news'],
-      rooms:true,
+      rooms:true, phone:'', msg:{t:'Instagram', u:'https://www.instagram.com/dr.coffee_casamiralabangon/'},
       photos:{hero:{src:'assets/casa-mira-entrance.jpg', alt:'The Casa Mira storefront under the sign Your daily dose of remedy, with a Dr. Coffee cup held up in front.'},
               wide:{src:'assets/casa-mira-icu-wide.jpg', alt:'The Intensive Work Unit sign over curtained work stations.'},
               main:{src:'assets/casa-mira-icu.jpg', alt:'Guests working under the Intensive Work Unit sign.'},
               s1:{src:'assets/casa-mira-dining.jpg', alt:'Casa Mira’s dining floor with round black tables and the counter at the back.'},
-              s2:{src:'assets/casa-mira-desks.jpg', alt:'Window desks with ergonomic chairs.'}},
-      caps:['The Intensive Work Unit','The dining floor','Window desks']},
+              s2:{src:'assets/casa-mira-stations.jpg', alt:'Work stations with ergonomic chairs and a table card reading: Hi! This seat is occupied.'}},
+      caps:['The Intensive Work Unit','The dining floor','Work stations']},
     'jamestown': {n:'JamesTown', area:'Tipolo · Mandaue City', region:'Mandaue City', hours:'Being confirmed. Message the branch before you visit.',
       tag:'A two-storey glass-and-steel storefront in Mandaue.',
       addr:'Stall No. 1, Jamestown Center, Mantawi International Drive, Tipolo, Mandaue City', dir:'https://www.google.com/maps/search/?api=1&query=Dr.%20Coffee%20Jamestown%20Center%20Mantawi%20International%20Drive%20Mandaue%20City',
       spaces:['Dining Area','Al Fresco'],
       why:['Al fresco seating under the glass canopy','Look for the IV bag hanging by the counter'],
       rooms:false, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/f8ax/dr-coffee-jamestown'},
+      phone:'', msg:{t:'Facebook', u:'https://www.facebook.com/profile.php?id=61552180229648'},
       photos:{hero:{src:'assets/jamestown-storefront.jpg', alt:'The JamesTown storefront: a glass and steel canopy with the Dr. Coffee sign over the entrance.'},
               wide:{ph:'JamesTown interior: the black counter with the white logo, straight on, landscape'},
               main:{ph:'A guest at a JamesTown table with a drink, natural light'},
@@ -1574,6 +1594,8 @@ var DCBag = (function(){
         '<div class="cells" data-anim="kids">' +
           '<div class="cell"><span class="over">Address</span><p>' + esc(b.addr) + '</p></div>' +
           '<div class="cell r"><span class="over">Hours</span><p>' + esc(b.hours) + '</p></div>' +
+          '<div class="cell"><span class="over">Phone</span>' + (b.phone ? '<p><a href="tel:' + b.phone.replace(/[^+\d]/g, '') + '">' + esc(b.phone) + '</a></p>' : '<p class="tbc">Number coming soon</p>') + '</div>' +
+          '<div class="cell r"><span class="over">Message</span><p><a href="' + b.msg.u + '" target="_blank" rel="noopener">Message ' + esc(b.n) + ' on ' + esc(b.msg.t) + ' &nearr;</a></p></div>' +
           '<div class="cell wide"><span class="over">Good to know</span><p>' + esc(b.note) + '</p></div>' +
           '<div class="cell wide"><span class="over">Spaces</span>' + spaces + '</div>' +
           '<div class="cell"><a class="tlink" href="' + b.dir + '" target="_blank" rel="noopener">Get directions &rarr;</a></div>' +
@@ -1607,7 +1629,7 @@ var DCBag = (function(){
         '<div class="rhead"><h3>' + esc(r.n) + '</h3><span class="sub">' + esc(b.n) + ' &middot; ' + esc(r.sub) + '</span><span class="rate">Rate on request</span>' +
         '<button class="plus" type="button" aria-expanded="false" aria-controls="rm-' + k + '" aria-label="Details for ' + esc(r.n) + '">+</button></div>' +
         '<div class="more" id="rm-' + k + '" hidden><p>' + esc(r.desc) + '</p><div class="tags">' + r.best.map(function(t){ return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' +
-        '<div class="row"><a class="btn solid" href="' + FB + '" target="_blank" rel="noopener">Ask to book</a><a class="btn" href="#' + r.br + '">' + esc(b.n) + '</a></div></div></article>'; }).join('');
+        '<div class="row"><a class="btn solid" href="' + b.msg.u + '" target="_blank" rel="noopener">Ask to book</a><a class="btn" href="#' + r.br + '">' + esc(b.n) + '</a></div></div></article>'; }).join('');
     observe(grid);
   }
   sel.addEventListener('change', renderRooms);
@@ -1632,18 +1654,38 @@ var DCBag = (function(){
     {id:'pastries', name:'Pastries', items:[['Chocolate Chip Cookies',105,1],['Revel Bar',140,1],['Blueberry Cheesecake Slice',230,1],['Biscoff Cheesecake',230],['Chocolate Banana Muffin',110],['Choco Tart',75],['Special Carrot Cake Slice',85],['Red Velvet Cake',120],['Chocolate Moist Cake',120],['Ube Cake',120],['Boston Cream Cake',120]]},
     {id:'crash-cart', name:'Crash Cart combos', items:[['Remedy Fries',159,1],['Emergency Burger Combo',169,1],['Code Red Nachos',179,1]]}
   ];
+  // [menu group, menu name, photo (slug of assets/s-*.jpg, a path, or null for a photo still needed), label, alt]
   var SHOTS = [
-    ['classic','Dr. Black Coffee','dr-coffee-black'],['classic','Caphé Muối','ca-phe-muoi'],['classic','Cold Brew','cold-brew'],
+    ['transfusions','Spanish Latte','assets/s-transfusion-sl.jpg','Transfusion, Spanish Latte','A Spanish Latte Transfusion bag with its ticked white label.'],
+    ['transfusions','Green Apple Yakult','assets/p-tb-green.jpg','Transfusion, Green Apple Yakult','A Green Apple Yakult Transfusion bag held by its tube.'],
+    ['transfusions','Cold Brew',null,'Transfusion, Cold Brew'],['transfusions','Vietnamese',null,'Transfusion, Vietnamese'],
+    ['classic','Dr. Black Coffee','dr-coffee-black'],['classic','Caphé Muối','ca-phe-muoi'],['classic','Cold Brew','cold-brew'],['classic','Vietnamese',null],
     ['espresso','Spanish Latte','spanish-latte'],['espresso','Caramel Macchiato','caramel-macchiato'],['espresso','Americano','americano'],['espresso','Biscoff Latte','biscoff-latte'],
     ['espresso','SeaSalt Caramel','seasalt-caramel'],['espresso','Café Latte','cafe-latte'],['espresso','Cappuccino','cappuccino'],['espresso','Vanilla Latte','vanilla-latte'],['espresso','Espresso Sunrise','espresso-sunrise'],
+    ['espresso','Café Mocha',null],['espresso','White Chocolate Mocha',null],['espresso','Espresso, single shot',null],['espresso','Doppio, double shot',null],
     ['coffee-free','Matcha Latte','matcha-latte'],['coffee-free','Chocolate Latte','chocolate-latte'],['coffee-free','Blue Lagoon','blue-lagoon'],['coffee-free','Green Apple Yakult','green-apple-yakult'],
     ['coffee-free','Strawberry Latte','strawberry-latte'],['coffee-free','Strawberry Ade','strawberry-ade'],['coffee-free','Yuzu Lemonade','yuzu-lemonade'],
     ['blended','Cryoccino','cryoccino'],['blended','Cookies & Cream','cookies-cream'],['blended','Java Chip','java-chip'],['blended','Caramello','caramello'],['blended','Mochaccino','mochaccino'],
-    ['overdose','Overdose, 1 litre','overdose-pair'],
+    ['blended','Biscoff Frappe',null],['blended','Dirty Matcha',null],['blended','Matcha Cloud',null],
+    ['overdose','Overdose, 1 litre','overdose-pair',null,'Two one-litre Overdose bottles with Rx labels.'],
+    ['tea','Chamomile',null],['tea','Pure Peppermint',null],['tea','English Breakfast',null],['tea','Earl Grey',null],
     ['more','Caramel Latte','caramel-latte'],['more','Coco Matcha','coco-matcha'],['more','Biscoff Matcha','biscoff-matcha'],['more','Matcha Strawberry','matcha-strawberry'],
     ['more','Matcha Espresso','matcha-espresso'],['more','Flat White Mocha','flatwhite-mocha'],['more','Lychee Yakult','lychee-yakult'],['more','Strawberry Frappe','strawberry-frappe']
   ];
-  var GROUPS = [['all','All'],['classic','Classic'],['espresso','Espresso-based'],['coffee-free','Coffee-free'],['blended','Blended'],['overdose','Overdose'],['more','More to try']];
+  var GROUPS = [['all','All'],['transfusions','Transfusion'],['classic','Classic'],['espresso','Espresso-based'],['coffee-free','Coffee-free'],['blended','Blended'],['overdose','Overdose'],['tea','Tea'],['more','More to try']];
+  var FOOD = [
+    ['crash-cart','Remedy Fries','assets/m-fries.jpg',null,'Remedy Fries dusted with cheese on a white plate, with a creamy dip.'],
+    ['crash-cart','Emergency Burger Combo','assets/m-burger.jpg',null,'The Emergency Burger Combo: a burger, fries and a dip on a wooden tray.'],
+    ['crash-cart','Code Red Nachos','assets/m-nachos.jpg',null,'Code Red Nachos with beef, cheese sauce and cabbage on a bamboo tray.'],
+    ['rice','Dr. Chicken Adobo, regular','assets/m-adobo.jpg','Dr. Chicken Adobo','Dr. Chicken Adobo: rice topped with adobo flakes, two fried eggs and cucumber.'],
+    ['pastries','Chocolate Chip Cookies','assets/m-cookies.jpg',null,'A chocolate chip cookie on a white plate.'],
+    ['pastries','Biscoff Cheesecake','assets/m-biscoff-cheesecake.jpg',null,'A slice of Biscoff cheesecake on a white plate.'],
+    ['pastries','Special Carrot Cake Slice','assets/m-carrot-cake.jpg',null,'A slice of carrot cake with cream cheese frosting on a white plate.'],
+    ['rice','Katsu Silog',null],['rice','Corned Beef Silog',null],['rice','Sausage Silog',null],['rice','Beef Tapsilog',null],['rice','Chicken Tocilog',null],['rice','Beef Siomai Rice',null],['rice','Chicken Siomai Rice',null],
+    ['pasta','Spaghetti with Meatballs (beef)',null],['pasta','Chicken Carbonara Supreme',null],['pasta','Tuna Pesto Delight',null],['pasta','Loaded Tuna Sandwich',null],['pasta','Dr. Coffee Clubhouse Sandwich',null],['pasta','Chicken Fajita',null],
+    ['pastries','Revel Bar',null],['pastries','Blueberry Cheesecake Slice',null],['pastries','Chocolate Banana Muffin',null],['pastries','Choco Tart',null],['pastries','Red Velvet Cake',null],['pastries','Chocolate Moist Cake',null],['pastries','Ube Cake',null],['pastries','Boston Cream Cake',null]
+  ];
+  var FOOD_GROUPS = [['all','All'],['crash-cart','Crash Cart'],['rice','Rice meals'],['pasta','Pasta & sandwiches'],['pastries','Pastries']];
   function priceOf(cat, name){
     if (cat === 'overdose') return {txt:'1 L · from ₱360'};
     var c = MENU.filter(function(m){ return m.id === cat; })[0]; if (!c) return null;
@@ -1651,17 +1693,25 @@ var DCBag = (function(){
     if (c.cols){ var parts = []; for (var i = 1; i <= 3; i++) if (it[i] != null) parts.push(c.cols[i - 1] + ' ₱' + it[i]); return {txt:parts.join(' · '), star:it[4]}; }
     return {txt:'₱' + it[1], star:it[2]};
   }
-  var shelfGrid = $('#shelfGrid'), shelfF = $('#shelfF');
-  shelfF.innerHTML = GROUPS.map(function(g, i){ return '<button type="button" data-g="' + g[0] + '" aria-pressed="' + (i ? 'false' : 'true') + '">' + g[1] + '</button>'; }).join('');
-  function renderShelf(g){
-    var list = SHOTS.filter(function(x){ return g === 'all' || x[0] === g; });
-    shelfGrid.innerHTML = list.map(function(x, k){ var pr = priceOf(x[0], x[1]);
-      return '<figure class="drink' + (g === 'all' ? '' : ' in') + '" style="--d:' + Math.min(k, 8)*50 + 'ms"><span class="pic"><img src="assets/s-' + x[2] + '.jpg" alt="' + esc(x[1]) + ' in the Dr. Coffee sleeve." width="900" height="1200" loading="lazy"></span>' +
-        '<figcaption><h3>' + esc(x[1]) + (pr && pr.star ? '<span class="star" aria-label="best seller">&#9733;</span>' : '') + '</h3><span class="pr">' + (pr ? esc(pr.txt) : 'Ask at the counter') + '</span></figcaption></figure>'; }).join('');
-    $('#shelfNote').hidden = !(g === 'more' || g === 'all');
+  function shelfTile(x, k, g){
+    var pr = priceOf(x[0], x[1]), name = x[3] || x[1], src = x[2] && (x[2].indexOf('/') < 0 ? 'assets/s-' + x[2] + '.jpg' : x[2]);
+    var pic = src ? '<span class="pic"><img src="' + src + '" alt="' + esc(x[4] || name + ' in the Dr. Coffee sleeve.') + '" loading="lazy"></span>'
+                  : '<span class="pic ph"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="over">Photo needed</span><span class="t">' + esc(name) + '</span></span>';
+    return '<figure class="drink' + (src ? '' : ' soon') + (g === 'all' ? '' : ' in') + '" style="--d:' + Math.min(k, 8)*50 + 'ms">' + pic +
+      '<figcaption><h3>' + esc(name) + (pr && pr.star ? '<span class="star" aria-label="best seller">&#9733;</span>' : '') + '</h3><span class="pr">' + (pr ? esc(pr.txt) : 'Ask at the counter') + '</span></figcaption></figure>';
   }
-  shelfF.addEventListener('click', function(e){ var b = e.target.closest('[data-g]'); if (!b) return;
-    $$('button', shelfF).forEach(function(x){ x.setAttribute('aria-pressed', x === b); }); renderShelf(b.dataset.g); });
+  function shelf(grid, filter, items, groups, after){
+    filter.innerHTML = groups.map(function(g, i){ return '<button type="button" data-g="' + g[0] + '" aria-pressed="' + (i ? 'false' : 'true') + '">' + g[1] + '</button>'; }).join('');
+    function render(g){
+      var list = items.filter(function(x){ return g === 'all' || x[0] === g; });
+      list = list.filter(function(x){ return x[2]; }).concat(list.filter(function(x){ return !x[2]; }));
+      grid.innerHTML = list.map(function(x, k){ return shelfTile(x, k, g); }).join('');
+      if (after) after(g);
+    }
+    filter.addEventListener('click', function(e){ var b = e.target.closest('[data-g]'); if (!b) return;
+      $$('button', filter).forEach(function(x){ x.setAttribute('aria-pressed', x === b); }); render(b.dataset.g); });
+    render('all');
+  }
 
   var colsEl = $('#menuCols'), html = '', chip = '';
   MENU.forEach(function(c){
@@ -1675,20 +1725,34 @@ var DCBag = (function(){
     html += '<div class="cat" id="m-' + c.id + '" data-anim><h3>' + esc(c.name) + (c.tag ? ' <small>' + esc(c.tag) + '</small>' : '') + '</h3><table>' + head + '<tbody>' + rows + '</tbody></table></div>';
   });
   colsEl.innerHTML = html; $('#chips').innerHTML = chip;
-  renderShelf('all');
+  shelf($('#shelfGrid'), $('#shelfF'), SHOTS, GROUPS, function(g){ $('#shelfNote').hidden = !(g === 'more' || g === 'all'); });
+  shelf($('#foodGrid'), $('#foodF'), FOOD, FOOD_GROUPS);
   $('#chips').addEventListener('click', function(e){ var a = e.target.closest('[data-cat]'); if (!a) return; e.preventDefault(); document.getElementById(a.dataset.cat).scrollIntoView({behavior:reduce ? 'auto' : 'smooth'}); });
   var bestBtn = $('#bestBtn');
   bestBtn.onclick = function(){ var on = bestBtn.getAttribute('aria-pressed') !== 'true'; bestBtn.setAttribute('aria-pressed', on); colsEl.classList.toggle('best', on); };
 
-  // ---------- Contact form: no server, so it hands the message to Messenger ----------
+  // ---------- Contact form ----------
+  // FORM_KEY empty: the form copies the message for Facebook or Instagram chat (no server needed).
+  // To have messages emailed instead, create a free access key at web3forms.com for the inbox that
+  // should receive them and paste it here. The form then asks for an email or mobile number and sends.
+  var FORM_KEY = '';
+  if (FORM_KEY){ $('#f-reply-wrap').hidden = false; $('#f-reply').required = true; $('#f-btn').textContent = 'Send message';
+    $('#f-note').textContent = 'Your message goes straight to our team. We reply by email or text.'; }
   $('#msgForm').addEventListener('submit', function(e){
     e.preventDefault();
-    var st = $('#formStatus'), nameEl = $('#f-name'), msgEl = $('#f-msg'), name = nameEl.value.trim(), msg = msgEl.value.trim(), br = $('#f-branch').value, topic = $('#f-topic').value;
-    if (!name || !msg){ st.hidden = false; st.innerHTML = 'Please add your name and a message.'; (name ? msgEl : nameEl).focus(); return; }
+    var st = $('#formStatus'), nameEl = $('#f-name'), msgEl = $('#f-msg'), replyEl = $('#f-reply'), name = nameEl.value.trim(), msg = msgEl.value.trim(), reply = replyEl.value.trim(), br = $('#f-branch').value, topic = $('#f-topic').value;
+    if (!name || !msg || (FORM_KEY && !reply)){ st.hidden = false; st.innerHTML = FORM_KEY ? 'Please add your name, a way to reach you and a message.' : 'Please add your name and a message.'; (!name ? nameEl : !msg ? msgEl : replyEl).focus(); return; }
     var text = 'Hi Dr. Coffee' + (br ? ' ' + br : '') + '! I’m ' + name + '. ' + topic + ': ' + msg;
-    function done(copied){ st.hidden = false;
-      st.innerHTML = (copied ? 'Your message is copied. ' : 'Copy your message below. ') + 'Paste it into our <a href="' + FB + '" target="_blank" rel="noopener">Facebook page</a> or <a href="' + IG + '" target="_blank" rel="noopener">Instagram</a> chat and we’ll reply there.' + (copied ? '' : '<pre>' + esc(text) + '</pre>'); }
-    try{ navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); }); }catch(err){ done(false); }
+    function done(copied, lead){ st.hidden = false;
+      st.innerHTML = (lead || '') + (copied ? 'Your message is copied. ' : 'Copy your message below. ') + 'Paste it into our <a href="' + FB + '" target="_blank" rel="noopener">Facebook page</a> or <a href="' + IG + '" target="_blank" rel="noopener">Instagram</a> chat and we’ll reply there.' + (copied ? '' : '<pre>' + esc(text) + '</pre>'); }
+    function copy(lead){ try{ navigator.clipboard.writeText(text).then(function(){ done(true, lead); }, function(){ done(false, lead); }); }catch(err){ done(false, lead); } }
+    if (!FORM_KEY){ copy(); return; }
+    st.hidden = false; st.textContent = 'Sending…';
+    fetch('https://api.web3forms.com/submit', {method:'POST', headers:{'Content-Type':'application/json', Accept:'application/json'},
+      body:JSON.stringify({access_key:FORM_KEY, subject:'Website message: ' + topic + (br ? ' · ' + br : ''), from_name:'Dr. Coffee website', name:name, reply_to:reply, branch:br || 'Any branch', topic:topic, message:msg})})
+      .then(function(r){ return r.json(); })
+      .then(function(j){ if (!j.success) throw 0; st.innerHTML = 'Thanks, ' + esc(name) + '. Your message is with our team, and we’ll get back to you at ' + esc(reply) + '.'; $('#msgForm').reset(); })
+      .catch(function(){ copy('We couldn’t send it just now. '); });
   });
 
   // ---------- Motion: split words, play-on-arrival, counters, line drawing ----------
