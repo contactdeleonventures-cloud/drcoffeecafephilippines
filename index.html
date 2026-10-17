@@ -976,7 +976,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <div class="rt" data-anim="kids">
         <a href="#rooms-cebu-main"><em>Room 1 &middot; Meetings</em><b>Conference Room</b><span>Cebu Main. The first room to open as the floor fills.</span></a>
         <a href="#rooms-cebu-main"><em>Room 2 &middot; Shared table</em><b>Dr&rsquo;s Lounge</b><span>Cebu Main. A long table, a sofa and warm lighting.</span></a>
-        <a href="#rooms-cebu-main"><em>Room 3 &middot; Most private</em><b>Portal Space</b><span>Cebu Main. The quietest room in the building.</span></a>
+        <a href="#rooms-cebu-main"><em>Room 3 &middot; Tiered seating</em><b>Portal Space</b><span>Cebu Main. Cushioned tiers and small tables, open last.</span></a>
         <a href="#rooms-casa-mira"><em>Work stations &middot; Solo work</em><b>Intensive Work Unit</b><span>Casa Mira. Curtained desks booked at the counter.</span></a>
       </div>
       <p style="margin-top:32px" data-anim><a class="tlink" href="#rooms">See all rooms &rarr;</a></p>
@@ -1450,7 +1450,7 @@ var DCBag = (function(){
       why:['Three bookable rooms: Conference Room, Dr’s Lounge and Portal Space','Dr. Chicken, Korean fried chicken, on the same floor','Order ahead on foodpanda'],
       rooms:true, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/jyg9/dr-coffee-j-llorente-street'},
       photos:{hero:{src:'assets/cebu-main-dining.jpg', alt:'The Cebu Main dining room: white tables and chairs under the lit Dr. Coffee sign.'},
-              wide:{src:'assets/cebu-main-tiered.jpg', alt:'Tiered seating with cushions and small tables under a wall that reads: Work until you no longer have to introduce yourself.'},
+              wide:{src:'assets/cebu-main-tiered.jpg', alt:'The Portal Space: tiered seating with cushions and small tables under a wall that reads: Work until you no longer have to introduce yourself.'},
               main:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table, black chairs and a TV.'},
               s1:{src:'assets/cebu-main-lounge-sofa.jpg', alt:'The Dr’s Lounge: a long shared table, a sofa and warm cove lighting.'},
               s2:{src:'assets/s-transfusion-sl.jpg', alt:'A Spanish Latte Transfusion bag with its ticked white label.'}},
@@ -1592,7 +1592,7 @@ var DCBag = (function(){
   var ROOMS = [
     {n:'Conference Room', br:'cebu-main', badge:'Meetings', sub:'Room 1', desc:'A private room for team meetings, pitches and group study. It is the first room to open when the dining floor fills.', best:['Team meetings','Presentations','Group study'], photo:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table and a TV.'}},
     {n:'Dr’s Lounge', br:'cebu-main', badge:'Shared table', sub:'Room 2', desc:'A long shared table with ergonomic chairs, a sofa and warm cove lighting. Opens after the Conference Room.', best:['Study groups','Long work sessions','Small gatherings'], photo:{src:'assets/cebu-main-lounge-sofa.jpg', alt:'The Dr’s Lounge long table and sofa.'}},
-    {n:'Portal Space', br:'cebu-main', badge:'Most private', sub:'Room 3', desc:'The last room to open and the quietest in the building. Made for the call or one-on-one that needs privacy.', best:['Private calls','One-on-ones','Focused work'], photo:{ph:'Portal Space: the room from the entrance, empty'}},
+    {n:'Portal Space', br:'cebu-main', badge:'Tiered seating', sub:'Room 3', desc:'Cushioned tiers with small tables and warm under-step lighting, beneath a wall that reads: Work until you no longer have to introduce yourself. The last room to open.', best:['Group study','Talks and workshops','Focused work'], photo:{src:'assets/cebu-main-portal.jpg', alt:'The Portal Space: cushioned tiered seating with small tables and warm lighting under the steps.'}},
     {n:'Intensive Work Unit', br:'casa-mira', badge:'Solo work', sub:'Work stations', desc:'Curtained work stations past the dining floor. Book one at the counter and a claim card on your desk shows the seat is yours.', best:['Solo deep work','Laptop sessions','Exam review'], photo:{src:'assets/casa-mira-icu.jpg', alt:'Work stations under the Intensive Work Unit sign.'}}
   ];
   var sel = $('#roomBranch'), grid = $('#roomGrid');
