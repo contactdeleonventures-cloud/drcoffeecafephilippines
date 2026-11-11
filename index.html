@@ -5,26 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dr. Coffee | Your Daily Dose of Remedy</title>
 <meta name="description" content="Dr. Coffee is a Philippine-rooted café with a playful clinic theme. Choose your dose at Cebu Main, Casa Mira and JamesTown.">
+<meta name="robots" content="index, follow">
 <meta name="theme-color" content="#F4F4F1">
-<link rel="canonical" href="https://drcoffee-cebu.pages.dev/">
+<link rel="canonical" href="https://drcoffeecafephilippines.contact-deleonventures.workers.dev/">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dr. Coffee">
 <meta property="og:title" content="Dr. Coffee | Your Daily Dose of Remedy">
 <meta property="og:description" content="Dr. Coffee is a Philippine-rooted café with a playful clinic theme. Choose your dose at Cebu Main, Casa Mira and JamesTown.">
-<meta property="og:url" content="https://drcoffee-cebu.pages.dev/">
-<meta property="og:image" content="https://drcoffee-cebu.pages.dev/og-image.jpg">
+<meta property="og:url" content="https://drcoffeecafephilippines.contact-deleonventures.workers.dev/">
+<meta property="og:image" content="https://drcoffeecafephilippines.contact-deleonventures.workers.dev/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <style>body{margin:0}[hidden]{display:none!important}</style>
+  <script type="module" crossorigin src="/assets/index-Dpuljc6q.js"></script>
 </head>
 <body>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@600;700&display=swap">
+
 <style>
 /* Dr. Coffee, matte white edition. Brand Book DC-BB-001 Rev 08: Georgia for display, Helvetica for labels,
    the black logo on light grounds, red kept for the Transfusion label's cross.
@@ -616,6 +616,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 </style>
+<link rel="stylesheet" href="/rebuild.css">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
@@ -631,12 +632,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
   <span class="pc" id="prePc">Preparing your dose 0%</span>
 </div>
 <script>
-/* Decide on the intro before first paint: once per visit, never with reduced motion. */
-(function(){ try{
-  var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches, seen = false;
-  try{ seen = sessionStorage.getItem('dc-intro') === '1'; }catch(e){}
-  if (!rm && !seen){ document.getElementById('pre').hidden = false; document.documentElement.classList.add('intro'); }
-}catch(e){} })();
+/* No artificial load delay: show usable content immediately. */
 </script>
 <div class="curtain" id="curtain" aria-hidden="true"><img src="assets/mark-ink.png" alt="" width="320" height="320"></div>
 <div class="cur" id="cur" aria-hidden="true"><span class="ring"><em id="curTxt"></em></span><span class="dot"></span></div>
@@ -646,12 +642,12 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 <header class="mast" id="mast">
   <div class="wrap mast-top">
     <nav class="soc" aria-label="Dr. Coffee on social media">
-      <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+      
       <a href="https://www.tiktok.com/@drcoffeecebu" target="_blank" rel="noopener" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
       <a href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
     </nav>
     <a class="logo" href="#home" aria-label="Dr. Coffee home"><img src="assets/logo-ink.png" alt="Dr. Coffee" width="1196" height="474"></a>
-    <div class="mast-st"><span class="over">Cebu City &middot; Mandaue &middot; Talisay soon</span></div>
+    <div class="mast-st"><span class="over">Cebu City &middot; Mandaue</span><button class="motion-toggle" id="motionToggle" type="button" aria-pressed="true">Pause motion</button></div>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="drawer"><span class="sr">Open navigation</span><i aria-hidden="true"></i></button>
   </div>
   <nav class="mast-nav" aria-label="Main">
@@ -661,14 +657,14 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <a href="#transfusion" data-nav="transfusion">Transfusion</a>
       <a href="#rooms" data-nav="rooms">Rooms</a>
       <a href="#menu" data-nav="menu">Menu</a>
-      <a href="#contact" data-nav="contact">Contact</a>
+      <a href="#contact" data-nav="contact">Contact</a><a href="#customer-service" data-nav="customer-service">Customer service</a>
     </div>
   </nav>
   <div class="drawer" id="drawer" hidden>
     <div class="wrap">
-      <a class="big" href="#branches">Branches</a><a class="big" href="#transfusion">Transfusion</a><a class="big" href="#rooms">Rooms</a><a class="big" href="#menu">Menu</a><a class="big" href="#contact">Contact</a>
+      <a class="big" href="#branches">Branches</a><a class="big" href="#transfusion">Transfusion</a><a class="big" href="#rooms">Rooms</a><a class="big" href="#menu">Menu</a><a class="big" href="#contact">Contact</a><a class="big" href="#customer-service">Customer service</a>
       <nav class="soc" aria-label="Social media">
-        <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+        
         <a href="https://www.tiktok.com/@drcoffeecebu" target="_blank" rel="noopener" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
         <a href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
       </nav>
@@ -687,7 +683,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
         <p class="over" data-anim>Coffee by the dose · Cebu</p>
         <h1 data-anim="split">Your daily <em>&ldquo;dose&rdquo;</em> of remedy.</h1>
         <p class="lead" data-anim style="--d:300ms">A hospital-inspired café where sizes are doses and the signature drink comes in a Transfusion bag. Brewed with care, and tested before it reaches your cup.</p>
-        <div class="row" data-anim style="--d:450ms"><a class="btn solid" data-magnetic href="#dose">Choose your dose <span class="arr" aria-hidden="true">&rarr;</span></a><a class="btn" data-magnetic href="#branches">Find a branch</a></div>
+        <div class="row" data-anim style="--d:450ms"><a class="btn solid" data-magnetic href="#menu">Explore the menu <span class="arr" aria-hidden="true">&rarr;</span></a><a class="btn" data-magnetic href="#branches">Find a branch</a></div>
         <div class="flv-wrap" data-anim style="--d:620ms"><p class="over">Try the Transfusion in</p><div class="flv" id="heroFlv" role="group" aria-label="Transfusion flavour"></div></div>
       </div>
       <div class="stage dark">
@@ -733,7 +729,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
         </article>
         <article class="dose">
           <div class="ic" data-anim="draw"><svg class="ico" viewBox="0 0 90 120" aria-hidden="true"><path class="fillq" d="M16 50h58v40l-14 14H30L16 90z"/><path d="M30 2v22"/><path d="M27 12h6v8h-6z"/><path d="M58 14v10"/><path d="M22 24h46l6 6v60l-14 14H30L16 90V30z"/><path d="M22 54h46v28H22z"/><path class="red" d="M58 57h7v7h-7z"/><path d="M26 62h12M26 68h18M26 74h10M48 64l2 2 4-5"/><path d="M38 104h14v10H38z"/></svg></div>
-          <div class="big"><span data-count="4">4</span><small>flavours</small></div>
+          <div class="big"><span data-count="9">9</span><small>flavours</small></div>
           <h3>Transfusion</h3>
           <span class="spec">Iced bag &middot; &#8369;260</span>
           <p>The signature bag, with a tube to sip from. Spanish Latte, Green Apple Yakult, Cold Brew or Vietnamese.</p>
@@ -763,7 +759,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <header class="sec-head">
         <p class="label rule" data-anim>The Transfusion</p>
         <h2 data-anim="split">Brewed to save your day.</h2>
-        <p class="lead" data-anim style="--d:200ms">Our signature iced drink comes in a clear IV-style bag with a tube to sip from and a white label, ticked for your drink. Four flavours, &#8369;260 each.</p>
+        <p class="lead" data-anim style="--d:200ms">Our signature iced drink comes in a clear IV-style bag with a tube to sip from and a white label, ticked for your drink. Explore the flavours on our current menu, &#8369;260 each.</p>
       </header>
       <div class="tx-grid">
         <div class="tx-stage">
@@ -789,13 +785,13 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
             <span class="chip" style="--c:#56341F"><i></i>Cold Brew</span>
             <h3>Coffee steeped cold, poured over ice.</h3>
             <p class="lead">Dark and smooth. On the label it gets the Cold Brew tick.</p>
-            <figure data-anim="wipe"><div class="ph"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="over">Photo needed</span><span class="t">Cold Brew Transfusion bag, white studio</span></div></figure>
+            
           </article>
           <article class="step" data-flavor="vietnamese">
             <span class="chip" style="--c:#A07046"><i></i>Vietnamese</span>
             <h3>Strong coffee with condensed milk.</h3>
             <p class="lead">The Vietnamese way, iced in a bag.</p>
-            <figure data-anim="wipe"><div class="ph"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="over">Photo needed</span><span class="t">Vietnamese Transfusion bag, white studio</span></div></figure>
+            
           </article>
           <article class="step" data-flavor="label">
             <span class="chip" style="--c:var(--red)"><i></i>Read the label</span>
@@ -826,6 +822,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
     <div class="rail" id="rail" data-cursor="Drag"></div>
   </section>
 
+<section class="sec studio-section"><div class="wrap"><div id="dose-film"><img src="/images/hero.webp" alt="Beaker coffee and a STAT bag on a chrome stand, photographed in a dark studio." width="2060" height="763" loading="lazy"></div><div class="studio-caption"><span>THE DAILY RITUAL · A STUDIO STUDY</span><a class="tlink" href="#menu">Explore the drinks ↗</a><span>Photographically enhanced product imagery.</span></div></div></section>
   <section class="sec band" id="details">
     <div class="wrap">
       <header class="sec-head center">
@@ -844,14 +841,14 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           <p>A full litre with its own Rx label and a clinic name for each blend. Made for the table, good for three to four.</p>
         </article>
         <article class="det" data-anim style="--d:200ms">
-          <figure data-anim="wipe"><img src="assets/casa-mira-icu-wide.jpg" alt="The Intensive Work Unit sign over curtained work stations at Casa Mira." loading="lazy"></figure>
+          <figure data-anim="wipe"><img src="images/rooms/iwu-2026-11-11.webp" alt="The Intensive Work Unit sign over curtained work stations at Casa Mira." loading="lazy"></figure>
           <h3>The Intensive Work Unit</h3><span class="sub">Casa Mira</span>
           <p>Curtained work stations past the dining floor. A card on your desk tells everyone the seat is taken.</p>
         </article>
         <article class="det" data-anim>
           <figure data-anim="wipe"><img src="assets/cebu-main-lounge-sofa.jpg" alt="A long shared table, a sofa and warm cove lighting at Cebu Main." loading="lazy"></figure>
-          <h3>Rooms that open in turn</h3><span class="sub">Cebu Main</span>
-          <p>The Conference Room opens first, then the Dr&rsquo;s Lounge, then the Portal Space as the café fills.</p>
+          <h3>Space for your next gathering</h3><span class="sub">Cebu Main</span>
+          <p>Choose the Conference Room, Doctor’s Lounge or Portal Space for a private booking. Compare packages and ask the branch to check your date.</p>
         </article>
         <article class="det" data-anim style="--d:100ms">
           <figure data-anim="wipe" style="background:#FEFEFE"><img src="assets/s-cafe-latte.jpg" alt="An iced Café Latte in the Dr. Coffee botanical sleeve." width="900" height="1200" loading="lazy" style="object-position:50% 58%"></figure>
@@ -914,7 +911,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           <p class="over" data-anim>Combo 02</p>
           <h3 data-anim="split" style="font-size:clamp(32px,3.6vw,48px)">Emergency Burger Combo</h3>
           <p class="price" data-anim>&#8369;169</p>
-          <p class="lead" data-anim>A crispy chicken burger with fries and a dip.</p>
+          <p class="lead" data-anim>A burger served with fries and a dip. Ask the branch about the current patty and ingredients.</p>
           <dl data-anim><dt>Pairs with</dt><dd>A Spanish Latte, Low or High Dose</dd><dt>Menu</dt><dd>Crash Cart &middot; best seller &#9733;</dd></dl>
         </div>
         <figure class="shot" data-anim="wipe"><span class="clip"><img src="assets/f-burger.jpg" alt="The Emergency Burger Combo: a sesame-bun burger with lettuce and cheese, fries and a dip on a wooden tray." width="900" height="1125" loading="lazy" data-px="0.05"></span></figure>
@@ -935,15 +932,15 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           <p class="label rule">From the kitchen</p>
           <h3 style="font-size:clamp(28px,3vw,40px)">Dr. Chicken Adobo</h3>
           <p class="lead">A house rice meal with fried eggs, regular or spicy, &#8369;239. A best seller, also sold by the bottle for &#8369;270.</p>
-          <p><a class="tlink" href="#menu">Rice meals, pasta &amp; pastries &rarr;</a></p>
+          <p><a class="tlink" href="#menu">Rice meals, pasta &amp; more &rarr;</a></p>
         </div>
       </article>
       <div class="pastry">
-        <p class="label rule" data-anim>From the pastry case</p>
+        <p class="label rule" data-anim>Branch pastry selection</p>
         <div class="pc-row">
-          <article class="pc" data-anim><figure><img src="assets/f-cookies.jpg" alt="A chocolate chip cookie with chocolate chunks on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Chocolate Chip Cookies</h4><p class="price">&#8369;105 <span>&#9733; best seller</span></p></div></article>
-          <article class="pc" data-anim style="--d:100ms"><figure><img src="assets/f-biscoff-cheesecake.jpg" alt="A slice of Biscoff cheesecake on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Biscoff Cheesecake</h4><p class="price">&#8369;230</p></div></article>
-          <article class="pc" data-anim style="--d:200ms"><figure><img src="assets/f-carrot-cake.jpg" alt="A slice of carrot cake with cream cheese frosting and a piped carrot on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Special Carrot Cake Slice</h4><p class="price">&#8369;85</p></div></article>
+          <article class="pc" data-anim><figure><img src="assets/f-cookies.jpg" alt="A chocolate chip cookie with chocolate chunks on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Chocolate Chip Cookies</h4><p class="price">Ask the branch <span>&#9733; best seller</span></p></div></article>
+          <article class="pc" data-anim style="--d:100ms"><figure><img src="assets/f-biscoff-cheesecake.jpg" alt="A slice of Biscoff cheesecake on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Biscoff Cheesecake</h4><p class="price">Ask the branch</p></div></article>
+          <article class="pc" data-anim style="--d:200ms"><figure><img src="assets/f-carrot-cake.jpg" alt="A slice of carrot cake with cream cheese frosting and a piped carrot on a white plate." width="900" height="900" loading="lazy"></figure><div><h4>Special Carrot Cake Slice</h4><p class="price">Ask the branch</p></div></article>
         </div>
       </div>
     </div>
@@ -954,12 +951,12 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <header class="sec-head center">
         <p class="label rule" data-anim>Our branches</p>
         <h2 data-anim="split">Find your nearest dose.</h2>
-        <p class="lead" data-anim style="--d:200ms">Three branches open in Cebu City and Mandaue, with Talisay on the way. Tap a stop on the map or a card below.</p>
+        <p class="lead" data-anim style="--d:200ms">Explore our Cebu City and Mandaue cafés. Choose a branch for photos, directions and visit information.</p>
       </header>
     </div>
     <div class="map" data-anim>
       <div class="wrap map-in">
-      <div class="box"><b>Four stops</b><span>Talisay to Mandaue</span></div>
+      <div class="box"><b>Your next stop</b><span>Cebu City to Mandaue</span></div>
       <div class="map-scroll">
         <svg viewBox="30 20 960 380" role="group" aria-label="A route map of Dr. Coffee branches, not to scale." data-anim="draw" id="mapSvg">
           <text class="mp-isl" x="80" y="110">Cebu</text>
@@ -981,13 +978,13 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <header class="sec-head">
         <p class="label rule" data-anim>Rooms</p>
         <h2 data-anim="split">Room for better focus.</h2>
-        <p class="lead" data-anim style="--d:200ms">Three rooms at Cebu Main and private work stations at Casa Mira. Rates and terms at the counter.</p>
+        <p class="lead" data-anim style="--d:200ms">Three private rooms at Cebu Main, plus focused work stations at Casa Mira. Compare spaces before you enquire.</p>
       </header>
       <div class="rt" data-anim="kids">
-        <a href="#rooms-cebu-main"><em>Room 1 &middot; Meetings</em><b>Conference Room</b><span>Cebu Main. The first room to open as the floor fills.</span></a>
-        <a href="#rooms-cebu-main"><em>Room 2 &middot; Shared table</em><b>Dr&rsquo;s Lounge</b><span>Cebu Main. A long table, a sofa and warm lighting.</span></a>
-        <a href="#rooms-cebu-main"><em>Room 3 &middot; Tiered seating</em><b>Portal Space</b><span>Cebu Main. Cushioned tiers and small tables, open last.</span></a>
-        <a href="#rooms-casa-mira"><em>Work stations &middot; Solo work</em><b>Intensive Work Unit</b><span>Casa Mira. Curtained desks booked at the counter.</span></a>
+        <a href="#rooms-cebu-main"><em>Room 1 &middot; Meetings</em><b>Conference Room</b><span>Cebu Main. 10–12 guests · ₱2,500 / four hours.</span></a>
+        <a href="#rooms-cebu-main"><em>Room 2 &middot; Shared table</em><b>Doctor&rsquo;s Lounge</b><span>Cebu Main. 20–25 guests · ₱6,000 / four hours.</span></a>
+        <a href="#rooms-cebu-main"><em>Room 3 &middot; Tiered seating</em><b>Portal Space</b><span>Cebu Main. 20–25 guests · ₱8,000 / four hours.</span></a>
+        <a href="#rooms-casa-mira"><em>Work stations &middot; Solo work</em><b>Intensive Work Unit</b><span>Casa Mira. Workstation passes from ₱135 for 3 hours.</span></a>
       </div>
       <p style="margin-top:32px" data-anim><a class="tlink" href="#rooms">See all rooms &rarr;</a></p>
     </div>
@@ -1005,7 +1002,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <div class="facts" data-anim="kids">
         <div class="fact"><b>2&ndash;3</b><span>Months of tasting for each recipe, with several tasters, before it reaches the menu.</span></div>
         <div class="fact"><b data-count="3">3</b><span>Highland names on our first kiosk&rsquo;s coffee: Baguio, Benguet and Atok.</span></div>
-        <div class="fact"><b data-count="3">3</b><span>Branches open today, in Cebu City and Mandaue. Talisay is next.</span></div>
+        <div class="fact"><b data-count="3">3</b><span>Cebu and Mandaue locations featured here. Kalibo is locally managed in Aklan.</span></div>
       </div>
     </div>
   </section>
@@ -1021,16 +1018,16 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
         <div class="visit" id="visitList"></div>
       </div>
       <form class="form" id="msgForm" novalidate data-anim>
-        <h3>Message us</h3>
-        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <h3>Message us</h3><p><a class="tlink" href="#customer-service">Customer service · Admin →</a></p>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" maxlength="100" required aria-describedby="f-note"></div>
         <div class="field"><label for="f-branch">Branch</label>
-          <select id="f-branch" name="branch"><option value="">Any branch</option><option>Cebu Main</option><option>Casa Mira</option><option>JamesTown</option></select></div>
+          <select id="f-branch" name="branch"><option value="">Any branch</option><option>Cebu Main</option><option>Casa Mira</option><option>JamesTown</option><option>Kalibo</option></select></div>
         <div class="field"><label for="f-topic">About</label>
           <select id="f-topic" name="topic"><option>A general question</option><option>Booking a room</option><option>A group or Overdose order</option><option>Feedback</option></select></div>
-        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" maxlength="3000" required aria-describedby="f-note"></textarea></div>
         <div class="field" id="f-reply-wrap" hidden><label for="f-reply">Email or mobile number</label><input id="f-reply" name="reply" autocomplete="email"></div>
         <div><button class="btn solid" type="submit" data-magnetic><span id="f-btn">Copy my message</span> <span class="arr" aria-hidden="true">&rarr;</span></button></div>
-        <p class="small" id="f-note">We reply on Facebook and Instagram. This copies your message so you can paste it into our chat.</p>
+        <p class="small" id="f-note">Your name and message are used to prepare your enquiry in this tab. This website does not submit or save those details to a server. Copying places them on your clipboard. You choose whether to send them through Messenger or your email app, where that service’s privacy policy applies. For privacy questions, email asvcphilcorporation@gmail.com.</p>
         <div class="status" id="formStatus" hidden role="status"></div>
       </form>
     </div>
@@ -1041,75 +1038,105 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 <div class="view" data-view="branch" hidden><div id="branchMount"></div></div>
 
 <!-- =============== ROOMS =============== -->
-<div class="view" data-view="rooms" hidden>
-  <section class="wrap r-hero">
-    <div class="copy">
-      <p class="over" data-anim>Rooms &middot; Cebu Main &amp; Casa Mira</p>
-      <h1 data-anim="split">Room for better focus.</h1>
-      <p class="lead" data-anim style="--d:200ms">Rooms for meetings, study and quiet work. Pick a branch below, then ask the counter or message us to book.</p>
-      <div class="row" data-anim style="--d:300ms"><a class="btn solid" data-magnetic href="#rooms" data-scroll="roomList">Explore the rooms <span class="arr" aria-hidden="true">&darr;</span></a></div>
-    </div>
-    <figure class="frame" data-anim="wipe"><span class="clip"><img src="assets/casa-mira-icu.jpg" alt="Casa Mira's work area under the lit Intensive Work Unit sign." width="1100" height="1375"></span></figure>
-  </section>
-  <section class="r-band dark">
-    <div class="wrap">
-      <p class="stack" data-anim="kids"><span style="display:block">Meet</span><span style="display:block">Study</span><span style="display:block">Focus</span></p>
-      <h2 data-anim="split">Book the room. Order your dose.</h2>
-      <p data-anim>Three rooms at Cebu Main.<br>Work stations at Casa Mira.<br>Rates and terms at the counter.</p>
-    </div>
-  </section>
-  <section class="sec" id="roomList" style="padding-block:clamp(64px,8vw,110px)">
-    <div class="wrap">
-      <div class="rooms-bar">
-        <div class="sec-head" style="margin:0"><p class="label rule">Featured rooms</p></div>
-        <div class="pick">
-          <label for="roomBranch">Branch</label>
-          <select id="roomBranch">
-            <option value="all">All branches</option>
-            <option value="cebu-main">Cebu Main</option>
-            <option value="casa-mira">Casa Mira</option>
-            <option value="jamestown">JamesTown</option>
-          </select>
-          <span class="count" id="roomCount" aria-live="polite"></span>
-        </div>
-      </div>
-      <div class="room-grid" id="roomGrid"></div>
-    </div>
-  </section>
-  <section class="band">
-    <div class="wrap r-icu">
-      <figure class="frame" data-anim="wipe"><span class="clip"><img src="assets/casa-mira-stations.jpg" alt="Work stations with ergonomic chairs and a table card reading Hi! This seat is occupied." width="1600" height="1067" loading="lazy" style="aspect-ratio:3/2"></span></figure>
-      <div class="copy">
-        <p class="label rule" data-anim>The Intensive Work Unit</p>
-        <h2 data-anim="split">Made for focus.</h2>
-        <p class="lead" data-anim>Past Casa Mira&rsquo;s dining floor, private work stations sit behind curtains under the Intensive Work Unit sign. Book one at the counter, set your claim card on the desk, and the seat is yours.</p>
-        <div class="row" data-anim><a class="btn" data-magnetic href="#casa-mira">Visit Casa Mira <span class="arr" aria-hidden="true">&rarr;</span></a></div>
-      </div>
-    </div>
-  </section>
-  <section class="sec">
-    <div class="wrap">
-      <header class="sec-head"><p class="label rule" data-anim>How booking works</p><h2 data-anim="split">Three steps to your room.</h2></header>
-      <ol class="steps" data-anim="kids">
-        <li><b>Pick a room and branch</b><span>Use the Branch filter above to see each branch&rsquo;s rooms.</span></li>
-        <li><b>Check it&rsquo;s free</b><span>Ask at the counter or message the branch. Rooms open in order as the dining floor fills.</span></li>
-        <li><b>Settle in</b><span>Order your dose at the counter and get to work. At Casa Mira, a claim card on your desk shows the seat is yours.</span></li>
-      </ol>
-      <p class="small" style="margin-top:26px">Rates and booking terms are set by each branch. <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener">Message us on Facebook</a> to ask.</p>
-    </div>
-  </section>
+<div class="view rooms-page" data-view="rooms" hidden>
+<section class="wrap rooms-intro">
+ <div class="rooms-intro-copy"><p class="over">Cebu Main &amp; Casa Mira</p><h1>Rooms &amp;<br> coworking.</h1><p class="lead">Book a private room for your group or pick a desk pass for focused work.</p><p class="warm-accent">Make room for focus.</p><div class="room-hero-actions"><a class="btn solid" href="#spaceRates" data-scroll="spaceRates">See rates ↓</a><a class="btn" href="#bookingGuide" data-scroll="bookingGuide">How to book ↓</a></div></div>
+ <div class="rooms-mosaic" aria-label="A look inside our spaces">
+  <figure><img src="images/rooms/lounge-2026-11-11.webp" alt="The shared table and sofa inside Doctor’s Lounge." width="1440" height="960"><figcaption>Cebu Main · Doctor’s Lounge</figcaption></figure>
+  <figure><img src="images/rooms/iwu-2026-11-11.webp" alt="Curtained desks at the Intensive Work Unit in Casa Mira." width="1122" height="1402"><figcaption>Casa Mira · Intensive Work Unit</figcaption></figure>
+ </div>
+</section>
+<section class="wrap space-rates" id="spaceRates" aria-labelledby="ratesTitle">
+ <h2 id="ratesTitle">Rates at a glance</h2>
+ <div class="rate-panels">
+  <section class="rate-panel"><p class="over">Cebu Main</p><h3>Private room packages</h3><p class="rate-note">4 hours for the whole room</p><div id="privateRates"></div><a class="tlink" href="#roomList" data-scroll="roomList" data-room-mode="private">See room photos and amenities ↓</a></section>
+  <section class="rate-panel"><p class="over">Casa Mira · Labangon</p><h3>Intensive Work Unit passes</h3><p class="rate-note">Individual workstations</p><div id="coworkRates"></div><p class="rate-note">One brewed coffee with 3–12 hour stays. Unlimited brewed coffee with the 24-hour pass.</p><a class="tlink" href="#roomList" data-scroll="roomList" data-room-mode="solo">See the workspace ↓</a></section>
+ </div>
+</section>
+<section class="wrap space-picker" aria-labelledby="spacePickerTitle">
+ <h2 id="spacePickerTitle">What brings you in?</h2>
+ <div class="purpose-tabs" role="group" aria-label="Choose your space type"><button type="button" data-room-mode="private" aria-pressed="true"><span>Meet & gather</span><small>Private rooms · Cebu Main</small></button><button type="button" data-room-mode="solo" aria-pressed="false"><span>Study & work</span><small>Individual desks · Casa Mira</small></button><button type="button" data-room-mode="all" aria-pressed="false"><span>Explore all</span><small>Compare every space</small></button></div>
+</section>
+<section class="wrap room-comparison" id="roomList" aria-labelledby="roomListTitle">
+ <div class="comparison-head"><div><p class="over">Find your fit</p><h2 id="roomListTitle">Compare private rooms.</h2></div><span id="roomCount" aria-live="polite"></span></div>
+ <div class="space-filterbar"><div><label for="roomBranch">Branch</label><select id="roomBranch"><option value="all">All branches</option><option value="cebu-main">Cebu Main</option><option value="casa-mira">Casa Mira</option></select></div><div id="guestFilter"><label for="roomGuests">Group size</label><select id="roomGuests"><option value="all">Any group size</option><option value="12">Up to 12 guests</option><option value="25">13–25 guests</option></select></div><p>Photos, package prices and inclusions.<br>Availability checked by the branch.</p><button type="button" class="filter-reset" data-all>Reset filters</button></div>
+ <div class="room-grid" id="roomGrid"></div>
+ <p class="room-equipment-note">Bringing a laptop or presentation? Tell the branch which connections or equipment you need so they can confirm compatibility before your visit.</p>
+</section>
+<section class="booking-guide" id="bookingGuide" aria-labelledby="bookingGuideTitle">
+ <div class="wrap booking-guide-layout">
+  <div><h2 id="bookingGuideTitle">How to book</h2>
+   <p><strong>Dr. Coffee Cafe Philippines is the Mother Page for general questions.</strong> Each branch handles its own bookings through its Messenger and Instagram pages.</p>
+   <ol class="booking-instructions"><li>Choose a room or pass, then copy and fill in the booking format.</li><li>Paste and send it to the branch for your space. Wait for the branch to confirm availability and give payment instructions.</li><li>For Cebu Main private rooms, the standard down payment is ₱500. Cebu Main verifies it before confirming your booking.</li></ol>
+   <a class="tlink" href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener">Ask the Mother Page ↗</a>
+   <p><a class="tlink" href="#customer-service">Customer service · Admin →</a></p>
+  </div>
+  <div class="booking-template"><label for="bookingTemplate">Booking format</label><textarea id="bookingTemplate" rows="11" readonly spellcheck="false">Name:
+
+Mobile Number:
+
+Room or Pass-Type:
+
+Schedule:
+
+Mode of Payment (Cash or GCash):
+
+Other Requests:</textarea><button class="btn solid" type="button" id="copyBookingTemplate">Copy booking format</button><p id="templateCopyStatus" class="copy-feedback" role="status"></p><div id="bookingBranchLinks" aria-label="Branch booking channels"></div></div>
+ </div>
+</section>
+<section class="wrap rooms-faq"><div><p class="over">Good to know</p><h2>Before you visit.</h2><p class="warm-accent">A little planning. More room to enjoy.</p></div><div class="faq-list">
+ <details><summary>Where are the spaces?</summary><p>The three private rooms are at Cebu Main: 2F Jaeja Building, corner J. Llorente Street and Osmeña Boulevard, Cebu City. Individual work stations are at Casa Mira in Labangon. <a href="#branches">See branch photos and directions →</a></p></details>
+ <details><summary>When can I visit?</summary><p>Cebu Main’s usual café hours are 7 AM–1 AM the next day; Casa Mira is usually open 24 hours. Ask the branch about special dates and your preferred room or station time. Café hours do not guarantee room availability or overnight booking access.</p></details>
+ <details><summary>What does the private-room price include?</summary><p>Each listed Cebu Main package covers four hours. Conference Room includes ₱1,000 worth of food and drinks; Doctor’s Lounge includes ₱2,000; Portal Space includes ₱5,000. These are the included food-and-drink values, not the full room fee. Equipment and amenities are listed separately on each card.</p></details>
+ <details><summary>How do I reserve a room?</summary><p>Copy the booking format above and send it to the branch that handles your room or pass. The branch checks availability before giving payment instructions. The standard down payment is ₱500 for any one of the three Cebu Main rooms. The branch verifies payment and rechecks the schedule before confirming. Please wait for those instructions before paying.</p></details>
+ <details><summary>Can I extend my stay or book a different duration?</summary><p>Ask the branch for availability and a quote. The listed prices are four-hour packages; they do not establish hourly or overtime rates. See the Casa Mira pass rates above. Ask the branch about extensions or access under the Weekly Plan.</p></details>
+ <details><summary>What if I need to change or cancel?</summary><p>Keep changes and cancellations in the same branch conversation. Ask the branch to confirm its current balance, cancellation and refund conditions before payment.</p></details>
+ <details><summary>Can you help with a custom setup or larger group?</summary><p>Email <a href="mailto:asvcphilcorporation@gmail.com">asvcphilcorporation@gmail.com</a> for custom packages and questions outside the branch’s standard offer. Admin replies are handled Monday–Friday, 9 AM–5 PM Philippine time.</p></details>
+</div></section>
 </div>
+
+<div class="view" data-view="customer-service" hidden>
+ <section class="wrap customer-service">
+  <p class="over">Dr. Coffee · Admin</p>
+  <h1>Customer service</h1>
+  <p class="warm-accent">On-going Construction</p>
+  <p class="lead">For customer service enquiries, you can email our admin team.</p>
+  <div class="room-hero-actions"><a class="btn solid" href="mailto:asvcphilcorporation@gmail.com">Email admin ↗</a><a class="btn" href="#rooms">Rooms &amp; coworking →</a></div>
+ </section>
+</div>
+
+<dialog class="booking-dialog" id="roomBooking" aria-labelledby="bookingTitle">
+ <header><div><p class="over" id="bookingBranch"></p><h2 id="bookingTitle"></h2></div><button type="button" class="close" aria-label="Close booking enquiry">×</button></header>
+ <p id="bookingRate"></p>
+ <p>Copy your request, then paste and send it to this branch. The branch will check your schedule and confirm the next steps.</p>
+ <form id="bookingForm" autocomplete="off">
+  <div class="booking-grid">
+   <div class="field"><label for="bookName">Name</label><input id="bookName" name="guestName" autocomplete="name" maxlength="100"></div>
+   <div class="field"><label for="bookMobile">Mobile Number</label><input id="bookMobile" name="mobile" type="tel" autocomplete="tel" maxlength="30"></div>
+   <div class="field full"><label for="bookPass">Room or Pass-Type</label><select id="bookPass" name="pass"></select></div>
+   <div class="field full"><label for="bookSchedule">Schedule</label><input id="bookSchedule" name="schedule" placeholder="Date and start–end time, Philippine time" maxlength="150"></div>
+   <div class="field full"><label for="bookPayment">Mode of Payment (Cash or GCash)</label><select id="bookPayment" name="payment"><option value="">Choose a preference</option><option>Cash</option><option>GCash</option></select></div>
+   <div class="field full"><label for="bookRequests">Other Requests</label><textarea id="bookRequests" name="requests" rows="2" maxlength="500" placeholder="Guest count, equipment or other requests"></textarea></div>
+  </div>
+  <button class="btn solid" type="submit">Copy booking request</button>
+  <p>Your details stay in this tab until you copy them. Send the request only in the branch chat.</p>
+ </form>
+ <div id="bookingResult" hidden><label for="bookingText">Your booking request</label><textarea id="bookingText" rows="7" readonly></textarea></div>
+ <p id="copyState" class="copy-feedback" role="status"></p>
+ <div class="booking-channels"><a class="btn" id="bookMessenger" target="_blank" rel="noopener">Messenger ↗</a><a class="btn" id="bookInstagram" target="_blank" rel="noopener">Instagram ↗</a></div>
+</dialog>
 
 <!-- =============== MENU =============== -->
 <div class="view" data-view="menu" hidden>
   <section class="wrap m-head">
     <p class="label rule" data-anim>The menu</p>
     <h1 data-anim="split">What&rsquo;s on the counter.</h1>
-    <p class="lead" data-anim style="--d:200ms">Coffee by the dose, coffee-free drinks, rice meals, pasta, pastries and the Crash Cart. Prices in pesos.</p>
+    <p class="lead" data-anim style="--d:200ms">Coffee by the dose, coffee-free drinks, Filipino breakfast, rice meals, pasta and the Crash Cart. Prices in pesos; availability varies by branch.</p>
   </section>
+  <div class="wrap"><div class="search-box"><label for="menuSearch">Search menu</label><input id="menuSearch" type="search" placeholder="Try matcha, Vietnamese, pasta…" autocomplete="off"><button id="clearMenu" type="button">Clear</button></div><p class="search-status" id="menuSearchStatus" aria-live="polite"></p></div>
   <section class="wrap shelf" id="shelf" aria-labelledby="shelfT">
     <div class="shelf-head">
-      <div class="sec-head" style="margin:0"><p class="label rule" data-anim>The drinks, pictured</p><h2 id="shelfT" data-anim="split">Every drink in the sleeve.</h2></div>
+      <div class="sec-head" style="margin:0"><p class="label rule" data-anim>The drinks, pictured</p><h2 id="shelfT" data-anim="split">Find your next favourite.</h2></div>
       <div class="shelf-f" id="shelfF" role="group" aria-label="Show drinks by group"></div>
     </div>
     <div class="shelf-grid" id="shelfGrid"></div>
@@ -1151,7 +1178,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <nav class="soc" aria-label="Follow Dr. Coffee">
         <a href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener" aria-label="Instagram, @dr.coffee_philippines"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
         <a href="https://www.tiktok.com/@drcoffeecebu" target="_blank" rel="noopener" aria-label="TikTok, @drcoffeecebu"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
-        <a href="https://www.facebook.com/profile.php?id=61552180229648" target="_blank" rel="noopener" aria-label="Facebook, Dr. Coffee Cebu City"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+        
         <a href="https://www.instagram.com/dr.coffee_casamiralabangon/" target="_blank" rel="noopener" aria-label="Instagram, Casa Mira, @dr.coffee_casamiralabangon"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
       </nav>
     </div>
@@ -1272,7 +1299,7 @@ var DCBag = (function(){
     E('rect', {x:69, y:305, width:468, height:350, rx:4, fill:'rgba(0,0,0,.16)'}, L);
     E('rect', {x:66, y:300, width:468, height:350, rx:4, fill:'url(#' + p + 'lab)', stroke:'rgba(0,0,0,.07)'}, L);
     function tx(x, y, s, size, ls, anchor){ var t = E('text', {x:x, y:y, 'font-size':size, 'letter-spacing':ls || 0}, L); if (anchor) t.setAttribute('text-anchor', anchor); t.textContent = s; return t; }
-    tx(88, 338, '100% ARABICA', 12.5, .9);
+    tx(88, 338, 'YOUR DAILY DOSE', 12.5, .9);
     tx(452, 343, 'BREWED TO', 16, 1, 'end'); tx(452, 364, 'SAVE YOUR DAY', 16, 1, 'end');
     E('rect', {x:462, y:318, width:48, height:48, fill:'#D3232E'}, L);
     E('path', {d:'M480 326H492V336H502V348H492V358H480V348H470V336H480Z', fill:'#fff'}, L);
@@ -1447,9 +1474,13 @@ var DCBag = (function(){
 
 (function(){
   'use strict';
-  var FB = 'https://www.facebook.com/profile.php?id=61552180229648', IG = 'https://www.instagram.com/dr.coffee_philippines/';
+  var FB = 'https://www.instagram.com/dr.coffee_philippines/', IG = 'https://www.instagram.com/dr.coffee_philippines/';
   function mm(q){ return !!(window.matchMedia && matchMedia(q).matches); }
-  var reduce = mm('(prefers-reduced-motion: reduce)'), fine = mm('(hover: hover) and (pointer: fine)');
+  var userPaused=false;try{userPaused=sessionStorage.getItem('dc-motion')==='paused';}catch(e){}
+  var reduce = userPaused || mm('(prefers-reduced-motion: reduce)'), fine = false;
+  document.documentElement.classList.toggle('dc-reduced',reduce);
+  var motionBtn=document.getElementById('motionToggle');motionBtn.textContent=reduce?'Enable motion':'Pause motion';motionBtn.setAttribute('aria-pressed',String(!reduce));
+  motionBtn.onclick=function(){try{sessionStorage.setItem('dc-motion',reduce?'playing':'paused');}catch(e){}location.reload();};
   function $(s, r){ return (r || document).querySelector(s); }
   function $$(s, r){ return [].slice.call((r || document).querySelectorAll(s)); }
   function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); }
@@ -1460,39 +1491,39 @@ var DCBag = (function(){
   // ---------- Branch data ----------
   var ORDER = ['cebu-main','casa-mira','jamestown'];
   var B = {
-    'cebu-main': {n:'Cebu Main', area:'Fuente · Cebu City', region:'Cebu City', hours:'Being confirmed. Message the branch before you visit.',
+    'cebu-main': {n:'Cebu Main', area:'Fuente · Cebu City', region:'Cebu City', open:7, close:25, hours:'Usually 7:00 AM–1:00 AM next day. Confirm special dates with the branch.',
       tag:'The flagship, in Cebu’s medical district. Five spaces, from the main dining floor to three bookable rooms.',
       addr:'2F Jaeja Building, cor. J. Llorente St., Osmeña Blvd., Cebu City',
       dir:'https://www.google.com/maps/dir/?api=1&destination=Jaeja%20Building%2C%20J.%20Llorente%20St.%2C%20Osme%C3%B1a%20Blvd.%2C%20Cebu%20City',
-      spaces:['Main Dining','Al Fresco','Conference Room','Dr’s Lounge','Portal Space'],
-      why:['Three bookable rooms: Conference Room, Dr’s Lounge and Portal Space','Dr. Chicken, Korean fried chicken, on the same floor','Order ahead on foodpanda'],
+      spaces:['Main Dining','Al Fresco','Conference Room','Doctor’s Lounge','Portal Space'],
+      why:['Three bookable rooms: Conference Room, Doctor’s Lounge and Portal Space','Dr. Chicken, Korean fried chicken, on the same floor','Order ahead on foodpanda'],
       rooms:true, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/jyg9/dr-coffee-j-llorente-street'},
-      phone:'', msg:{t:'Facebook', u:'https://www.facebook.com/profile.php?id=61552180229648'},
+      phone:'', msg:{t:'Messenger', u:'https://m.me/1374562045738797'},
       photos:{hero:{src:'assets/cebu-main-dining.jpg', alt:'The Cebu Main dining room: white tables and chairs under the lit Dr. Coffee sign.'},
               wide:{src:'assets/cebu-main-tiered.jpg', alt:'The Portal Space: tiered seating with cushions and small tables under a wall that reads: Work until you no longer have to introduce yourself.'},
               main:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table, black chairs and a TV.'},
-              s1:{src:'assets/cebu-main-lounge-sofa.jpg', alt:'The Dr’s Lounge: a long shared table, a sofa and warm cove lighting.'},
+              s1:{src:'assets/cebu-main-lounge-sofa.jpg', alt:'The Doctor’s Lounge: a long shared table, a sofa and warm cove lighting.'},
               s2:{src:'assets/s-transfusion-sl.jpg', alt:'A Spanish Latte Transfusion bag with its ticked white label.'}},
-      caps:['Conference Room','Dr’s Lounge','The Transfusion bag']},
-    'casa-mira': {n:'Casa Mira', area:'Labangon · Cebu City', region:'Cebu City', hours:'Being confirmed. Message the branch before you visit.',
+      caps:['Conference Room','Doctor’s Lounge','The Transfusion bag']},
+    'casa-mira': {n:'Casa Mira', area:'Labangon · Cebu City', region:'Cebu City', open:0, close:24, hours:'Usually open 24 hours. Confirm special closures with the branch.',
       tag:'Built for focus. Private work stations in the Intensive Work Unit.',
       addr:'A4 Ground Floor, Casa Mira Tower, Salvador Ext., Labangon, Cebu City', dir:'https://maps.app.goo.gl/id6rguPjxUAkrcmt9',
       spaces:['Dining Area','Intensive Work Unit'],
-      why:['Private work stations in the Intensive Work Unit, booked at the counter','A claim card on your desk shows the seat is yours','A calm dining floor for solo work or meetups','Follow @dr.coffee_casamiralabangon for branch news'],
-      rooms:true, phone:'', msg:{t:'Instagram', u:'https://www.instagram.com/dr.coffee_casamiralabangon/'},
+      why:['Private work stations in the Intensive Work Unit, with passes from ₱135','A claim card on your desk shows the seat is yours','A calm dining floor for solo work or meetups','Follow @dr.coffee_casamiralabangon for branch news'],
+      rooms:true, phone:'', msg:{t:'Messenger', u:'https://m.me/1147540818444533'},
       photos:{hero:{src:'assets/casa-mira-entrance.jpg', alt:'The Casa Mira storefront under the sign Your daily dose of remedy, with a Dr. Coffee cup held up in front.'},
-              wide:{src:'assets/casa-mira-icu-wide.jpg', alt:'The Intensive Work Unit sign over curtained work stations.'},
-              main:{src:'assets/casa-mira-icu.jpg', alt:'Guests working under the Intensive Work Unit sign.'},
+              wide:{src:'images/rooms/iwu-2026-11-11.webp', alt:'The Intensive Work Unit sign over curtained work stations.'},
+              main:{src:'images/rooms/iwu-detail-2026-11-11.webp', alt:'Workstations with desk lamps and power outlets.'},
               s1:{src:'assets/casa-mira-dining.jpg', alt:'Casa Mira’s dining floor with round black tables and the counter at the back.'},
-              s2:{src:'assets/casa-mira-stations.jpg', alt:'Work stations with ergonomic chairs and a table card reading: Hi! This seat is occupied.'}},
+              s2:{}},
       caps:['The Intensive Work Unit','The dining floor','Work stations']},
-    'jamestown': {n:'JamesTown', area:'Tipolo · Mandaue City', region:'Mandaue City', hours:'Being confirmed. Message the branch before you visit.',
+    'jamestown': {n:'JamesTown', area:'Tipolo · Mandaue City', region:'Mandaue City', hours:'Ask admin to confirm the current café hours before you visit.',
       tag:'A two-storey glass-and-steel storefront in Mandaue.',
       addr:'Stall No. 1, Jamestown Center, Mantawi International Drive, Tipolo, Mandaue City', dir:'https://www.google.com/maps/search/?api=1&query=Dr.%20Coffee%20Jamestown%20Center%20Mantawi%20International%20Drive%20Mandaue%20City',
       spaces:['Dining Area','Al Fresco'],
       why:['Al fresco seating under the glass canopy','Look for the IV bag hanging by the counter'],
       rooms:false, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/f8ax/dr-coffee-jamestown'},
-      phone:'', msg:{t:'Facebook', u:'https://www.facebook.com/profile.php?id=61552180229648'},
+      phone:'', msg:{t:'Admin email', u:'mailto:asvcphilcorporation@gmail.com'},
       photos:{hero:{src:'assets/jamestown-storefront.jpg', alt:'The JamesTown storefront: a glass and steel canopy with the Dr. Coffee sign over the entrance.'},
               wide:{ph:'JamesTown interior: the black counter with the white logo, straight on, landscape'},
               main:{ph:'A guest at a JamesTown table with a drink, natural light'},
@@ -1501,8 +1532,8 @@ var DCBag = (function(){
       caps:['Inside JamesTown','The IV bag','The Overdose poster']}
   };
   var COPY = {
-    'cebu-main': {about:'Our flagship sits on the second floor of the Jaeja Building on J. Llorente St., in Cebu’s medical district. It has the most space of any branch: a main dining floor, al fresco seating and three rooms that open as the café fills.',
-      note:'Need a private room? Ask the counter to reserve one.', walkin:'a main dining floor and al fresco seating'},
+    'cebu-main': {about:'Our flagship sits on the second floor of the Jaeja Building on J. Llorente St., in Cebu’s medical district. It has the most space of any branch: a main dining floor, al fresco seating and three private rooms for meetings and gatherings.',
+      note:'Private rooms start at ₱2,500 for four hours. Ask Cebu Main to check your date before payment; a ₱500 down payment is verified before the branch confirms.', walkin:'a main dining floor and al fresco seating'},
     'casa-mira': {about:'Casa Mira in Labangon is built for focus. Past the dining floor, the Intensive Work Unit has curtained work stations with ergonomic chairs under its lit sign.',
       note:'Book a work station at the counter.', walkin:'a dining area'},
     'jamestown': {about:'JamesTown is our Mandaue branch: a two-storey glass-and-steel storefront at Jamestown Center, with a dining floor inside and al fresco tables under the canopy.',
@@ -1515,9 +1546,10 @@ var DCBag = (function(){
   function manila(){ try{ var o = {}; new Intl.DateTimeFormat('en-US', {timeZone:'Asia/Manila', hour:'numeric', minute:'2-digit', hour12:false}).formatToParts(new Date()).forEach(function(x){ o[x.type] = x.value; }); return {h:parseInt(o.hour, 10) % 24, m:parseInt(o.minute, 10)}; }catch(e){ return null; } }
   function fmt(h){ h = h % 24; return (h % 12 || 12) + ':00 ' + (h < 12 ? 'AM' : 'PM'); }
   function status(b){
+    if(b.close===24 && b.open===0)return {cls:'open',txt:'Usually open 24 hours'};
     var t = manila(); if (b.open == null || !t) return {cls:'ask', txt:'Message the branch for hours'};
     var now = t.h + t.m/60, open = (now >= b.open && now < b.close) || (b.close > 24 && now < b.close - 24);
-    return open ? {cls:'open', txt:'Open now · until ' + fmt(b.close)} : {cls:'closed', txt:'Closed · opens ' + fmt(b.open)};
+    return open ? {cls:'open', txt:'Usually open · until ' + fmt(b.close)} : {cls:'closed', txt:'Usually closed · opens ' + fmt(b.open)};
   }
   function stHtml(b){ var s = status(b); return '<span class="st ' + s.cls + '">' + (s.cls === 'ask' ? '' : '<i aria-hidden="true"></i>') + s.txt + '</span>'; }
   function paintStatus(){
@@ -1533,7 +1565,7 @@ var DCBag = (function(){
     {id:'cebu-main', x:650, y:196, lx:672, ly:238, a:'start', sub:'Fuente · Cebu City', hub:1},
     {id:'casa-mira', x:470, y:266, lx:450, ly:252, a:'end', sub:'Labangon · Cebu City'},
     {id:'jamestown', x:830, y:120, lx:852, ly:126, a:'start', sub:'Mandaue City'},
-    {id:'talisay', x:290, y:330, lx:270, ly:322, a:'end', sub:'Coming soon', soon:1}
+
   ];
   $('#mpStations').innerHTML = MAP.map(function(m){
     var nm = m.soon ? 'Talisay' : B[m.id].n, r = m.hub ? 13 : 10;
@@ -1548,7 +1580,7 @@ var DCBag = (function(){
   $('#brGrid').innerHTML = ORDER.map(function(id, i){ var b = B[id], src = CARD[id];
     return '<a class="br" href="#' + id + '" data-anim style="--d:' + (i*90) + 'ms"><figure data-anim="wipe" style="--d:' + (i*90) + 'ms">' + (src ? '<img src="' + src + '" alt="' + esc(b.photos.hero.alt || b.n) + '" loading="lazy">' : ph('Storefront photo coming', b.n.charAt(0))) + '</figure>' +
       '<h3>' + esc(b.n) + '</h3><span class="sub">' + esc(b.area) + '</span></a>'; }).join('') +
-    '<a class="br soon" href="' + FB + '" target="_blank" rel="noopener" data-anim style="--d:360ms"><figure><b>Coming soon</b><span class="over">Follow us for the date</span></figure><h3>Talisay</h3><span class="sub">Talisay City · Cebu</span></a>';
+    '<div class="br soon"><figure><b>Looking for Kalibo?</b><span class="over">Locally managed in Aklan</span></figure><h3>Kalibo enquiries</h3><a href="mailto:asvcphilcorporation@gmail.com" class="tlink">Email admin for routing ↗</a></div>';
   $('#visitList').innerHTML = ORDER.map(function(id){ var b = B[id];
     return '<a href="#' + id + '"><b>' + esc(b.n) + '</b><span>' + esc(b.addr) + '</span><span>Hours: ' + esc(b.hours.split('.')[0].toLowerCase()) + '</span><em>View &rarr;</em></a>'; }).join('');
 
@@ -1579,7 +1611,7 @@ var DCBag = (function(){
     var third = b.rooms ? '<a class="tlink" href="#rooms-' + id + '">See the rooms &rarr;</a>' : (b.extra ? '<a class="tlink" href="' + b.extra.u + '" target="_blank" rel="noopener">' + esc(b.extra.t) + ' &rarr;</a>' : '<a class="tlink" href="' + FB + '" target="_blank" rel="noopener">Message the branch &rarr;</a>');
     var spaces = b.spaces.length ? '<div class="pills">' + b.spaces.map(function(s){ return '<span class="pill">' + esc(s) + '</span>'; }).join('') + '</div>' : '<p>Space list coming soon.</p>';
     var trio = ['main','s1','s2'].map(function(k, j){ var p = P[k];
-      return '<figure data-anim="wipe" style="--d:' + (j*110) + 'ms">' + pic(p) + (p.src ? '<figcaption>' + esc(b.caps[j]) + '</figcaption>' : '') + '</figure>'; }).join('');
+      if(!p.src)return ''; return '<figure data-anim="wipe" style="--d:' + (j*110) + 'ms">' + pic(p) + (p.src ? '<figcaption>' + esc(b.caps[j]) + '</figcaption>' : '') + '</figure>'; }).join('');
     $('#branchMount').innerHTML =
       '<div class="wrap"><nav class="crumbs" aria-label="Branches"><a class="tlink" href="#branches">&larr; All branches</a><div class="tabs">' + tabs + '</div></nav></div>' +
       '<section class="wrap b-hero">' +
@@ -1594,7 +1626,7 @@ var DCBag = (function(){
         '<div class="cells" data-anim="kids">' +
           '<div class="cell"><span class="over">Address</span><p>' + esc(b.addr) + '</p></div>' +
           '<div class="cell r"><span class="over">Hours</span><p>' + esc(b.hours) + '</p></div>' +
-          '<div class="cell"><span class="over">Phone</span>' + (b.phone ? '<p><a href="tel:' + b.phone.replace(/[^+\d]/g, '') + '">' + esc(b.phone) + '</a></p>' : '<p class="tbc">Number coming soon</p>') + '</div>' +
+          '<div class="cell"><span class="over">Phone</span>' + (b.phone ? '<p><a href="tel:' + b.phone.replace(/[^+\d]/g, '') + '">' + esc(b.phone) + '</a></p>' : '<p class="tbc">Use the verified contact link below</p>') + '</div>' +
           '<div class="cell r"><span class="over">Message</span><p><a href="' + b.msg.u + '" target="_blank" rel="noopener">Message ' + esc(b.n) + ' on ' + esc(b.msg.t) + ' &nearr;</a></p></div>' +
           '<div class="cell wide"><span class="over">Good to know</span><p>' + esc(b.note) + '</p></div>' +
           '<div class="cell wide"><span class="over">Spaces</span>' + spaces + '</div>' +
@@ -1605,56 +1637,148 @@ var DCBag = (function(){
         '<aside class="b-panel" data-anim><p class="label rule">This branch</p><h3>Why come here?</h3><p class="about">' + esc(b.about) + '</p><ul>' + b.why.map(function(w){ return '<li>' + esc(w) + '</li>'; }).join('') + '</ul></aside>' +
       '</section>' +
       '<section class="wrap b-gal">' +
-        '<figure class="b-wide" data-anim="wipe">' + pic(P.wide, ' data-px="0.05"') + '</figure>' +
+        (P.wide.src ? '<figure class="b-wide" data-anim="wipe">' + pic(P.wide, ' data-px="0.05"') + '</figure>' : '') +
         '<div class="b-trio">' + trio + '</div>' +
       '</section>' +
       '<a class="wrap b-next" href="#' + nx + '"><span class="over">Next branch</span><b>' + esc(B[nx].n) + ' &rarr;</b></a>';
   }
 
   // ---------- Rooms ----------
-  var ROOMS = [
-    {n:'Conference Room', br:'cebu-main', badge:'Meetings', sub:'Room 1', desc:'A private room for team meetings, pitches and group study. It is the first room to open when the dining floor fills.', best:['Team meetings','Presentations','Group study'], photo:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table and a TV.'}},
-    {n:'Dr’s Lounge', br:'cebu-main', badge:'Shared table', sub:'Room 2', desc:'A long shared table with ergonomic chairs, a sofa and warm cove lighting. Opens after the Conference Room.', best:['Study groups','Long work sessions','Small gatherings'], photo:{src:'assets/cebu-main-lounge-sofa.jpg', alt:'The Dr’s Lounge long table and sofa.'}},
-    {n:'Portal Space', br:'cebu-main', badge:'Tiered seating', sub:'Room 3', desc:'Cushioned tiers with small tables and warm under-step lighting, beneath a wall that reads: Work until you no longer have to introduce yourself. The last room to open.', best:['Group study','Talks and workshops','Focused work'], photo:{src:'assets/cebu-main-portal.jpg', alt:'The Portal Space: cushioned tiered seating with small tables and warm lighting under the steps.'}},
-    {n:'Intensive Work Unit', br:'casa-mira', badge:'Solo work', sub:'Work stations', desc:'Curtained work stations past the dining floor. Book one at the counter and a claim card on your desk shows the seat is yours.', best:['Solo deep work','Laptop sessions','Exam review'], photo:{src:'assets/casa-mira-icu.jpg', alt:'Work stations under the Intensive Work Unit sign.'}}
-  ];
-  var sel = $('#roomBranch'), grid = $('#roomGrid');
-  function renderRooms(){
-    var v = sel.value, list = ROOMS.filter(function(r){ return v === 'all' || r.br === v; });
-    $('#roomCount').textContent = list.length + ' room' + (list.length === 1 ? '' : 's');
-    if (!list.length){ var b = B[v];
-      grid.innerHTML = '<div class="empty"><p class="over">' + esc(b.n) + '</p><h3>No bookable rooms here yet.</h3><p>' + (b.walkin ? esc(b.n) + ' has ' + esc(b.walkin) + ' for walk-ins.' : esc(b.n) + '’s space list is coming soon.') + ' For a private room, try Cebu Main or Casa Mira.</p><div class="row"><a class="btn" href="#' + v + '">Visit ' + esc(b.n) + '</a><button class="btn" type="button" data-all>Show all rooms</button></div></div>';
-      return; }
-    grid.innerHTML = list.map(function(r, k){ var b = B[r.br];
-      return '<article class="room" data-anim style="--d:' + (k*90) + 'ms"><figure>' + pic(r.photo) + '<span class="badge">' + esc(r.badge) + '</span></figure>' +
-        '<div class="rhead"><h3>' + esc(r.n) + '</h3><span class="sub">' + esc(b.n) + ' &middot; ' + esc(r.sub) + '</span><span class="rate">Rate on request</span>' +
-        '<button class="plus" type="button" aria-expanded="false" aria-controls="rm-' + k + '" aria-label="Details for ' + esc(r.n) + '">+</button></div>' +
-        '<div class="more" id="rm-' + k + '" hidden><p>' + esc(r.desc) + '</p><div class="tags">' + r.best.map(function(t){ return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' +
-        '<div class="row"><a class="btn solid" href="' + b.msg.u + '" target="_blank" rel="noopener">Ask to book</a><a class="btn" href="#' + r.br + '">' + esc(b.n) + '</a></div></div></article>'; }).join('');
-    observe(grid);
+  var ROOMS = [{"n": "Conference Room", "br": "cebu-main", "badge": "Meetings & presentations", "sub": "Private room", "desc": "Bring your team together around one long table, with a Smart TV for presentations.", "price": 2500, "credit": 1000, "capacity": 12, "capacityText": "10–12 guests", "best": ["Team meetings", "Presentations", "Group study"], "amenities": ["Smart TV", "High-speed Wi-Fi", "Free water"], "photos": ["images/rooms/conference-2026-11-11.webp", "images/conference-alt.webp"], "alts": ["Conference Room: a long meeting table, chairs and wall-mounted TV.", "Another view of the Conference Room at Cebu Main."]}, {"n": "Doctor’s Lounge", "br": "cebu-main", "badge": "Meetings & gatherings", "sub": "Private room", "desc": "A shared table and lounge seating for discussions, group work and smaller gatherings.", "price": 6000, "credit": 2000, "capacity": 25, "capacityText": "20–25 guests", "best": ["Group discussions", "Team sessions", "Gatherings"], "amenities": ["Smart TV", "High-speed Wi-Fi", "Free Dr. Black Coffee", "Glass board for discussions", "Private toilet", "Free water"], "photos": ["images/rooms/lounge-2026-11-11.webp", "images/lounge-alt.webp"], "alts": ["Doctor’s Lounge: a long table, sofa and warm cove lighting.", "A second view of the Doctor’s Lounge at Cebu Main."]}, {"n": "Portal Space", "br": "cebu-main", "badge": "Lectures & seminars", "sub": "Private room", "desc": "Tiered benches and portable tables create a setting for talks, seminars and group sessions.", "price": 8000, "credit": 5000, "capacity": 25, "capacityText": "20–25 guests", "best": ["Lectures", "Seminars", "Group sessions"], "amenities": ["LCD projector", "Private high-speed Wi-Fi", "Free Dr. Black Coffee", "Whiteboard for discussions", "Free water", "Open benches with portable tables"], "photos": ["images/rooms/portal-2026-11-11.webp", "assets/cebu-main-tiered.jpg"], "alts": ["Portal Space: tiered seating, portable tables and a projector.", "Another view of the tiered seating in Portal Space."]}, {"n": "Intensive Work Unit", "br": "casa-mira", "badge": "Solo study & work", "sub": "Individual work stations", "desc": "Settle into a curtained desk beyond the café’s dining floor for an individual study or work session.", "price": null, "credit": null, "capacity": null, "capacityText": "Individual work stations", "best": ["Exam review", "Laptop work", "Solo focus"], "amenities": ["Fast Wi-Fi", "Power outlets", "Comfortable seats", "Quiet workspace"], "photos": ["images/rooms/iwu-2026-11-11.webp", "images/rooms/iwu-detail-2026-11-11.webp"], "alts": ["Casa Mira’s Intensive Work Unit, with curtained desks and task chairs.", "Desk lamps, power outlets and chairs at the Casa Mira workstations."], "passes": [["Walk-in Pass", "3 hours", 135], ["Focus Dose", "4 hours", 170], ["Daylight Shift", "8 AM–8 PM", 250], ["Night Shift", "8 PM–8 AM", 250], ["24-Hour Pass", "8 AM–8 AM", 350], ["Weekly Plan", "Ask branch for access details", 2000]]}];
+  var roomChannels = {
+    'cebu-main': {messenger: 'https://m.me/1374562045738797', instagram: 'https://ig.me/m/dr.coffee_cebumain'},
+    'casa-mira': {messenger: 'https://m.me/1147540818444533', instagram: 'https://ig.me/m/dr.coffee_casamiralabangon'}
+  };
+  $('#bookingBranchLinks').innerHTML = Object.keys(roomChannels).map(function(branch) {
+    var channels = roomChannels[branch];
+    return '<div><strong>' + esc(B[branch].n) + '</strong><a href="' + channels.messenger +
+      '" target="_blank" rel="noopener">Messenger ↗</a><a href="' + channels.instagram +
+      '" target="_blank" rel="noopener">Instagram ↗</a></div>';
+  }).join('');
+
+  function pesos(amount) { return '₱' + amount.toLocaleString('en-PH'); }
+
+  $('#privateRates').innerHTML = '<ul class="private-rate-list">' + ROOMS.filter(function(room) {
+    return room.price !== null;
+  }).map(function(room) {
+    return '<li><div><strong>' + esc(room.n) + '</strong><small>' + esc(room.capacityText) +
+      ' · ' + pesos(room.credit) + ' food &amp; drinks included</small></div><b>' + pesos(room.price) + '</b></li>';
+  }).join('') + '</ul>';
+
+  var coworking = ROOMS.find(function(room) { return room.br === 'casa-mira'; });
+  $('#coworkRates').innerHTML = '<table class="pass-table"><thead><tr><th scope="col">Pass</th><th scope="col">Duration</th><th scope="col">Price</th></tr></thead><tbody>' +
+    coworking.passes.map(function(pass) {
+      return '<tr><th scope="row">' + esc(pass[0]) + '</th><td>' + esc(pass[1]) + '</td><td>' + pesos(pass[2]) + '</td></tr>';
+    }).join('') + '</tbody></table>';
+
+  var bookingDialog = $('#roomBooking');
+  var bookingForm = $('#bookingForm');
+  var bookingTemplate = $('#bookingTemplate');
+  var bookingTrigger;
+  async function copyRequest(textbox, status, successMessage) {
+    try {
+      await navigator.clipboard.writeText(textbox.value);
+      status.textContent = successMessage;
+    } catch {
+      textbox.focus();
+      textbox.select();
+      status.textContent = 'Select and copy the text, then paste it into the branch chat.';
+    }
   }
-  sel.addEventListener('change', renderRooms);
-  grid.addEventListener('click', function(e){
-    if (e.target.closest('[data-all]')){ sel.value = 'all'; renderRooms(); return; }
-    var p = e.target.closest('.plus'); if (!p) return;
-    var open = p.getAttribute('aria-expanded') !== 'true'; p.setAttribute('aria-expanded', open); document.getElementById(p.getAttribute('aria-controls')).hidden = !open;
+
+  $('#copyBookingTemplate').addEventListener('click', function() {
+    copyRequest(bookingTemplate, $('#templateCopyStatus'), 'Booking format copied.');
+  });
+
+  function clearBookingResult() {
+    $('#bookingResult').hidden = true;
+    $('#bookingText').value = '';
+    $('#copyState').textContent = '';
+  }
+
+  document.addEventListener('click', function(event) {
+    var trigger = event.target.closest('[data-book-room]');
+    if (!trigger) return;
+    var room = ROOMS[Number(trigger.dataset.bookRoom)];
+    var channels = roomChannels[room.br];
+    bookingTrigger = trigger;
+    bookingForm.reset();
+    clearBookingResult();
+    $('#bookingTitle').textContent = room.n;
+    $('#bookingBranch').textContent = B[room.br].n;
+    $('#bookMessenger').href = channels.messenger;
+    $('#bookInstagram').href = channels.instagram;
+    $('#bookPass').replaceChildren();
+    if (room.passes) {
+      $('#bookPass').add(new Option('Choose a pass', ''));
+      room.passes.forEach(function(pass) {
+        $('#bookPass').add(new Option(pass[0] + ' · ' + pesos(pass[2]), pass[0]));
+      });
+      $('#bookingRate').textContent = 'Passes from ' + pesos(room.passes[0][2]) + ' for 3 hours.';
+    } else {
+      $('#bookPass').add(new Option(room.n, room.n));
+      $('#bookingRate').textContent = pesos(room.price) + ' for 4 hours, including ' + pesos(room.credit) + ' worth of food and drinks.';
+    }
+    bookingDialog.showModal();
+    bookingDialog.scrollTop = 0;
+  });
+
+  $('.close', bookingDialog).addEventListener('click', function() { bookingDialog.close(); });
+  bookingDialog.addEventListener('close', function() {
+    bookingForm.reset();
+    clearBookingResult();
+    bookingTrigger?.focus();
+  });
+  window.addEventListener('hashchange', function() {
+    if (bookingDialog.open) bookingDialog.close();
+  });
+  bookingForm.addEventListener('input', clearBookingResult);
+  bookingForm.addEventListener('change', clearBookingResult);
+  bookingForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var fields = new FormData(bookingForm);
+    var keys = ['guestName', 'mobile', 'pass', 'schedule', 'payment', 'requests'];
+    var request = bookingTemplate.value.split('\n').filter(Boolean).map(function(label, index) {
+      var value = String(fields.get(keys[index]) || '').trim();
+      return value ? label + ' ' + value : label;
+    }).join('\n\n');
+    var output = $('#bookingText');
+    output.value = request;
+    $('#bookingResult').hidden = false;
+    output.scrollIntoView({block:'nearest'});
+    copyRequest(output, $('#copyState'), 'Booking request copied. Paste and send it in Messenger or Instagram.');
+  });
+
+  var sel = $('#roomBranch'), grid = $('#roomGrid'), roomMode='private';
+  function renderRooms(){
+    var branch=sel.value,size=$('#roomGuests').value;
+    var list=ROOMS.filter(function(r){return (roomMode==='all'||(roomMode==='private'?r.br==='cebu-main':r.br==='casa-mira'))&&(branch==='all'||r.br===branch)&&(size==='all'||(r.capacity&&r.capacity>=Number(size)));});
+    grid.classList.toggle('solo-grid',roomMode==='solo');
+    $('#roomCount').textContent=list.length+' space'+(list.length===1?'':'s');
+    $('#roomListTitle').textContent=roomMode==='private'?'Compare private rooms.':roomMode==='solo'?'Make space for solo focus.':'Compare our spaces.';
+    $('#guestFilter').hidden=roomMode==='solo';
+    $$('[data-room-mode]').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.dataset.roomMode===roomMode));});
+    if(!list.length){grid.innerHTML='<div class="empty"><h3>No spaces match these filters.</h3><p>Try a different branch or group size.</p><button class="btn" data-all type="button">Show all spaces</button></div>';return;}
+    grid.innerHTML=list.map(function(r){var i=ROOMS.indexOf(r),b=B[r.br];
+      var photos=r.photos.map(function(src,k){return '<button type="button" data-room-photo="'+k+'" aria-label="Photo '+(k+1)+' of '+r.photos.length+' for '+esc(r.n)+'" aria-pressed="'+(k===0)+'"><img src="'+src+'" alt="" loading="lazy" width="90" height="60"></button>';}).join('');
+      return '<article class="room space-card" data-room-index="'+i+'"><div class="space-photo"><img class="room-main-photo" src="'+r.photos[0]+'" alt="'+esc(r.alts[0])+'" width="1100" height="720" loading="lazy"><span class="badge">'+esc(r.badge)+'</span><span class="photo-count" aria-live="polite">1 / '+r.photos.length+'</span></div><div class="room-thumbnails" role="group" aria-label="'+esc(r.n)+' photos">'+photos+'</div><div class="space-card-body"><p class="over">'+esc(b.n)+' · '+esc(r.sub)+'</p><h3>'+esc(r.n)+'</h3><p class="capacity">'+esc(r.capacityText)+'</p><p class="space-description">'+esc(r.desc)+'</p><div class="package-price">'+(r.price?'<strong>₱'+r.price.toLocaleString('en-PH')+'</strong><span>for 4 hours · whole room</span>':'<strong>From ₱135</strong><span>3-hour Walk-in Pass</span>')+'</div>'+(r.price?'<p class="included-credit">Includes <b>₱'+r.credit.toLocaleString('en-PH')+'</b> worth of food & drinks</p>':'<p class="included-credit">Includes one brewed coffee with the Walk-in Pass.</p>')+'<h4 class="amenities-title">'+(r.price?'Included amenities':'Your work station')+'</h4><ul class="amenity-list">'+r.amenities.map(function(a){return '<li><span aria-hidden="true">✓</span>'+esc(a)+'</li>';}).join('')+'</ul><div class="space-card-actions"><button class="btn solid" type="button" data-book-room="'+i+'">Book now <span aria-hidden="true">↗</span></button><a class="space-directions" href="'+b.dir+'" target="_blank" rel="noopener">Directions to '+esc(b.n)+' ↗</a></div></div></article>';
+    }).join('');
+  }
+  sel.addEventListener('change',function() {
+    roomMode = sel.value === 'casa-mira' ? 'solo' : sel.value === 'cebu-main' ? 'private' : 'all';
+    if (roomMode === 'solo') $('#roomGuests').value = 'all';
+    renderRooms();
+  });
+  $('#roomGuests').addEventListener('change',renderRooms);
+  document.addEventListener('click',function(e){
+    var purpose=e.target.closest('[data-room-mode]');if(purpose){roomMode=purpose.dataset.roomMode;sel.value='all';$('#roomGuests').value='all';renderRooms();return;}
+    if(e.target.closest('[data-all]')){roomMode='all';sel.value='all';$('#roomGuests').value='all';renderRooms();return;}
+    var photo=e.target.closest('[data-room-photo]');if(!photo)return;var card=photo.closest('[data-room-index]'),room=ROOMS[Number(card.dataset.roomIndex)],k=Number(photo.dataset.roomPhoto),main=$('.room-main-photo',card);main.src=room.photos[k];main.alt=room.alts[k];$('.photo-count',card).textContent=(k+1)+' / '+room.photos.length;$$('[data-room-photo]',card).forEach(function(btn){btn.setAttribute('aria-pressed',String(btn===photo));});
   });
 
   // ---------- Menu ----------
   var H = ['Hot','Low','High'];
-  var MENU = [
-    {id:'classic', name:'Classic brews', cols:H, items:[['Dr. Black Coffee',120,null,null],['Vietnamese',120,120,160],['Caphé Muối',120,120,160],['Cold Brew',null,120,160]]},
-    {id:'espresso', name:'Espresso-based', cols:H, items:[['Espresso, single shot',75,null,null],['Doppio, double shot',100,null,null],['Americano',160,160,190,1],['Biscoff Latte',160,160,190,1],['Café Latte',160,160,190],['Cappuccino',160,160,190],['Café Mocha',160,160,190],['Caramel Macchiato',160,160,190,1],['SeaSalt Caramel',160,160,190,1],['White Chocolate Mocha',160,160,190],['Spanish Latte',160,160,190,1],['Vanilla Latte',160,160,190],['Espresso Sunrise',null,160,190]]},
-    {id:'transfusions', name:'Signature Transfusions', tag:'Iced only', items:[['Vietnamese',260],['Spanish Latte',260],['Green Apple Yakult',260],['Cold Brew',260]]},
-    {id:'overdose', name:'Overdose', tag:'1 L · good for 3–4', items:[['Vietnamese',360],['Americano',490],['Café Latte',490],['Cappuccino',490],['Café Mocha',490],['Caramel Macchiato',490],['Flat White Chocolate Mocha',490],['Matcha Espresso',490],['SeaSalt Caramel',490],['Spanish Latte',490]]},
-    {id:'coffee-free', name:'Coffee-free', cols:H, items:[['Chocolate Latte',160,160,190,1],['Matcha Latte',160,160,190,1],['Blue Lagoon',null,160,190],['Green Apple Yakult',null,160,190],['Lychee',null,160,190],['Strawberry Ade',null,160,190],['Strawberry Latte',null,160,190],['Yuzu Lemonade',null,160,190]]},
-    {id:'blended', name:'Blended', items:[['Biscoff Frappe',230],['Caramello',230],['Cookies & Cream',230],['Cryoccino',230],['Dirty Matcha',230],['Java Chip',230],['Matcha Cloud',230],['Mochaccino',230]]},
-    {id:'tea', name:'Tea', items:[['Chamomile',150],['Pure Peppermint',150],['English Breakfast',150],['Earl Grey',150]]},
-    {id:'rice', name:'Rice meals', items:[['Katsu Silog',239],['Corned Beef Silog',239],['Sausage Silog',239],['Beef Tapsilog',239],['Chicken Tocilog',239],['Dr. Chicken Adobo, regular',239,1],['Dr. Chicken Adobo, spicy',239,1],['Beef Siomai Rice',159],['Chicken Siomai Rice',159],['Dr. Chicken Adobo Bottle',270]]},
-    {id:'pasta', name:'Pasta & sandwiches', items:[['Spaghetti with Meatballs (beef)',249],['Chicken Carbonara Supreme',249,1],['Tuna Pesto Delight',249],['Loaded Tuna Sandwich',249],['Dr. Coffee Clubhouse Sandwich',260,1],['Chicken Fajita',260]]},
-    {id:'pastries', name:'Pastries', items:[['Chocolate Chip Cookies',105,1],['Revel Bar',140,1],['Blueberry Cheesecake Slice',230,1],['Biscoff Cheesecake',230],['Chocolate Banana Muffin',110],['Choco Tart',75],['Special Carrot Cake Slice',85],['Red Velvet Cake',120],['Chocolate Moist Cake',120],['Ube Cake',120],['Boston Cream Cake',120]]},
-    {id:'crash-cart', name:'Crash Cart combos', items:[['Remedy Fries',159,1],['Emergency Burger Combo',169,1],['Code Red Nachos',179,1]]}
-  ];
+  var MENU = [{"id": "classic", "name": "Classic Brews", "items": [["Caphé Muối", 120, 120, 160], ["Cold Brew", null, 120, 160], ["Vietnamese", 120, 120, 160], ["Dr. Black Coffee", 120, null, null]], "cols": ["Hot", "Low", "High"]}, {"id": "espresso", "name": "Espresso-Based", "items": [["Americano", 160, 160, 190, 1], ["Biscoff Latte", 160, 160, 190, 1], ["Café Latte", 160, 160, 190], ["Café Mocha", 160, 160, 190], ["Cappuccino", 160, 160, 190], ["Caramel Macchiato", 160, 160, 190, 1], ["Espresso Sunrise", null, 160, 190], ["Matcha Espresso", 160, 160, 190], ["SeaSalt Caramel", 160, 160, 190, 1], ["Spanish Latte", 160, 160, 190, 1], ["Vanilla Latte", 160, 160, 190], ["White Chocolate Mocha", 160, 160, 190], ["Doppio · double shot", 100, null, null], ["Espresso · single shot", 75, null, null]], "cols": ["Hot", "Low", "High"]}, {"id": "coffee-free", "name": "Coffee-Free", "items": [["Blue Lagoon", null, 160, 190], ["Chocolate Latte", 160, 160, 190, 1], ["Green Apple Yakult", null, 160, 190], ["Lychee", null, 160, 190], ["Matcha Latte", 160, 160, 190, 1], ["Strawberry Ade", null, 160, 190], ["Strawberry Latte", null, 160, 190], ["Yuzu Lemonade", null, 160, 190]], "cols": ["Hot", "Low", "High"]}, {"id": "tea", "name": "Tea", "items": [["Chamomile", 150], ["Earl Grey", 150], ["English Breakfast", 150], ["Pure Peppermint", 150]]}, {"id": "transfusions", "name": "Signature Transfusions", "items": [["Americano", 260], ["Caramel Macchiato", 260], ["Chocolate Latte", 260], ["Cold Brew", 260], ["Green Apple Yakult", 260], ["Lychee", 260], ["Matcha Latte", 260], ["Spanish Latte", 260], ["Vietnamese", 260]], "tag": "Iced only"}, {"id": "overdose", "name": "Overdose", "items": [["Americano", 490], ["Café Latte", 490], ["Café Mocha", 490], ["Cappuccino", 490], ["Caramel Macchiato", 490], ["Flat White Chocolate Mocha", 490], ["Matcha Espresso", 490], ["SeaSalt Caramel", 490], ["Spanish Latte", 490], ["Vietnamese", 360]], "tag": "1 L · concentrated"}, {"id": "blended", "name": "Blended", "items": [["Biscoff Frappe", 230], ["Caramello", 230], ["Cookies & Cream", 230], ["Cryoccino", 230], ["Dirty Matcha", 230], ["Java Chip", 230], ["Matcha Cloud", 230], ["Mochaccino", 230]]}, {"id": "rice", "name": "Rice Meals", "items": [["Dr. Chicken Adobo · regular", 239, 1], ["Dr. Chicken Adobo · spicy", 239, 1], ["Beef Siomai Rice", 159], ["Chicken Siomai Rice", 159]]}, {"id": "crash-cart", "name": "Crash Cart Combos", "items": [["Code Red Nachos", 179, 1], ["Emergency Burger Combo", 169, 1], ["Remedy Fries", 159, 1]]}, {"id": "pasta", "name": "Pasta & Sandwiches", "items": [["Dr. Coffee Clubhouse Sandwich", 260, 1], ["Chicken Carbonara Supreme", 249, 1], ["Loaded Tuna Sandwich", 249], ["Spaghetti with Meatballs (Beef)", 249], ["Tuna Pesto Delight", 249]]}, {"id": "breakfast", "name": "Filipino Breakfast", "items": [["Beef Tapa", 239], ["Chicken Katsu", 239], ["Chicken Tocino", 239], ["Corned Beef", 239], ["Sausage", 239]]}, {"id": "bottled", "name": "Bottled Comfort", "items": [["Dr. Chicken Adobo Bottle", 270]]}];
   // [menu group, menu name, photo (slug of assets/s-*.jpg, a path, or null for a photo still needed), label, alt]
   var SHOTS = [
     ['transfusions','Spanish Latte','assets/s-transfusion-sl.jpg','Transfusion, Spanish Latte','A Spanish Latte Transfusion bag with its ticked white label.'],
@@ -1683,15 +1807,21 @@ var DCBag = (function(){
     ['pastries','Biscoff Cheesecake','assets/m-biscoff-cheesecake.jpg',null,'A slice of Biscoff cheesecake on a white plate.'],
     ['pastries','Special Carrot Cake Slice','assets/m-carrot-cake.jpg',null,'A slice of carrot cake with cream cheese frosting on a white plate.'],
     ['rice','Katsu Silog',null],['rice','Corned Beef Silog',null],['rice','Sausage Silog',null],['rice','Beef Tapsilog',null],['rice','Chicken Tocilog',null],['rice','Beef Siomai Rice',null],['rice','Chicken Siomai Rice',null],
-    ['pasta','Spaghetti with Meatballs (beef)',null],['pasta','Chicken Carbonara Supreme',null],['pasta','Tuna Pesto Delight',null],['pasta','Loaded Tuna Sandwich',null],['pasta','Dr. Coffee Clubhouse Sandwich',null],['pasta','Chicken Fajita',null],
+    ['pasta','Spaghetti with Meatballs (Beef)',null],['pasta','Chicken Carbonara Supreme',null],['pasta','Tuna Pesto Delight',null],['pasta','Loaded Tuna Sandwich',null],['pasta','Dr. Coffee Clubhouse Sandwich',null],['pasta','Chicken Fajita',null],
     ['pastries','Revel Bar',null],['pastries','Blueberry Cheesecake Slice',null],['pastries','Chocolate Banana Muffin',null],['pastries','Choco Tart',null],['pastries','Red Velvet Cake',null],['pastries','Chocolate Moist Cake',null],['pastries','Ube Cake',null],['pastries','Boston Cream Cake',null]
   ];
-  var FOOD_GROUPS = [['all','All'],['crash-cart','Crash Cart'],['rice','Rice meals'],['pasta','Pasta & sandwiches'],['pastries','Pastries']];
+  var renameFood={'Katsu Silog':'Chicken Katsu','Corned Beef Silog':'Corned Beef','Sausage Silog':'Sausage','Beef Tapsilog':'Beef Tapa','Chicken Tocilog':'Chicken Tocino','Dr. Chicken Adobo, regular':'Dr. Chicken Adobo · regular'};
+  FOOD=FOOD.filter(function(x){return x[0]!=='pastries' && x[1]!=='Chicken Fajita';}).map(function(x){if(renameFood[x[1]]){x[1]=renameFood[x[1]];if(x[0]==='rice' && !x[1].includes('Adobo'))x[0]='breakfast';}return x;});
+  var libraryPhotos = [{"name": "Sausage", "asset": "images/menu/sausage.webp"}, {"name": "Corned Beef", "asset": "images/menu/corned-beef.webp"}, {"name": "Chicken Tocino", "asset": "images/menu/tocino.webp"}, {"name": "Spaghetti with Meatballs (Beef)", "asset": "images/menu/spaghetti.webp"}, {"name": "Chicken Carbonara Supreme", "asset": "images/menu/carbonara.webp"}, {"name": "Tuna Pesto Delight", "asset": "images/menu/tuna-pesto.webp"}, {"name": "Loaded Tuna Sandwich", "asset": "images/menu/tuna-sandwich.webp"}, {"name": "Chicken Katsu", "asset": "images/menu/katsu.webp"}, {"name": "Dr. Chicken Adobo Bottle", "asset": "images/menu/adobo-bottle.webp"}, {"name": "Dr. Coffee Clubhouse Sandwich", "asset": "images/menu/clubhouse.webp"}, {"name": "Beef Tapa", "asset": "images/menu/beef-tapa.webp"}];
+  FOOD.forEach(function(item){ var photo=libraryPhotos.filter(function(p){return p.name===item[1];})[0]; if(photo){item[2]=photo.asset;item[4]=item[1]+' — studio product image.';} });
+  FOOD.push(['bottled','Dr. Chicken Adobo Bottle','images/menu/adobo-bottle.webp',null,'Dr. Chicken Adobo in its labelled bottle.']);
+  var FOOD_GROUPS = [['all','All'],['crash-cart','Crash Cart'],['rice','Rice meals'],['pasta','Pasta & sandwiches'],['breakfast','Filipino breakfast'],['bottled','Bottled comfort']];
   function priceOf(cat, name){
     if (cat === 'overdose'){ var od = MENU.filter(function(m){ return m.id === 'overdose'; })[0].items.filter(function(x){ return x[0] === name; })[0];
       return {txt:od ? 'Overdose 1 L · ₱' + od[1] : '1 L · from ₱360'}; }
     var c = MENU.filter(function(m){ return m.id === cat; })[0]; if (!c) return null;
     var it = c.items.filter(function(x){ return x[0] === name; })[0]; if (!it) return null;
+    if(name==='Strawberry Latte')return {txt:'Ask the branch for current pricing'};
     if (c.cols){ var parts = []; for (var i = 1; i <= 3; i++) if (it[i] != null) parts.push(c.cols[i - 1] + ' ₱' + it[i]); return {txt:parts.join(' · '), star:it[4]}; }
     return {txt:'₱' + it[1], star:it[2]};
   }
@@ -1700,14 +1830,14 @@ var DCBag = (function(){
     var pic = src ? '<span class="pic"><img src="' + src + '" alt="' + esc(x[4] || name + ' in the Dr. Coffee sleeve.') + '" loading="lazy"></span>'
                   : '<span class="pic ph"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="over">Photo needed</span><span class="t">' + esc(name) + '</span></span>';
     return '<figure class="drink' + (src ? '' : ' soon') + (g === 'all' ? '' : ' in') + '" style="--d:' + Math.min(k, 8)*50 + 'ms">' + pic +
-      '<figcaption><h3>' + esc(name) + (pr && pr.star ? '<span class="star" aria-label="best seller">&#9733;</span>' : '') + '</h3><span class="pr">' + (pr ? esc(pr.txt) : 'Ask at the counter') + '</span></figcaption></figure>';
+      '<figcaption><h3>' + esc(name) + (pr && pr.star ? '<span class="star" aria-label="best seller">&#9733;</span>' : '') + '</h3><span class="pr">' + (pr ? esc(pr.txt) : 'Ask the branch for the current price') + '</span></figcaption></figure>';
   }
   function shelf(grid, filter, items, groups, after){
     filter.innerHTML = groups.map(function(g, i){ return '<button type="button" data-g="' + g[0] + '" aria-pressed="' + (i ? 'false' : 'true') + '">' + g[1] + '</button>'; }).join('');
     function render(g){
       var list = items.filter(function(x){ return g === 'all' || x[0] === g; });
-      list = list.filter(function(x){ return x[2]; }).concat(list.filter(function(x){ return !x[2]; }));
-      grid.innerHTML = list.map(function(x, k){ return shelfTile(x, k, g); }).join('');
+      list = list.filter(function(x){ return x[2]; });
+      grid.innerHTML = list.length ? list.map(function(x, k){ return shelfTile(x, k, g); }).join('') : '<p class="shelf-empty">Explore the full menu and prices below. Ask the branch about today’s selection.</p>';
       if (after) after(g);
     }
     filter.addEventListener('click', function(e){ var b = e.target.closest('[data-g]'); if (!b) return;
@@ -1721,7 +1851,7 @@ var DCBag = (function(){
     var multi = !!c.cols, rows = '';
     c.items.forEach(function(it){ var best = multi ? it[4] : it[2];
       rows += '<tr class="' + (best ? 'bs' : 'reg') + '"><td>' + esc(it[0]) + (best ? '<span class="star" aria-label="best seller">&#9733;</span>' : '') + '</td>';
-      if (multi){ for (var i = 1; i <= 3; i++) rows += it[i] == null ? '<td class="na" aria-label="not available">&ndash;</td>' : '<td>' + it[i] + '</td>'; } else rows += '<td>' + it[1] + '</td>';
+      if(multi && it[0]==='Strawberry Latte'){rows+='<td colspan="3">Ask the branch</td>';} else if (multi){ for (var i = 1; i <= 3; i++) rows += it[i] == null ? '<td class="na" aria-label="not available">&ndash;</td>' : '<td>' + it[i] + '</td>'; } else rows += '<td>' + it[1] + '</td>';
       rows += '</tr>'; });
     var head = multi ? '<thead><tr><th scope="col"><span class="sr">Item</span></th>' + c.cols.map(function(h){ return '<th scope="col">' + h + '</th>'; }).join('') + '</tr></thead>' : '';
     html += '<div class="cat" id="m-' + c.id + '" data-anim><h3>' + esc(c.name) + (c.tag ? ' <small>' + esc(c.tag) + '</small>' : '') + '</h3><table>' + head + '<tbody>' + rows + '</tbody></table></div>';
@@ -1733,29 +1863,21 @@ var DCBag = (function(){
   var bestBtn = $('#bestBtn');
   bestBtn.onclick = function(){ var on = bestBtn.getAttribute('aria-pressed') !== 'true'; bestBtn.setAttribute('aria-pressed', on); colsEl.classList.toggle('best', on); };
 
-  // ---------- Contact form ----------
-  // FORM_KEY empty: the form copies the message for Facebook or Instagram chat (no server needed).
-  // To have messages emailed instead, create a free access key at web3forms.com for the inbox that
-  // should receive them and paste it here. The form then asks for an email or mobile number and sends.
-  var FORM_KEY = '929adda3-faa1-4dda-bdb9-72d89320e7ec';
-  if (FORM_KEY){ $('#f-reply-wrap').hidden = false; $('#f-reply').required = true; $('#f-btn').textContent = 'Send message';
-    $('#f-note').textContent = 'Your message goes straight to our team. We reply by email or text.'; }
-  $('#msgForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    var st = $('#formStatus'), nameEl = $('#f-name'), msgEl = $('#f-msg'), replyEl = $('#f-reply'), name = nameEl.value.trim(), msg = msgEl.value.trim(), reply = replyEl.value.trim(), br = $('#f-branch').value, topic = $('#f-topic').value;
-    if (!name || !msg || (FORM_KEY && !reply)){ st.hidden = false; st.innerHTML = FORM_KEY ? 'Please add your name, a way to reach you and a message.' : 'Please add your name and a message.'; (!name ? nameEl : !msg ? msgEl : replyEl).focus(); return; }
-    var text = 'Hi Dr. Coffee' + (br ? ' ' + br : '') + '! I’m ' + name + '. ' + topic + ': ' + msg;
-    function done(copied, lead){ st.hidden = false;
-      st.innerHTML = (lead || '') + (copied ? 'Your message is copied. ' : 'Copy your message below. ') + 'Paste it into our <a href="' + FB + '" target="_blank" rel="noopener">Facebook page</a> or <a href="' + IG + '" target="_blank" rel="noopener">Instagram</a> chat and we’ll reply there.' + (copied ? '' : '<pre>' + esc(text) + '</pre>'); }
-    function copy(lead){ try{ navigator.clipboard.writeText(text).then(function(){ done(true, lead); }, function(){ done(false, lead); }); }catch(err){ done(false, lead); } }
-    if (!FORM_KEY){ copy(); return; }
-    st.hidden = false; st.textContent = 'Sending…';
-    fetch('https://api.web3forms.com/submit', {method:'POST', headers:{'Content-Type':'application/json', Accept:'application/json'},
-      body:JSON.stringify({access_key:FORM_KEY, subject:'Website message: ' + topic + (br ? ' · ' + br : ''), from_name:'Dr. Coffee website', name:name, reply_to:reply, branch:br || 'Any branch', topic:topic, message:msg})})
-      .then(function(r){ return r.json(); })
-      .then(function(j){ if (!j.success) throw 0; st.innerHTML = 'Thanks, ' + esc(name) + '. Your message is with our team, and we’ll get back to you at ' + esc(reply) + '.'; $('#msgForm').reset(); })
-      .catch(function(){ copy('We couldn’t send it just now. '); });
+  // Contact prepares a message locally; it never submits to an unverified inbox.
+  $('#msgForm').addEventListener('submit',function(e){
+    e.preventDefault();var name=$('#f-name'),message=$('#f-msg'),st=$('#formStatus');
+    if(!name.value.trim()||!message.value.trim()){st.hidden=false;st.textContent='Please enter your name and message.';(!name.value.trim()?name:message).focus();return;}
+    var br=$('#f-branch').value,id=br==='Cebu Main'?'cebu-main':br==='Casa Mira'?'casa-mira':null;
+    var direct=id && $('#f-topic').value!=='A general question';
+    var text='Hi Dr. Coffee'+(br?' '+br:'')+'! I’m '+name.value.trim()+'. '+$('#f-topic').value+': '+message.value.trim();
+    var url=direct?B[id].msg.u:'mailto:asvcphilcorporation@gmail.com?subject='+encodeURIComponent('Dr. Coffee enquiry'+(br?' — '+br:''))+'&body='+encodeURIComponent(text);
+    st.hidden=false;st.innerHTML='<b>Message prepared — not sent.</b><pre></pre><a class="tlink" target="_blank" rel="noopener" href="'+url+'">'+(direct?'Open '+esc(br)+' Messenger':'Open admin email')+' ↗</a><p>Copy the message above, open the destination, then paste and send it. Admin replies Monday–Friday, 9 AM–5 PM Philippine time. Active orders and bookings stay with the branch.</p>';
+    $('pre',st).textContent=text;
+    if(navigator.clipboard)navigator.clipboard.writeText(text).catch(function(){});
   });
+
+  $('#msgForm').addEventListener('input',function(){ $('#formStatus').hidden=true; });
+  $('#msgForm').addEventListener('change',function(){ $('#formStatus').hidden=true; });
 
   // ---------- Motion: split words, play-on-arrival, counters, line drawing ----------
   function split(el){
@@ -1836,7 +1958,7 @@ var DCBag = (function(){
   }
 
   // ---------- Marquee (speeds and leans with scroll) ----------
-  var mqItems = ['Choose your dose','Brewed with care','Tested before it reaches your cup','Philippine beans first','Every drink in the botanical sleeve','Cebu City · Mandaue','Talisay, coming soon'];
+  var mqItems = ['Choose your dose','Brewed with care','Tested before it reaches your cup','Find your daily dose','Every drink in the botanical sleeve','Cebu City · Mandaue','Make room for your next idea'];
   var mqOne = mqItems.map(function(t){ return '<span>' + esc(t) + '<svg aria-hidden="true"><use href="#i-ecg"/></svg></span>'; }).join('');
   var mqT = $('#mqTrack'); mqT.innerHTML = mqOne + mqOne;
 
@@ -1918,12 +2040,13 @@ var DCBag = (function(){
   var views = $$('.view'), curtain = $('#curtain'), current = null, curH = null, busy = false, pxEls = [];
   function show(name){ views.forEach(function(v){ var on = v.dataset.view === name; v.hidden = !on; }); }
   function navMark(key){ $$('[data-nav]').forEach(function(a){ if (a.dataset.nav === key) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); }); }
-  function viewFor(h){ return B[h] ? 'branch' : /^rooms(?:-(.+))?$/.test(h) ? 'rooms' : h === 'menu' ? 'menu' : 'home'; }
+  function viewFor(h){ return B[h] ? 'branch' : /^rooms(?:-(.+))?$/.test(h) ? 'rooms' : h === 'menu' ? 'menu' : h === 'customer-service' ? 'customer-service' : 'home'; }
   function apply(h, name, wasHidden){
     $('#drawer').hidden = true; $('#burger').setAttribute('aria-expanded', 'false');
     if (name === 'branch'){ show('branch'); renderBranch(h); navMark('branches'); document.title = B[h].n + ' · Dr. Coffee'; window.scrollTo(0, 0); }
     else if (name === 'rooms'){ var m = /^rooms(?:-(.+))?$/.exec(h); show('rooms'); navMark('rooms'); document.title = 'Rooms · Dr. Coffee';
-      if (m[1] && B[m[1]]){ sel.value = m[1]; renderRooms(); setTimeout(function(){ $('#roomList').scrollIntoView(); }, 40); } else { renderRooms(); window.scrollTo(0, 0); } }
+      if (m[1] && B[m[1]]){ roomMode=m[1]==='casa-mira'?'solo':'private';$('#roomGuests').value='all';sel.value = m[1]; renderRooms(); setTimeout(function(){ $('#roomList').scrollIntoView(); }, 40); } else { renderRooms(); window.scrollTo(0, 0); } }
+    else if (name === 'customer-service'){ show('customer-service'); navMark('customer-service'); document.title = 'Customer service · Dr. Coffee'; window.scrollTo(0, 0); }
     else if (name === 'menu'){ show('menu'); navMark('menu'); document.title = 'Menu · Dr. Coffee'; window.scrollTo(0, 0); }
     else { show('home'); document.title = 'Dr. Coffee';
       navMark(h === 'branches' || h === 'contact' || h === 'transfusion' ? h : '');
@@ -1938,7 +2061,7 @@ var DCBag = (function(){
   function route(){
     var h = (location.hash || '').slice(1), name = viewFor(h), wasHidden = views[0].hidden;
     if (busy) return;
-    if (current === null || reduce || (name === current && name !== 'branch')){ apply(h, name, wasHidden); return; }
+    if (true){ apply(h, name, wasHidden); return; }
     busy = true;
     curtain.className = 'curtain cover';
     setTimeout(function(){ apply(h, name, wasHidden); curtain.className = 'curtain leave';
@@ -1947,6 +2070,7 @@ var DCBag = (function(){
   $$('[data-scroll]').forEach(function(a){ a.addEventListener('click', function(e){ e.preventDefault(); document.getElementById(a.dataset.scroll).scrollIntoView({behavior:reduce ? 'auto' : 'smooth'}); }); });
   $('#skip').addEventListener('click', function(e){ e.preventDefault(); $('#main').focus(); });
   window.addEventListener('hashchange', route);
+  document.addEventListener('visibilitychange',function(){if(!document.hidden && !reduce){hero.start();tx.start();}});
   $('#burger').onclick = function(){ var d = $('#drawer'), open = d.hidden; d.hidden = !open; this.setAttribute('aria-expanded', open); };
 
   // ---------- Start: intro once per visit, then the page plays in ----------
@@ -1968,5 +2092,7 @@ var DCBag = (function(){
 })();
 </script>
 
+<nav class="mobile-actions" aria-label="Quick actions"><a href="#menu">Menu</a><a href="#branches">Directions</a><a href="#rooms">Find a space</a></nav>
+<script src="/enhancements.js" defer></script>
 </body>
 </html>
