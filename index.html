@@ -952,7 +952,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
       <header class="sec-head center">
         <p class="label rule" data-anim>Our branches</p>
         <h2 data-anim="split">Find your nearest dose.</h2>
-        <p class="lead" data-anim style="--d:200ms">Explore our Cebu City and Mandaue cafés. Choose a branch for photos, directions and visit information.</p>
+        <p class="lead" data-anim style="--d:200ms">Choose a branch for photos, directions, café hours and contact details.</p>
       </header>
     </div>
     <div class="map" data-anim>
@@ -1019,16 +1019,23 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
         <div class="visit" id="visitList"></div>
       </div>
       <form class="form" id="msgForm" novalidate data-anim>
-        <h3>Message us</h3><p><a class="tlink" href="#customer-service">Customer service · Admin →</a></p>
+        <h3>How can we help?</h3>
+        <div class="contact-options">
+          <p><a class="tlink" href="#branches">Browse branches →</a><span>Photos, café hours, directions and branch contacts.</span></p>
+          <p><a class="tlink" href="#rooms">Rooms &amp; workspaces →</a><span>See rates and send a booking request to the branch.</span></p>
+          <p><a class="tlink" href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener">Ask Dr. Coffee Cafe Philippines ↗</a><span>For general questions about the menu, branches and spaces.</span></p>
+          <p><a class="tlink" href="#customer-service">Contact Admin →</a><span>For full-café bookings, custom requests and customer concerns.</span></p>
+        </div>
+        <h4>Prepare a branch message</h4>
         <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" maxlength="100" required aria-describedby="f-note"></div>
         <div class="field"><label for="f-branch">Branch</label>
-          <select id="f-branch" name="branch"><option value="">Any branch</option><option>Cebu Main</option><option>Casa Mira</option><option>JamesTown</option><option>Kalibo</option></select></div>
+          <select id="f-branch" name="branch"><option value="">Choose a branch</option><option value="cebu-main">Cebu Main</option><option value="casa-mira">Casa Mira</option><option value="jamestown">JamesTown</option><option value="kalibo">Kalibo</option></select></div>
         <div class="field"><label for="f-topic">About</label>
-          <select id="f-topic" name="topic"><option>A general question</option><option>Booking a room</option><option>A group or Overdose order</option><option>Feedback</option></select></div>
+          <select id="f-topic" name="topic"><option>Group or Overdose order</option><option>Existing order or booking</option><option>Other branch request</option></select></div>
         <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" maxlength="3000" required aria-describedby="f-note"></textarea></div>
         <div class="field" id="f-reply-wrap" hidden><label for="f-reply">Email or mobile number</label><input id="f-reply" name="reply" autocomplete="email"></div>
         <div><button class="btn solid" type="submit" data-magnetic><span id="f-btn">Copy my message</span> <span class="arr" aria-hidden="true">&rarr;</span></button></div>
-        <p class="small" id="f-note">Your name and message are used to prepare your enquiry in this tab. This website does not submit or save those details to a server. Copying places them on your clipboard. You choose whether to send them through Messenger or your email app, where that service’s privacy policy applies. For privacy questions, email asvcphilcorporation@gmail.com.</p>
+        <p class="small" id="f-note">Your name and message are used to prepare your enquiry in this tab. This website does not submit or save those details to a server. Copying places them on your clipboard. You choose whether to send them through the branch’s social page or your email app, where that service’s privacy policy applies. For privacy questions, email asvcphilcorporation@gmail.com.</p>
         <div class="status" id="formStatus" hidden role="status"></div>
       </form>
     </div>
@@ -1050,8 +1057,8 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 <section class="wrap space-rates" id="spaceRates" aria-labelledby="ratesTitle">
  <h2 id="ratesTitle">Rates at a glance</h2>
  <div class="rate-panels">
-  <section class="rate-panel"><p class="over">Cebu Main</p><h3>Private room packages</h3><p class="rate-note">4 hours for the whole room</p><div id="privateRates"></div><a class="tlink" href="#roomList" data-scroll="roomList" data-room-mode="private">See room photos and amenities ↓</a></section>
-  <section class="rate-panel"><p class="over">Casa Mira · Labangon</p><h3>Intensive Work Unit passes</h3><p class="rate-note">Individual workstations</p><div id="coworkRates"></div><p class="rate-note">One brewed coffee with 3–12 hour stays. Unlimited brewed coffee with the 24-hour pass.</p><a class="tlink" href="#roomList" data-scroll="roomList" data-room-mode="solo">See the workspace ↓</a></section>
+  <section class="rate-panel" id="rates-cebu-main"><p class="over">Cebu Main</p><h3>Private room packages</h3><p class="rate-note">4 hours for the whole room</p><div id="privateRates"></div><a class="tlink" href="#roomList" data-scroll="roomList" data-room-mode="private">See room photos and amenities ↓</a></section>
+  <section class="rate-panel" id="rates-casa-mira"><p class="over">Casa Mira · Labangon</p><h3>Intensive Work Unit passes</h3><p class="rate-note">Individual workstations</p><div id="coworkRates"></div><p class="rate-note">One brewed coffee with 3–12 hour stays. Unlimited brewed coffee with the 24-hour pass.</p><a class="tlink" href="#roomList" data-scroll="roomList" data-room-mode="solo">See the workspace ↓</a></section>
  </div>
 </section>
 <section class="wrap space-picker" aria-labelledby="spacePickerTitle">
@@ -1067,32 +1074,32 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 <section class="booking-guide" id="bookingGuide" aria-labelledby="bookingGuideTitle">
  <div class="wrap booking-guide-layout">
   <div><h2 id="bookingGuideTitle">How to book</h2>
-   <p><strong>Dr. Coffee Cafe Philippines is the Mother Page for general questions.</strong> Each branch handles its own bookings through its Messenger and Instagram pages.</p>
-   <ol class="booking-instructions"><li>Choose a room or pass, then copy and fill in the booking format.</li><li>Paste and send it to the branch for your space. Wait for the branch to confirm availability and give payment instructions.</li><li>For Cebu Main private rooms, the standard down payment is ₱500. Cebu Main verifies it before confirming your booking.</li></ol>
-   <a class="tlink" href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener">Ask the Mother Page ↗</a>
-   <p><a class="tlink" href="#customer-service">Customer service · Admin →</a></p>
+   <p>Choose a private room at Cebu Main or a workspace pass at Casa Mira. The branch checks availability and confirms your booking.</p>
+   <ol class="booking-instructions"><li>Tap <strong>Request booking</strong> on your room or workspace, or copy the format here.</li><li>Send your request to the branch on Messenger or open its Instagram profile and tap <strong>Message</strong>.</li><li>Wait for the branch to check your schedule and send payment instructions. Cebu Main confirms private-room bookings after verifying the ₱500 down payment.</li></ol>
+   <a class="tlink" href="https://www.instagram.com/dr.coffee_philippines/" target="_blank" rel="noopener">Ask Dr. Coffee Cafe Philippines ↗</a>
+   <p><a class="tlink" href="#customer-service">Full-café bookings &amp; custom requests →</a></p>
   </div>
-  <div class="booking-template"><label for="bookingTemplate">Booking format</label><textarea id="bookingTemplate" rows="11" readonly spellcheck="false">Name:
+  <div class="booking-template"><label for="bookingTemplate">Booking format</label><p class="rate-note">For Cebu Main, enter the room name under Pass Type and include guest count under Other Requests.</p><textarea id="bookingTemplate" rows="11" readonly spellcheck="false">Name:
 
 Mobile Number:
 
-Room or Pass-Type:
+Pass Type:
 
 Schedule:
 
-Mode of Payment (Cash or GCash):
+Mode of Payment:
 
 Other Requests:</textarea><button class="btn solid" type="button" id="copyBookingTemplate">Copy booking format</button><p id="templateCopyStatus" class="copy-feedback" role="status"></p><div id="bookingBranchLinks" aria-label="Branch booking channels"></div></div>
  </div>
 </section>
 <section class="wrap rooms-faq"><div><p class="over">Good to know</p><h2>Before you visit.</h2><p class="warm-accent">A little planning. More room to enjoy.</p></div><div class="faq-list">
  <details><summary>Where are the spaces?</summary><p>The three private rooms are at Cebu Main: 2F Jaeja Building, corner J. Llorente Street and Osmeña Boulevard, Cebu City. Individual work stations are at Casa Mira in Labangon. <a href="#branches">See branch photos and directions →</a></p></details>
- <details><summary>When can I visit?</summary><p>Cebu Main’s usual café hours are 7 AM–1 AM the next day; Casa Mira is usually open 24 hours. Ask the branch about special dates and your preferred room or station time. Café hours do not guarantee room availability or overnight booking access.</p></details>
+ <details><summary>When can I visit?</summary><p>See visit details for <a href="#cebu-main">Cebu Main</a> or <a href="#casa-mira">Casa Mira</a>. Message the branch to check your preferred room or workspace schedule.</p></details>
  <details><summary>What does the private-room price include?</summary><p>Each listed Cebu Main package covers four hours. Conference Room includes ₱1,000 worth of food and drinks; Doctor’s Lounge includes ₱2,000; Portal Space includes ₱5,000. These are the included food-and-drink values, not the full room fee. Equipment and amenities are listed separately on each card.</p></details>
  <details><summary>How do I reserve a room?</summary><p>Copy the booking format above and send it to the branch that handles your room or pass. The branch checks availability before giving payment instructions. The standard down payment is ₱500 for any one of the three Cebu Main rooms. The branch verifies payment and rechecks the schedule before confirming. Please wait for those instructions before paying.</p></details>
  <details><summary>Can I extend my stay or book a different duration?</summary><p>Ask the branch for availability and a quote. The listed prices are four-hour packages; they do not establish hourly or overtime rates. See the Casa Mira pass rates above. Ask the branch about extensions or access under the Weekly Plan.</p></details>
  <details><summary>What if I need to change or cancel?</summary><p>Keep changes and cancellations in the same branch conversation. Ask the branch to confirm its current balance, cancellation and refund conditions before payment.</p></details>
- <details><summary>Can you help with a custom setup or larger group?</summary><p>Email <a href="mailto:asvcphilcorporation@gmail.com">asvcphilcorporation@gmail.com</a> for custom packages and questions outside the branch’s standard offer. Admin replies are handled Monday–Friday, 9 AM–5 PM Philippine time.</p></details>
+ <details><summary>Can I book the whole café or request a custom setup?</summary><p><a href="#customer-service">Contact Admin</a> with your preferred branch, date, start and end time, guest count and a short description. <strong>Monday to Friday, 9 AM–5 PM Philippine time.</strong></p></details>
 </div></section>
 </div>
 
@@ -1100,23 +1107,25 @@ Other Requests:</textarea><button class="btn solid" type="button" id="copyBookin
  <section class="wrap customer-service">
   <p class="over">Dr. Coffee · Admin</p>
   <h1>Customer service</h1>
-  <p class="warm-accent">On-going Construction</p>
-  <p class="lead">For customer service enquiries, you can email our admin team.</p>
-  <div class="room-hero-actions"><a class="btn solid" href="mailto:asvcphilcorporation@gmail.com">Email admin ↗</a><a class="btn" href="#rooms">Rooms &amp; coworking →</a></div>
+  <p class="lead"><strong>Admin hours<br>Monday to Friday · 9 AM–5 PM Philippine time</strong></p>
+  <p>You can email anytime. The admin team reviews messages during these hours.</p>
+  <p>For a full-café booking, event or custom request, include the branch, date, start and end time, guest count and a short description.</p>
+  <p>For an existing booking or order, continue with the branch handling it.</p>
+  <div class="room-hero-actions"><a class="btn solid" href="mailto:asvcphilcorporation@gmail.com">Email admin ↗</a><a class="btn" href="#branches">Find your branch →</a></div>
  </section>
 </div>
 
 <dialog class="booking-dialog" id="roomBooking" aria-labelledby="bookingTitle">
  <header><div><p class="over" id="bookingBranch"></p><h2 id="bookingTitle"></h2></div><button type="button" class="close" aria-label="Close booking enquiry">×</button></header>
  <p id="bookingRate"></p>
- <p>Copy your request, then paste and send it to this branch. The branch will check your schedule and confirm the next steps.</p>
+ <p>Copy your request and paste it in the branch chat. On Instagram, open the profile and tap <strong>Message</strong>.</p><p id="bookingTerms"></p>
  <form id="bookingForm" autocomplete="off">
   <div class="booking-grid">
    <div class="field"><label for="bookName">Name</label><input id="bookName" name="guestName" autocomplete="name" maxlength="100"></div>
    <div class="field"><label for="bookMobile">Mobile Number</label><input id="bookMobile" name="mobile" type="tel" autocomplete="tel" maxlength="30"></div>
-   <div class="field full"><label for="bookPass">Room or Pass-Type</label><select id="bookPass" name="pass"></select></div>
+   <div class="field full"><label for="bookPass">Pass Type</label><select id="bookPass" name="pass"></select></div>
    <div class="field full"><label for="bookSchedule">Schedule</label><input id="bookSchedule" name="schedule" placeholder="Date and start–end time, Philippine time" maxlength="150"></div>
-   <div class="field full"><label for="bookPayment">Mode of Payment (Cash or GCash)</label><select id="bookPayment" name="payment"><option value="">Choose a preference</option><option>Cash</option><option>GCash</option></select></div>
+   <div class="field full"><label for="bookPayment">Mode of Payment</label><select id="bookPayment" name="payment"><option value="">Choose a preference</option><option>Cash</option><option>GCash</option></select></div>
    <div class="field full"><label for="bookRequests">Other Requests</label><textarea id="bookRequests" name="requests" rows="2" maxlength="500" placeholder="Guest count, equipment or other requests"></textarea></div>
   </div>
   <button class="btn solid" type="submit">Copy booking request</button>
@@ -1124,7 +1133,7 @@ Other Requests:</textarea><button class="btn solid" type="button" id="copyBookin
  </form>
  <div id="bookingResult" hidden><label for="bookingText">Your booking request</label><textarea id="bookingText" rows="7" readonly></textarea></div>
  <p id="copyState" class="copy-feedback" role="status"></p>
- <div class="booking-channels"><a class="btn" id="bookMessenger" target="_blank" rel="noopener">Messenger ↗</a><a class="btn" id="bookInstagram" target="_blank" rel="noopener">Instagram ↗</a></div>
+ <div class="booking-channels"><a class="btn" id="bookMessenger" target="_blank" rel="noopener">Messenger ↗</a><a class="btn" id="bookInstagram" target="_blank" rel="noopener">Instagram profile ↗</a></div>
 </dialog>
 
 <!-- =============== MENU =============== -->
@@ -1492,14 +1501,14 @@ var DCBag = (function(){
   // ---------- Branch data ----------
   var ORDER = ['cebu-main','casa-mira','jamestown'];
   var B = {
-    'cebu-main': {n:'Cebu Main', area:'Fuente · Cebu City', region:'Cebu City', open:7, close:25, hours:'Usually 7:00 AM–1:00 AM next day. Confirm special dates with the branch.',
+    'cebu-main': {n:'Cebu Main', area:'Fuente · Cebu City', region:'Cebu City', hours:'Check the branch’s Instagram profile or message Cebu Main for current café hours.',
       tag:'The flagship, in Cebu’s medical district. Five spaces, from the main dining floor to three bookable rooms.',
       addr:'2F Jaeja Building, cor. J. Llorente St., Osmeña Blvd., Cebu City',
       dir:'https://www.google.com/maps/dir/?api=1&destination=Jaeja%20Building%2C%20J.%20Llorente%20St.%2C%20Osme%C3%B1a%20Blvd.%2C%20Cebu%20City',
       spaces:['Main Dining','Al Fresco','Conference Room','Doctor’s Lounge','Portal Space'],
       why:['Three bookable rooms: Conference Room, Doctor’s Lounge and Portal Space','Dr. Chicken, Korean fried chicken, on the same floor','Order ahead on foodpanda'],
       rooms:true, extra:{t:'Order on foodpanda', u:'https://www.foodpanda.ph/restaurant/jyg9/dr-coffee-j-llorente-street'},
-      phone:'', msg:{t:'Messenger', u:'https://m.me/1374562045738797'},
+      phone:'', msg:{t:'Messenger', u:'https://m.me/1374562045738797'}, instagram:'https://www.instagram.com/dr.coffee_cebumain/',
       photos:{hero:{src:'assets/cebu-main-dining.jpg', alt:'The Cebu Main dining room: white tables and chairs under the lit Dr. Coffee sign.'},
               wide:{src:'assets/cebu-main-tiered.jpg', alt:'The Portal Space: tiered seating with cushions and small tables under a wall that reads: Work until you no longer have to introduce yourself.'},
               main:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table, black chairs and a TV.'},
@@ -1511,7 +1520,7 @@ var DCBag = (function(){
       addr:'A4 Ground Floor, Casa Mira Tower, Salvador Ext., Labangon, Cebu City', dir:'https://maps.app.goo.gl/id6rguPjxUAkrcmt9',
       spaces:['Dining Area','Intensive Work Unit'],
       why:['Private work stations in the Intensive Work Unit, with passes from ₱135','A claim card on your desk shows the seat is yours','A calm dining floor for solo work or meetups','Follow @dr.coffee_casamiralabangon for branch news'],
-      rooms:true, phone:'', msg:{t:'Messenger', u:'https://m.me/1147540818444533'},
+      rooms:true, phone:'', msg:{t:'Messenger', u:'https://m.me/1147540818444533'}, instagram:'https://www.instagram.com/dr.coffee_casamiralabangon/',
       photos:{hero:{src:'assets/casa-mira-entrance.jpg', alt:'The Casa Mira storefront under the sign Your daily dose of remedy, with a Dr. Coffee cup held up in front.'},
               wide:{src:'images/rooms/iwu-2026-11-11.webp', alt:'The Intensive Work Unit sign over curtained work stations.'},
               main:{src:'images/rooms/iwu-detail-2026-11-11.webp', alt:'Workstations with desk lamps and power outlets.'},
@@ -1536,7 +1545,7 @@ var DCBag = (function(){
     'cebu-main': {about:'Our flagship sits on the second floor of the Jaeja Building on J. Llorente St., in Cebu’s medical district. It has the most space of any branch: a main dining floor, al fresco seating and three private rooms for meetings and gatherings.',
       note:'Private rooms start at ₱2,500 for four hours. Ask Cebu Main to check your date before payment; a ₱500 down payment is verified before the branch confirms.', walkin:'a main dining floor and al fresco seating'},
     'casa-mira': {about:'Casa Mira in Labangon is built for focus. Past the dining floor, the Intensive Work Unit has curtained work stations with ergonomic chairs under its lit sign.',
-      note:'Book a work station at the counter.', walkin:'a dining area'},
+      note:'Choose a pass and message Casa Mira to request a work station.', walkin:'a dining area'},
     'jamestown': {about:'JamesTown is our Mandaue branch: a two-storey glass-and-steel storefront at Jamestown Center, with a dining floor inside and al fresco tables under the canopy.',
       note:'Order ahead on foodpanda, or walk in for al fresco seating.', walkin:'a dining area and al fresco seating'}
   };
@@ -1609,7 +1618,8 @@ var DCBag = (function(){
   function renderBranch(id){
     var b = B[id], i = ORDER.indexOf(id), nx = ORDER[(i + 1) % N], P = b.photos;
     var tabs = ORDER.map(function(o){ return '<a href="#' + o + '"' + (o === id ? ' aria-current="page"' : '') + '>' + esc(B[o].n) + '</a>'; }).join('');
-    var third = b.rooms ? '<a class="tlink" href="#rooms-' + id + '">See the rooms &rarr;</a>' : (b.extra ? '<a class="tlink" href="' + b.extra.u + '" target="_blank" rel="noopener">' + esc(b.extra.t) + ' &rarr;</a>' : '<a class="tlink" href="' + FB + '" target="_blank" rel="noopener">Message the branch &rarr;</a>');
+    var spacesLabel = id === 'casa-mira' ? 'See workspace passes' : 'See private room rates';
+    var third = b.rooms ? '<a class="tlink" href="#rooms-' + id + '">' + spacesLabel + ' &rarr;</a>' : (b.extra ? '<a class="tlink" href="' + b.extra.u + '" target="_blank" rel="noopener">' + esc(b.extra.t) + ' &rarr;</a>' : '<a class="tlink" href="' + FB + '" target="_blank" rel="noopener">Message the branch &rarr;</a>');
     var spaces = b.spaces.length ? '<div class="pills">' + b.spaces.map(function(s){ return '<span class="pill">' + esc(s) + '</span>'; }).join('') + '</div>' : '<p>Space list coming soon.</p>';
     var trio = ['main','s1','s2'].map(function(k, j){ var p = P[k];
       if(!p.src)return ''; return '<figure data-anim="wipe" style="--d:' + (j*110) + 'ms">' + pic(p) + (p.src ? '<figcaption>' + esc(b.caps[j]) + '</figcaption>' : '') + '</figure>'; }).join('');
@@ -1620,15 +1630,15 @@ var DCBag = (function(){
           '<p class="over" data-anim>' + esc(b.area) + ' &middot; Branch 0' + (i + 1) + ' of 0' + N + '</p>' +
           '<h1 data-anim="split">' + esc(b.n) + '</h1><p class="lead" data-anim style="--d:200ms">' + esc(b.tag) + '</p>' +
           '<div class="row" data-anim style="--d:360ms"><a class="btn solid" data-magnetic href="' + b.dir + '" target="_blank" rel="noopener">Get directions <span class="arr" aria-hidden="true">&nearr;</span></a>' +
-          (b.rooms ? '<a class="btn" data-magnetic href="#rooms-' + id + '">Book a room</a>' : (b.extra ? '<a class="btn" data-magnetic href="' + b.extra.u + '" target="_blank" rel="noopener">' + esc(b.extra.t) + '</a>' : '')) + '</div></div>' +
+          (b.rooms ? '<a class="btn" data-magnetic href="#rooms-' + id + '">' + spacesLabel + '</a>' : (b.extra ? '<a class="btn" data-magnetic href="' + b.extra.u + '" target="_blank" rel="noopener">' + esc(b.extra.t) + '</a>' : '')) + '</div></div>' +
         '<figure class="frame" data-anim="wipe"><span class="clip">' + pic(P.hero, ' data-px="0.05"') + '</span></figure>' +
       '</section>' +
       '<section class="wrap b-info">' +
         '<div class="cells" data-anim="kids">' +
           '<div class="cell"><span class="over">Address</span><p>' + esc(b.addr) + '</p></div>' +
           '<div class="cell r"><span class="over">Hours</span><p>' + esc(b.hours) + '</p></div>' +
-          '<div class="cell"><span class="over">Phone</span>' + (b.phone ? '<p><a href="tel:' + b.phone.replace(/[^+\d]/g, '') + '">' + esc(b.phone) + '</a></p>' : '<p class="tbc">Use the verified contact link below</p>') + '</div>' +
-          '<div class="cell r"><span class="over">Message</span><p><a href="' + b.msg.u + '" target="_blank" rel="noopener">Message ' + esc(b.n) + ' on ' + esc(b.msg.t) + ' &nearr;</a></p></div>' +
+          '<div class="cell wide"><span class="over">Contact</span><p><a href="' + b.msg.u + '" target="_blank" rel="noopener">' + (b.instagram ? 'Message ' + esc(b.n) + ' on Messenger' : 'Email Admin about ' + esc(b.n)) + ' &nearr;</a>' +
+          (b.instagram ? ' · <a href="' + b.instagram + '" target="_blank" rel="noopener">Open Instagram profile &nearr;</a>' : '') + '</p></div>' +
           '<div class="cell wide"><span class="over">Good to know</span><p>' + esc(b.note) + '</p></div>' +
           '<div class="cell wide"><span class="over">Spaces</span>' + spaces + '</div>' +
           '<div class="cell"><a class="tlink" href="' + b.dir + '" target="_blank" rel="noopener">Get directions &rarr;</a></div>' +
@@ -1646,15 +1656,11 @@ var DCBag = (function(){
 
   // ---------- Rooms ----------
   var ROOMS = [{"n": "Conference Room", "br": "cebu-main", "badge": "Meetings & presentations", "sub": "Private room", "desc": "Bring your team together around one long table, with a Smart TV for presentations.", "price": 2500, "credit": 1000, "capacity": 12, "capacityText": "10–12 guests", "best": ["Team meetings", "Presentations", "Group study"], "amenities": ["Smart TV", "High-speed Wi-Fi", "Free water"], "photos": ["images/rooms/conference-2026-11-11.webp"], "alts": ["Conference Room: a long meeting table, chairs and wall-mounted TV."]}, {"n": "Doctor’s Lounge", "br": "cebu-main", "badge": "Meetings & gatherings", "sub": "Private room", "desc": "A shared table and lounge seating for discussions, group work and smaller gatherings.", "price": 6000, "credit": 2000, "capacity": 25, "capacityText": "20–25 guests", "best": ["Group discussions", "Team sessions", "Gatherings"], "amenities": ["Smart TV", "High-speed Wi-Fi", "Free Dr. Black Coffee", "Glass board for discussions", "Private toilet", "Free water"], "photos": ["assets/cebu-main-lounge-sofa.jpg", "images/lounge-alt.webp"], "alts": ["Doctor’s Lounge: a long table, sofa and warm cove lighting.", "A second view of the Doctor’s Lounge at Cebu Main."]}, {"n": "Portal Space", "br": "cebu-main", "badge": "Lectures & seminars", "sub": "Private room", "desc": "Tiered benches and portable tables create a setting for talks, seminars and group sessions.", "price": 8000, "credit": 5000, "capacity": 25, "capacityText": "20–25 guests", "best": ["Lectures", "Seminars", "Group sessions"], "amenities": ["LCD projector", "Private high-speed Wi-Fi", "Free Dr. Black Coffee", "Whiteboard for discussions", "Free water", "Open benches with portable tables"], "photos": ["assets/cebu-main-portal.jpg", "assets/cebu-main-tiered.jpg"], "alts": ["Portal Space: tiered seating, portable tables and a projector.", "Another view of the tiered seating in Portal Space."]}, {"n": "Intensive Work Unit", "br": "casa-mira", "badge": "Solo study & work", "sub": "Individual work stations", "desc": "Settle into a curtained desk beyond the café’s dining floor for an individual study or work session.", "price": null, "credit": null, "capacity": null, "capacityText": "Individual work stations", "best": ["Exam review", "Laptop work", "Solo focus"], "amenities": ["Fast Wi-Fi", "Power outlets", "Comfortable seats", "Quiet workspace"], "photos": ["images/rooms/iwu-2026-11-11.webp", "images/rooms/iwu-detail-2026-11-11.webp"], "alts": ["Casa Mira’s Intensive Work Unit, with curtained desks and task chairs.", "Desk lamps, power outlets and chairs at the Casa Mira workstations."], "passes": [["Walk-in Pass", "3 hours", 135], ["Focus Dose", "4 hours", 170], ["Daylight Shift", "8 AM–8 PM", 250], ["Night Shift", "8 PM–8 AM", 250], ["24-Hour Pass", "8 AM–8 AM", 350], ["Weekly Plan", "Ask branch for access details", 2000]]}];
-  var roomChannels = {
-    'cebu-main': {messenger: 'https://m.me/1374562045738797', instagram: 'https://ig.me/m/dr.coffee_cebumain'},
-    'casa-mira': {messenger: 'https://m.me/1147540818444533', instagram: 'https://ig.me/m/dr.coffee_casamiralabangon'}
-  };
-  $('#bookingBranchLinks').innerHTML = Object.keys(roomChannels).map(function(branch) {
-    var channels = roomChannels[branch];
-    return '<div><strong>' + esc(B[branch].n) + '</strong><a href="' + channels.messenger +
-      '" target="_blank" rel="noopener">Messenger ↗</a><a href="' + channels.instagram +
-      '" target="_blank" rel="noopener">Instagram ↗</a></div>';
+  $('#bookingBranchLinks').innerHTML = ORDER.filter(function(id) { return B[id].rooms; }).map(function(id) {
+    var branch = B[id];
+    return '<div><strong>' + esc(branch.n) + '</strong><a href="' + branch.msg.u +
+      '" target="_blank" rel="noopener">Messenger ↗</a><a href="' + branch.instagram +
+      '" target="_blank" rel="noopener">Instagram profile ↗</a></div>';
   }).join('');
 
   function pesos(amount) { return '₱' + amount.toLocaleString('en-PH'); }
@@ -1701,14 +1707,18 @@ var DCBag = (function(){
     var trigger = event.target.closest('[data-book-room]');
     if (!trigger) return;
     var room = ROOMS[Number(trigger.dataset.bookRoom)];
-    var channels = roomChannels[room.br];
+    var branch = B[room.br];
     bookingTrigger = trigger;
     bookingForm.reset();
     clearBookingResult();
     $('#bookingTitle').textContent = room.n;
-    $('#bookingBranch').textContent = B[room.br].n;
-    $('#bookMessenger').href = channels.messenger;
-    $('#bookInstagram').href = channels.instagram;
+    $('#bookingBranch').textContent = branch.n;
+    $('#bookMessenger').href = branch.msg.u;
+    $('#bookInstagram').href = branch.instagram;
+    $('#bookingTerms').textContent = room.passes
+      ? 'Casa Mira will check your schedule and let you know the next steps.'
+      : 'Wait for Cebu Main to check your schedule and send payment instructions. The branch confirms after verifying the ₱500 down payment.';
+    $('label[for="bookPass"]').textContent = room.passes ? 'Pass Type' : 'Room';
     $('#bookPass').replaceChildren();
     if (room.passes) {
       $('#bookPass').add(new Option('Choose a pass', ''));
@@ -1740,6 +1750,7 @@ var DCBag = (function(){
     var fields = new FormData(bookingForm);
     var keys = ['guestName', 'mobile', 'pass', 'schedule', 'payment', 'requests'];
     var request = bookingTemplate.value.split('\n').filter(Boolean).map(function(label, index) {
+      if (index === 2 && $('label[for="bookPass"]').textContent === 'Room') label = 'Room:';
       var value = String(fields.get(keys[index]) || '').trim();
       return value ? label + ' ' + value : label;
     }).join('\n\n');
@@ -1763,7 +1774,7 @@ var DCBag = (function(){
     grid.innerHTML=list.map(function(r){var i=ROOMS.indexOf(r),b=B[r.br];
       var hasGallery = r.photos.length > 1;
       var photos = hasGallery ? r.photos.map(function(src,k){return '<button type="button" data-room-photo="'+k+'" aria-label="Photo '+(k+1)+' of '+r.photos.length+' for '+esc(r.n)+'" aria-pressed="'+(k===0)+'"><img src="'+src+'" alt="" loading="lazy" width="90" height="60"></button>';}).join('') : '';
-      return '<article class="room space-card" data-room-index="'+i+'"><div class="space-photo"><img class="room-main-photo" src="'+r.photos[0]+'" alt="'+esc(r.alts[0])+'" width="1100" height="720" loading="lazy"><span class="badge">'+esc(r.badge)+'</span>'+(hasGallery?'<span class="photo-count" aria-live="polite">1 / '+r.photos.length+'</span>':'')+'</div>'+(hasGallery?'<div class="room-thumbnails" role="group" aria-label="'+esc(r.n)+' photos">'+photos+'</div>':'')+'<div class="space-card-body"><p class="over">'+esc(b.n)+' · '+esc(r.sub)+'</p><h3>'+esc(r.n)+'</h3><p class="capacity">'+esc(r.capacityText)+'</p><p class="space-description">'+esc(r.desc)+'</p><div class="package-price">'+(r.price?'<strong>₱'+r.price.toLocaleString('en-PH')+'</strong><span>for 4 hours · whole room</span>':'<strong>From ₱135</strong><span>3-hour Walk-in Pass</span>')+'</div>'+(r.price?'<p class="included-credit">Includes <b>₱'+r.credit.toLocaleString('en-PH')+'</b> worth of food & drinks</p>':'<p class="included-credit">Includes one brewed coffee with the Walk-in Pass.</p>')+'<h4 class="amenities-title">'+(r.price?'Included amenities':'Your work station')+'</h4><ul class="amenity-list">'+r.amenities.map(function(a){return '<li><span aria-hidden="true">✓</span>'+esc(a)+'</li>';}).join('')+'</ul><div class="space-card-actions"><button class="btn solid" type="button" data-book-room="'+i+'">Book now <span aria-hidden="true">↗</span></button><a class="space-directions" href="'+b.dir+'" target="_blank" rel="noopener">Directions to '+esc(b.n)+' ↗</a></div></div></article>';
+      return '<article class="room space-card" data-room-index="'+i+'"><div class="space-photo"><img class="room-main-photo" src="'+r.photos[0]+'" alt="'+esc(r.alts[0])+'" width="1100" height="720" loading="lazy"><span class="badge">'+esc(r.badge)+'</span>'+(hasGallery?'<span class="photo-count" aria-live="polite">1 / '+r.photos.length+'</span>':'')+'</div>'+(hasGallery?'<div class="room-thumbnails" role="group" aria-label="'+esc(r.n)+' photos">'+photos+'</div>':'')+'<div class="space-card-body"><p class="over">'+esc(b.n)+' · '+esc(r.sub)+'</p><h3>'+esc(r.n)+'</h3><p class="capacity">'+esc(r.capacityText)+'</p><p class="space-description">'+esc(r.desc)+'</p><div class="package-price">'+(r.price?'<strong>₱'+r.price.toLocaleString('en-PH')+'</strong><span>for 4 hours · whole room</span>':'<strong>From ₱135</strong><span>3-hour Walk-in Pass</span>')+'</div>'+(r.price?'<p class="included-credit">Includes <b>₱'+r.credit.toLocaleString('en-PH')+'</b> worth of food & drinks</p>':'<p class="included-credit">Includes one brewed coffee with the Walk-in Pass.</p>')+'<h4 class="amenities-title">'+(r.price?'Included amenities':'Your work station')+'</h4><ul class="amenity-list">'+r.amenities.map(function(a){return '<li><span aria-hidden="true">✓</span>'+esc(a)+'</li>';}).join('')+'</ul><div class="space-card-actions"><button class="btn solid" type="button" data-book-room="'+i+'">Request booking <span aria-hidden="true">↗</span></button><a class="space-directions" href="'+b.dir+'" target="_blank" rel="noopener">Directions to '+esc(b.n)+' ↗</a></div></div></article>';
     }).join('');
   }
   sel.addEventListener('change',function() {
@@ -1869,13 +1880,29 @@ var DCBag = (function(){
   $('#msgForm').addEventListener('submit',function(e){
     e.preventDefault();var name=$('#f-name'),message=$('#f-msg'),st=$('#formStatus');
     if(!name.value.trim()||!message.value.trim()){st.hidden=false;st.textContent='Please enter your name and message.';(!name.value.trim()?name:message).focus();return;}
-    var br=$('#f-branch').value,id=br==='Cebu Main'?'cebu-main':br==='Casa Mira'?'casa-mira':null;
-    var direct=id && $('#f-topic').value!=='A general question';
-    var text='Hi Dr. Coffee'+(br?' '+br:'')+'! I’m '+name.value.trim()+'. '+$('#f-topic').value+': '+message.value.trim();
-    var url=direct?B[id].msg.u:'mailto:asvcphilcorporation@gmail.com?subject='+encodeURIComponent('Dr. Coffee enquiry'+(br?' — '+br:''))+'&body='+encodeURIComponent(text);
-    st.hidden=false;st.innerHTML='<b>Message prepared — not sent.</b><pre></pre><a class="tlink" target="_blank" rel="noopener" href="'+url+'">'+(direct?'Open '+esc(br)+' Messenger':'Open admin email')+' ↗</a><p>Copy the message above, open the destination, then paste and send it. Admin replies Monday–Friday, 9 AM–5 PM Philippine time. Active orders and bookings stay with the branch.</p>';
-    $('pre',st).textContent=text;
-    if(navigator.clipboard)navigator.clipboard.writeText(text).catch(function(){});
+    var branchField = $('#f-branch'), id = branchField.value;
+    if (!id) {
+      st.hidden = false;
+      st.textContent = 'Please choose the branch you want to contact.';
+      branchField.focus();
+      return;
+    }
+    var branch = B[id], branchName = branch ? branch.n : 'Kalibo';
+    var text = 'Hi Dr. Coffee ' + branchName + '! I’m ' + name.value.trim() + '. ' + $('#f-topic').value + ': ' + message.value.trim();
+    st.hidden = false;
+    st.innerHTML = '<b>Your message is ready.</b><pre></pre>';
+    $('pre',st).textContent = text;
+    if (branch && branch.instagram) {
+      st.insertAdjacentHTML('beforeend', '<p><a class="tlink" target="_blank" rel="noopener" href="' + branch.msg.u + '">Open ' + esc(branchName) + ' Messenger ↗</a> · <a class="tlink" target="_blank" rel="noopener" href="' + branch.instagram + '">Open Instagram profile ↗</a></p><p>Paste and send your message in the branch chat. On Instagram, tap Message.</p>');
+    } else {
+      var adminLink = document.createElement('a');
+      adminLink.className = 'tlink';
+      adminLink.href = 'mailto:asvcphilcorporation@gmail.com?subject=' + encodeURIComponent('Dr. Coffee enquiry — ' + branchName) + '&body=' + encodeURIComponent(text);
+      adminLink.textContent = 'Email Admin for the ' + branchName + ' contact ↗';
+      st.append(adminLink);
+      st.insertAdjacentHTML('beforeend', '<p>Admin hours are Monday to Friday, 9 AM–5 PM Philippine time. If you already have a branch conversation, send your message there.</p>');
+    }
+    if (navigator.clipboard) navigator.clipboard.writeText(text).catch(function() {});
   });
 
   $('#msgForm').addEventListener('input',function(){ $('#formStatus').hidden=true; });
@@ -2047,7 +2074,13 @@ var DCBag = (function(){
     $('#drawer').hidden = true; $('#burger').setAttribute('aria-expanded', 'false');
     if (name === 'branch'){ show('branch'); renderBranch(h); navMark('branches'); document.title = B[h].n + ' · Dr. Coffee'; window.scrollTo(0, 0); }
     else if (name === 'rooms'){ var m = /^rooms(?:-(.+))?$/.exec(h); show('rooms'); navMark('rooms'); document.title = 'Rooms · Dr. Coffee';
-      if (m[1] && B[m[1]]){ roomMode=m[1]==='casa-mira'?'solo':'private';$('#roomGuests').value='all';sel.value = m[1]; renderRooms(); setTimeout(function(){ $('#roomList').scrollIntoView(); }, 40); } else { renderRooms(); window.scrollTo(0, 0); } }
+      var branchId = m[1] && B[m[1]]?.rooms ? m[1] : null;
+      roomMode = branchId === 'casa-mira' ? 'solo' : 'private';
+      sel.value = branchId || 'all';
+      $('#roomGuests').value = 'all';
+      renderRooms();
+      if (branchId) setTimeout(function(){ document.getElementById('rates-' + branchId).scrollIntoView(); }, 40);
+      else window.scrollTo(0, 0); }
     else if (name === 'customer-service'){ show('customer-service'); navMark('customer-service'); document.title = 'Customer service · Dr. Coffee'; window.scrollTo(0, 0); }
     else if (name === 'menu'){ show('menu'); navMark('menu'); document.title = 'Menu · Dr. Coffee'; window.scrollTo(0, 0); }
     else { show('home'); document.title = 'Dr. Coffee';

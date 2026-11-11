@@ -162,6 +162,12 @@ h1{line-height:1.04}h2{line-height:1.12}.lead{line-height:1.65}.label{font-famil
 .customer-service {padding-block:clamp(42px,8vw,105px);min-height:55vh}
 .customer-service h1 {font-size:clamp(42px,7vw,82px);margin-top:12px}
 .customer-service .lead {margin-top:14px}
+.customer-service p:not(.over) {max-width:58ch}
+.customer-service p + p {margin-top:14px}
+.contact-options {display:grid;gap:12px;margin:16px 0 28px}
+.contact-options p {margin:0}
+.contact-options span {display:block;margin-top:4px}
+.rate-panel[id] {scroll-margin-top:112px}
 .space-card[data-room-index="0"] .room-main-photo {object-position:50% 65%}
 .space-card[data-room-index="3"] .room-main-photo {object-position:50% 63%}
 @media(max-width:760px) {
