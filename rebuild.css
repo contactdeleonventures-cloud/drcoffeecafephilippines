@@ -180,3 +180,14 @@ h1{line-height:1.04}h2{line-height:1.12}.lead{line-height:1.65}.label{font-famil
 #bookingBranchLinks>div {display:flex;align-items:center;flex-wrap:wrap;gap:8px 13px;border-top:1px solid var(--hair);padding:7px 0}
 #bookingBranchLinks strong {margin-right:auto;font-size:14px}
 #bookingBranchLinks a {display:inline-flex;align-items:center;min-height:38px;font-size:13px;text-underline-offset:3px}
+
+/* A light display grade keeps the original alternate-angle photographs intact. */
+.room-main-photo[src="images/lounge-alt.webp"],
+.room-thumbnails img[src="images/lounge-alt.webp"] {
+  filter: brightness(1.025) saturate(.91);
+}
+
+.room-main-photo[src="assets/cebu-main-tiered.jpg"],
+.room-thumbnails img[src="assets/cebu-main-tiered.jpg"] {
+  filter: brightness(1.055) contrast(.98) saturate(.90);
+}
