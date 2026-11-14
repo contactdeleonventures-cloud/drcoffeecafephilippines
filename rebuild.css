@@ -170,6 +170,8 @@ h1{line-height:1.04}h2{line-height:1.12}.lead{line-height:1.65}.label{font-famil
 .rate-panel[id] {scroll-margin-top:112px}
 .space-card[data-room-index="0"] .room-main-photo {object-position:50% 65%}
 .space-card[data-room-index="3"] .room-main-photo {object-position:50% 63%}
+.space-photo > .room-main-photo.is-portrait {object-fit:contain;background:#eeece7}
+.room-thumbnails {flex-wrap:wrap}
 @media(max-width:760px) {
   .rooms-intro,.rate-panels,.booking-guide-layout {grid-template-columns:1fr}
   .rooms-intro {gap:18px}

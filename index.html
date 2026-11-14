@@ -617,8 +617,9 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 </style>
-<link rel="stylesheet" href="/rebuild.css?v=matched-room-photos">
+<link rel="stylesheet" href="/rebuild.css?v=20261114-lounge">
 <link rel="stylesheet" href="/motion.css?v=20261114">
+<link rel="stylesheet" href="/hero-refresh.css?v=20261114">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
@@ -679,17 +680,33 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 <!-- =============== HOME =============== -->
 <div class="view" data-view="home">
 
-  <section class="hero" id="top">
+  <section class="hero hero-photo" id="top">
     <div class="wrap">
       <div class="hero-copy">
         <p class="over" data-anim>Coffee by the dose · Cebu</p>
-        <h1 data-anim="split">Your daily <em>&ldquo;dose&rdquo;</em> of remedy.</h1>
-        <p class="lead" data-anim style="--d:300ms">A hospital-inspired café where sizes are doses and the signature drink comes in a Transfusion bag. Brewed with care, and tested before it reaches your cup.</p>
+        <h1 data-anim="split">Make it<br>STAT.</h1>
+        <p class="lead" data-anim style="--d:300ms">Meet our Spanish Latte STAT Bag, served on its signature stand. Your daily dose of coffee, with a little Dr. Coffee character.</p>
         <div class="row" data-anim style="--d:450ms"><a class="btn solid" data-magnetic href="#menu">Explore the menu <span class="arr" aria-hidden="true">&rarr;</span></a><a class="btn" data-magnetic href="#branches">Find a branch</a></div>
-        <div class="flv-wrap" data-anim style="--d:620ms"><p class="over">Try the Transfusion in</p><div class="flv" id="heroFlv" role="group" aria-label="Transfusion flavour"></div></div>
+        <a class="stat-motion-link" href="#stat-in-motion" data-scroll="stat-in-motion">See the bag in motion <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="stage dark">
-        <p class="stage-tag">The Transfusion<b>Iced &middot; &#8369;260</b></p>
+      <figure class="stat-hero-visual">
+        <img src="/images/stat-hero-2026-11-14.webp" srcset="/images/stat-hero-2026-11-14.webp 1672w, /images/stat-hero-4k-2026-11-14.webp 3840w" sizes="(max-width: 860px) 100vw, 50vw" alt="One Spanish Latte STAT Bag hanging from the left hook of a chrome stand, with both hooks and the round base visible." width="3840" height="2160" fetchpriority="high" decoding="async">
+        <figcaption><span class="over">The signature dose</span><span>Spanish Latte STAT Bag</span><span class="stat-hero-price">Concentrated &middot; &#8369;260</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="stat-interaction" id="stat-in-motion" aria-labelledby="stat-motion-title">
+    <div class="wrap">
+      <div class="stat-interaction-copy">
+        <p class="over" data-anim>A little play with your daily dose</p>
+        <h2 id="stat-motion-title" data-anim="split">Pick your<br>flavour.</h2>
+        <p class="lead" data-anim>Pick a flavour, then give the bag a gentle swing.</p>
+        <div class="flv-wrap" data-anim><p class="over">Try the Transfusion in</p><div class="flv" id="heroFlv" role="group" aria-label="Transfusion flavour"></div></div>
+        <a class="tlink" href="#transfusion">Meet the Transfusion <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="stage dark stat-animation-panel">
+        <p class="stage-tag">The Transfusion<b>Choose a flavour &middot; Drag to swing</b></p>
         <p class="hint" id="heroHint" aria-hidden="true">Drag to swing</p>
         <div class="bag" id="heroBag" role="img" aria-label="An animated Transfusion bag: a clear IV-style bag of Spanish Latte with a sipping tube, a white clamp and the Dr. Coffee label."></div>
       </div>
@@ -848,7 +865,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
           <p>Curtained work stations past the dining floor. A card on your desk tells everyone the seat is taken.</p>
         </article>
         <article class="det" data-anim>
-          <figure data-anim="wipe"><img src="assets/cebu-main-lounge-sofa.jpg" alt="A long shared table, a sofa and warm cove lighting at Cebu Main." loading="lazy"></figure>
+          <figure data-anim="wipe"><img src="images/rooms/lounge-main-2026-11-14.webp" alt="A long shared table, a sofa and warm cove lighting at Cebu Main." loading="lazy"></figure>
           <h3>Space for your next gathering</h3><span class="sub">Cebu Main</span>
           <p>Choose the Conference Room, Doctor’s Lounge or Portal Space for a private booking. Compare packages and ask the branch to check your date.</p>
         </article>
@@ -1051,7 +1068,7 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,72px) 28px}
 <section class="wrap rooms-intro">
  <div class="rooms-intro-copy"><p class="over">Cebu Main &amp; Casa Mira</p><h1>Rooms &amp;<br> coworking.</h1><p class="lead">Book a private room for your group or pick a desk pass for focused work.</p><p class="warm-accent">Make room for focus.</p><div class="room-hero-actions"><a class="btn solid" href="#spaceRates" data-scroll="spaceRates">See rates ↓</a><a class="btn" href="#bookingGuide" data-scroll="bookingGuide">How to book ↓</a></div></div>
  <div class="rooms-mosaic" aria-label="A look inside our spaces">
-  <figure><img src="assets/cebu-main-lounge-sofa.jpg" alt="The shared table and sofa inside Doctor’s Lounge." width="1440" height="960"><figcaption>Cebu Main · Doctor’s Lounge</figcaption></figure>
+  <figure><img src="images/rooms/lounge-main-2026-11-14.webp" alt="The shared table and sofa inside Doctor’s Lounge." width="1440" height="960"><figcaption>Cebu Main · Doctor’s Lounge</figcaption></figure>
   <figure><img src="images/rooms/iwu-2026-11-11.webp" alt="Curtained desks at the Intensive Work Unit in Casa Mira." width="1122" height="1402"><figcaption>Casa Mira · Intensive Work Unit</figcaption></figure>
  </div>
 </section>
@@ -1513,7 +1530,7 @@ var DCBag = (function(){
       photos:{hero:{src:'assets/cebu-main-dining.jpg', alt:'The Cebu Main dining room: white tables and chairs under the lit Dr. Coffee sign.'},
               wide:{src:'assets/cebu-main-tiered.jpg', alt:'The Portal Space: tiered seating with cushions and small tables under a wall that reads: Work until you no longer have to introduce yourself.'},
               main:{src:'assets/cebu-main-conference.jpg', alt:'The glass-walled Conference Room with a long table, black chairs and a TV.'},
-              s1:{src:'assets/cebu-main-lounge-sofa.jpg', alt:'The Doctor’s Lounge: a long shared table, a sofa and warm cove lighting.'},
+              s1:{src:'images/rooms/lounge-main-2026-11-14.webp', alt:'The Doctor’s Lounge: a long shared table, a sofa and warm cove lighting.'},
               s2:{src:'assets/s-transfusion-sl.jpg', alt:'A Spanish Latte Transfusion bag with its ticked white label.'}},
       caps:['Conference Room','Doctor’s Lounge','The Transfusion bag']},
     'casa-mira': {n:'Casa Mira', area:'Labangon · Cebu City', region:'Cebu City', open:0, close:24, hours:'Usually open 24 hours. Confirm special closures with the branch.',
@@ -1656,7 +1673,7 @@ var DCBag = (function(){
   }
 
   // ---------- Rooms ----------
-  var ROOMS = [{"n": "Conference Room", "br": "cebu-main", "badge": "Meetings & presentations", "sub": "Private room", "desc": "Bring your team together around one long table, with a Smart TV for presentations.", "price": 2500, "credit": 1000, "capacity": 12, "capacityText": "10–12 guests", "best": ["Team meetings", "Presentations", "Group study"], "amenities": ["Smart TV", "High-speed Wi-Fi", "Free water"], "photos": ["images/rooms/conference-2026-11-11.webp"], "alts": ["Conference Room: a long meeting table, chairs and wall-mounted TV."]}, {"n": "Doctor’s Lounge", "br": "cebu-main", "badge": "Meetings & gatherings", "sub": "Private room", "desc": "A shared table and lounge seating for discussions, group work and smaller gatherings.", "price": 6000, "credit": 2000, "capacity": 25, "capacityText": "20–25 guests", "best": ["Group discussions", "Team sessions", "Gatherings"], "amenities": ["Smart TV", "High-speed Wi-Fi", "Free Dr. Black Coffee", "Glass board for discussions", "Private toilet", "Free water"], "photos": ["assets/cebu-main-lounge-sofa.jpg", "images/lounge-alt.webp"], "alts": ["Doctor’s Lounge: a long table, sofa and warm cove lighting.", "A second view of the Doctor’s Lounge at Cebu Main."]}, {"n": "Portal Space", "br": "cebu-main", "badge": "Lectures & seminars", "sub": "Private room", "desc": "Tiered benches and portable tables create a setting for talks, seminars and group sessions.", "price": 8000, "credit": 5000, "capacity": 25, "capacityText": "20–25 guests", "best": ["Lectures", "Seminars", "Group sessions"], "amenities": ["LCD projector", "Private high-speed Wi-Fi", "Free Dr. Black Coffee", "Whiteboard for discussions", "Free water", "Open benches with portable tables"], "photos": ["assets/cebu-main-portal.jpg", "assets/cebu-main-tiered.jpg"], "alts": ["Portal Space: tiered seating, portable tables and a projector.", "Another view of the tiered seating in Portal Space."]}, {"n": "Intensive Work Unit", "br": "casa-mira", "badge": "Solo study & work", "sub": "Individual work stations", "desc": "Settle into a curtained desk beyond the café’s dining floor for an individual study or work session.", "price": null, "credit": null, "capacity": null, "capacityText": "Individual work stations", "best": ["Exam review", "Laptop work", "Solo focus"], "amenities": ["Fast Wi-Fi", "Power outlets", "Comfortable seats", "Quiet workspace"], "photos": ["images/rooms/iwu-2026-11-11.webp", "images/rooms/iwu-detail-2026-11-11.webp"], "alts": ["Casa Mira’s Intensive Work Unit, with curtained desks and task chairs.", "Desk lamps, power outlets and chairs at the Casa Mira workstations."], "passes": [["Walk-in Pass", "3 hours", 135], ["Focus Dose", "4 hours", 170], ["Daylight Shift", "8 AM–8 PM", 250], ["Night Shift", "8 PM–8 AM", 250], ["24-Hour Pass", "8 AM–8 AM", 350], ["Weekly Plan", "Ask branch for access details", 2000]]}];
+  var ROOMS = [{"n": "Conference Room", "br": "cebu-main", "badge": "Meetings & presentations", "sub": "Private room", "desc": "Bring your team together around one long table, with a Smart TV for presentations.", "price": 2500, "credit": 1000, "capacity": 12, "capacityText": "10–12 guests", "best": ["Team meetings", "Presentations", "Group study"], "amenities": ["Smart TV", "High-speed Wi-Fi", "Free water"], "photos": ["images/rooms/conference-2026-11-11.webp"], "alts": ["Conference Room: a long meeting table, chairs and wall-mounted TV."]}, {"n": "Doctor’s Lounge", "br": "cebu-main", "badge": "Meetings & gatherings", "sub": "Private room", "desc": "A shared table and lounge seating for discussions, group work and smaller gatherings.", "price": 6000, "credit": 2000, "capacity": 25, "capacityText": "20–25 guests", "best": ["Group discussions", "Team sessions", "Gatherings"], "amenities": ["Smart TV", "High-speed Wi-Fi", "Free Dr. Black Coffee", "Glass board for discussions", "Private toilet", "Free water"], "photos": ["images/rooms/lounge-main-2026-11-14.webp", "images/rooms/lounge-length-2026-11-14.webp", "images/rooms/lounge-reverse-2026-11-14.webp", "images/rooms/lounge-entrance-2026-11-14.webp", "images/rooms/lounge-restroom-2026-11-14.webp"], "alts": ["Doctor’s Lounge: shared tables, black chairs, sofa and gray curtains.", "Doctor’s Lounge: the long table facing the glass board and wall-mounted TV.", "Doctor’s Lounge: a reverse view showing the table, TV and lounge seating.", "The entrance to Room 2, marked Dr. Coffee Lounge.", "Doctor’s Lounge private restroom, with a sink, mirror and toilet."], "portraitPhotos": [3, 4]}, {"n": "Portal Space", "br": "cebu-main", "badge": "Lectures & seminars", "sub": "Private room", "desc": "Tiered benches and portable tables create a setting for talks, seminars and group sessions.", "price": 8000, "credit": 5000, "capacity": 25, "capacityText": "20–25 guests", "best": ["Lectures", "Seminars", "Group sessions"], "amenities": ["LCD projector", "Private high-speed Wi-Fi", "Free Dr. Black Coffee", "Whiteboard for discussions", "Free water", "Open benches with portable tables"], "photos": ["assets/cebu-main-portal.jpg", "assets/cebu-main-tiered.jpg"], "alts": ["Portal Space: tiered seating, portable tables and a projector.", "Another view of the tiered seating in Portal Space."]}, {"n": "Intensive Work Unit", "br": "casa-mira", "badge": "Solo study & work", "sub": "Individual work stations", "desc": "Settle into a curtained desk beyond the café’s dining floor for an individual study or work session.", "price": null, "credit": null, "capacity": null, "capacityText": "Individual work stations", "best": ["Exam review", "Laptop work", "Solo focus"], "amenities": ["Fast Wi-Fi", "Power outlets", "Comfortable seats", "Quiet workspace"], "photos": ["images/rooms/iwu-2026-11-11.webp", "images/rooms/iwu-detail-2026-11-11.webp"], "alts": ["Casa Mira’s Intensive Work Unit, with curtained desks and task chairs.", "Desk lamps, power outlets and chairs at the Casa Mira workstations."], "passes": [["Walk-in Pass", "3 hours", 135], ["Focus Dose", "4 hours", 170], ["Daylight Shift", "8 AM–8 PM", 250], ["Night Shift", "8 PM–8 AM", 250], ["24-Hour Pass", "8 AM–8 AM", 350], ["Weekly Plan", "Ask branch for access details", 2000]]}];
   $('#bookingBranchLinks').innerHTML = ORDER.filter(function(id) { return B[id].rooms; }).map(function(id) {
     var branch = B[id];
     return '<div><strong>' + esc(branch.n) + '</strong><a href="' + branch.msg.u +
@@ -1787,7 +1804,7 @@ var DCBag = (function(){
   document.addEventListener('click',function(e){
     var purpose=e.target.closest('[data-room-mode]');if(purpose){roomMode=purpose.dataset.roomMode;sel.value='all';$('#roomGuests').value='all';renderRooms();return;}
     if(e.target.closest('[data-all]')){roomMode='all';sel.value='all';$('#roomGuests').value='all';renderRooms();return;}
-    var photo=e.target.closest('[data-room-photo]');if(!photo)return;var card=photo.closest('[data-room-index]'),room=ROOMS[Number(card.dataset.roomIndex)],k=Number(photo.dataset.roomPhoto),main=$('.room-main-photo',card);main.src=room.photos[k];main.alt=room.alts[k];$('.photo-count',card).textContent=(k+1)+' / '+room.photos.length;$$('[data-room-photo]',card).forEach(function(btn){btn.setAttribute('aria-pressed',String(btn===photo));});
+    var photo=e.target.closest('[data-room-photo]');if(!photo)return;var card=photo.closest('[data-room-index]'),room=ROOMS[Number(card.dataset.roomIndex)],k=Number(photo.dataset.roomPhoto),main=$('.room-main-photo',card);main.src=room.photos[k];main.alt=room.alts[k];main.classList.toggle('is-portrait',(room.portraitPhotos||[]).includes(k));$('.photo-count',card).textContent=(k+1)+' / '+room.photos.length;$$('[data-room-photo]',card).forEach(function(btn){btn.setAttribute('aria-pressed',String(btn===photo));});
   });
 
   // ---------- Menu ----------

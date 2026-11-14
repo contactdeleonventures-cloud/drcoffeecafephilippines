@@ -1,0 +1,240 @@
+/* A photographic first impression; the interactive bag lives just below it. */
+.hero-photo {
+  background: linear-gradient(90deg, #fbfaf7 0 50%, #1c1c1c 50% 100%);
+}
+
+.hero-photo > .wrap {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: clamp(600px, 48vw, 760px);
+}
+
+.hero-photo .hero-copy {
+  position: relative;
+  z-index: 1;
+  gap: 26px;
+  padding-block: clamp(56px, 6vw, 96px);
+  padding-right: clamp(28px, 4vw, 64px);
+}
+
+.hero-photo h1 {
+  max-width: 9.5ch;
+  font-size: clamp(52px, 5.5vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -.055em;
+}
+
+.hero-photo .lead {
+  max-width: 29em;
+  font-size: clamp(16px, 1.22vw, 18px);
+  line-height: 1.65;
+}
+
+.hero-photo .row {
+  gap: 12px;
+}
+
+.hero-photo .btn {
+  padding: 15px 20px;
+  font-size: 10px;
+  letter-spacing: .13em;
+}
+
+.stat-motion-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding-block: 10px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.stat-motion-link span {
+  transition: transform .25s ease;
+}
+
+.stat-motion-link:hover span {
+  transform: translateY(3px);
+}
+
+.stat-hero-visual {
+  position: relative;
+  align-self: stretch;
+  min-width: 0;
+  min-height: 600px;
+  margin: 0 calc(-1 * var(--side-r)) 0 0;
+  overflow: hidden;
+  background: #1c1c1c;
+  color: var(--cream);
+}
+
+.stat-hero-visual > img {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 80px);
+  max-width: none;
+  object-fit: cover;
+  object-position: 56% 50%;
+}
+
+.stat-hero-visual figcaption {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0;
+  display: grid;
+  gap: 5px;
+  padding: 52px 32px 28px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .55));
+  font-family: var(--sans);
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.stat-hero-visual .over {
+  color: #c9c7c0;
+  font-size: 9px;
+}
+
+.stat-hero-price {
+  font-size: 12px;
+  color: #dedcd5;
+}
+
+.stat-interaction {
+  border-bottom: 1px solid var(--hair);
+  background: var(--paper);
+  scroll-margin-top: calc(var(--mast-nav) + 24px);
+}
+
+.stat-interaction > .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+  padding-block: clamp(52px, 6vw, 80px);
+}
+
+.stat-interaction-copy {
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+}
+
+.stat-interaction h2 {
+  font-size: clamp(38px, 4.2vw, 56px);
+  line-height: 1.06;
+}
+
+.stat-interaction .lead {
+  max-width: 24em;
+  font-size: 17px;
+}
+
+.stat-interaction .flv-wrap {
+  margin-top: 8px;
+  gap: 14px;
+}
+
+.stat-interaction .flv button {
+  min-height: 44px;
+}
+
+.stat-interaction .stat-animation-panel {
+  width: 100%;
+  min-height: 520px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.stat-interaction .stage::before {
+  inset: 0;
+}
+
+.stat-interaction .stage .bag {
+  inset: 28px 0 22px;
+}
+
+.stat-interaction .stage-tag {
+  font-size: 9px;
+  letter-spacing: .16em;
+}
+
+.stat-interaction .stage-tag b {
+  color: var(--cream-2);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: .08em;
+}
+
+.stat-interaction .hint {
+  top: auto;
+  bottom: 18px;
+}
+
+@media (min-width: 1241px) {
+  .stat-hero-visual {
+    margin-right: calc((var(--wrap) - 100vw) / 2 - var(--side-r));
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-photo {
+    background: #fbfaf7;
+  }
+
+  .hero-photo > .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .hero-photo .hero-copy {
+    padding: 44px 0 36px;
+    gap: 22px;
+  }
+
+  .hero-photo h1 {
+    max-width: 12ch;
+    font-size: clamp(48px, 9vw, 72px);
+  }
+
+  .hero-photo .lead {
+    max-width: 34em;
+    font-size: 16px;
+  }
+
+  .stat-hero-visual {
+    min-height: 0;
+    height: clamp(380px, 105vw, 620px);
+    margin-inline: calc(-1 * var(--side-l)) calc(-1 * var(--side-r));
+  }
+
+  .stat-hero-visual figcaption {
+    padding-inline: var(--side-l);
+  }
+
+  .stat-interaction > .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-block: 48px;
+  }
+
+  .stat-interaction-copy {
+    gap: 20px;
+  }
+
+  .stat-interaction h2 br {
+    display: none;
+  }
+
+  .stat-interaction .stat-animation-panel {
+    min-height: min(560px, 125vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-motion-link span {
+    transition: none;
+  }
+}
