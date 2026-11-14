@@ -1,0 +1,105 @@
+/* Photo tours use the existing room images and their approved color filters. */
+.room-tour-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.room-tour-controls[hidden] {
+  display: none;
+}
+
+.room-thumbnails {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.room-thumbnails .room-tour-controls {
+  margin-left: auto;
+}
+
+.room-tour-toggle,
+.room-thumbnails .room-tour-toggle {
+  width: auto;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid var(--hair);
+  background: transparent;
+  color: var(--ink);
+  font: 500 12px/1.4 var(--sans);
+  cursor: pointer;
+  text-align: center;
+}
+
+.room-tour-toggle[aria-pressed="true"],
+.room-thumbnails .room-tour-toggle[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--paper-2);
+}
+
+.room-tour-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.space-photo > .room-photo-outgoing {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.space-photo .badge,
+.space-photo .photo-count {
+  z-index: 2;
+}
+
+/* The menu already has hover effects. Keep the movement small and deliberate. */
+.shelf-grid .drink .pic {
+  transform: none;
+}
+
+.shelf-grid .drink .pic img {
+  scale: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.dc-reduced) .motion-enter {
+    animation: room-card-enter 550ms var(--ease) both;
+    animation-delay: var(--motion-delay, 0ms);
+  }
+
+  html:not(.dc-reduced) .shelf-grid .drink:focus-within .pic {
+    transform: translateY(-2px);
+  }
+
+  html:not(.dc-reduced) .shelf-grid .drink:focus-within .pic img {
+    scale: 1.025;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  html:not(.dc-reduced) .shelf-grid .drink:hover .pic {
+    transform: translateY(-2px);
+  }
+
+  html:not(.dc-reduced) .shelf-grid .drink:hover .pic img {
+    scale: 1.025;
+  }
+}
+
+@keyframes room-card-enter {
+  from { opacity: .65; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html.dc-reduced .room-photo-outgoing {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .room-photo-outgoing {
+    display: none;
+  }
+}
