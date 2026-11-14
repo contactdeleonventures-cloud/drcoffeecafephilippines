@@ -1,0 +1,93 @@
+/* Full product framing for the current-pouch flavour photographs. */
+.stat-hero-visual > img {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* The same full stand framing follows the product into the story and menu. */
+.step figure img[src*="images/stat/"],
+.tile figure img[src*="images/stat/"],
+.b-trio img[src*="images/stat/"],
+.shelf-grid .drink .pic img[src*="images/stat/"] {
+  object-fit: contain;
+  background: #f8f7f5;
+  padding: 12px;
+  scale: 1;
+  transform: none;
+}
+
+.bag.stat-photo {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  padding: 18px;
+  background: #f8f7f5;
+  cursor: default;
+  touch-action: pan-y;
+}
+
+.stat-photo-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.stat-photo-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+  filter: none;
+}
+
+.stat-photo-fallback {
+  position: absolute;
+  inset: 40% 24px auto;
+  color: var(--muted, #67645e);
+  text-align: center;
+  font: 15px/1.6 var(--sans, Helvetica, Arial, sans-serif);
+}
+
+.stat-interaction .stat-animation-panel {
+  background: #f8f7f5;
+  color: var(--ink, #1c1c1c);
+}
+
+.stat-interaction .stat-animation-panel::before {
+  background: #f8f7f5;
+}
+
+.stat-interaction .stage .bag.stat-photo {
+  inset: 64px 0 28px;
+}
+
+.stat-interaction .stat-animation-panel .stage-tag {
+  color: var(--ink, #1c1c1c);
+}
+
+.stat-interaction .stat-animation-panel .stage-tag b {
+  color: var(--muted, #67645e);
+}
+
+.stat-interaction .stat-animation-panel .hint {
+  display: none;
+}
+
+/* The label story must not crop the stand or hooks through the old SVG zoom. */
+.plate.zoom .bag.stat-photo {
+  transform: none;
+}
+
+.plate .bag.stat-photo {
+  transition: none;
+}
+
+@media (max-width: 860px) {
+  .bag.stat-photo { padding: 12px; }
+  .stat-interaction .stage .bag.stat-photo { inset: 60px 0 20px; }
+}
